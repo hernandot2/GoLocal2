@@ -1,10 +1,31 @@
-// Define variables for your color scheme
+// primary colors
 
-// For example:
-$red: #FD1015;
-$blue: #0D6EFD;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+$primary-01: #faedee;
+$primary-02: #f0c6ca;
+$primary-03: #e8aab0;
+$primary-04: #de848c;
+$primary-05: #d76c76;
+$primary-06: #cd4754;
+$primary-07: #bb414c;
+$primary-08: #92323c;
+$primary-09: #71272e;
+$primary-10: #561e23;
+
+// neutral colors
+
+$neutral-01: #f1f2f3;
+$neutral-02: #d3d5da;
+$neutral-03: #bdc1c8;
+$neutral-04: #9fa5af;
+$neutral-05: #8d93a0;
+$neutral-06: #707888;
+$neutral-07: #666d7c;
+$neutral-08: #505561;
+$neutral-09: #3e424b;
+$neutral-10: #2f3239;
+
+// alert colors
+
+$alert-warning: #F79009;
+$alert-success: #12B76A;
+$alert-error:   #F04438;
