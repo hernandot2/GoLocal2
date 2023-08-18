@@ -1,0 +1,26 @@
+.card-sq-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $primary-06;
+  border-radius: $border-radius;
+  min-height: 350px;
+  min-width: 350px;
+  max-height: 652px;
+  max-width: 400px;
+}
+
+.card-sq-lg-content {
+  color: $neutral-01;
+  display: flex;
+  text-align: center;
+  font-size: $heading-2xl-bold;
+  font-weight: $font-bold;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.card-sq-lg img {
+  height: 100%;
+  width: 100%;
+}
