@@ -23,10 +23,44 @@
   font-weight: $font-bold;
   flex-wrap: wrap;
   margin: 0;
-  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40); 
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
 }
 
 .card-sq-lg img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.card-sq-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  min-height: 106px;
+  min-width: 106px;
+  max-height: 197px;
+  max-width: 121px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  object-fit: fill;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-sq-sm-content {
+  color: $neutral-01;
+  display: flex;
+  text-align: center;
+  font-size: $heading-lg-bold;
+  font-weight: $font-bold;
+  flex-wrap: wrap;
+  margin: 0;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+}
+
+.card-sq-sm img {
   height: 100%;
   width: 100%;
 }
