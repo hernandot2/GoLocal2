@@ -8,62 +8,17 @@ $headers-font: "Public Sans", "Nunito", "Helvetica", "sans-serif";
 
 // Text-size styles 
 // base size: text-md-regular (16px)
-
-// display 2xl
-$heading-2xl-medium: 4.5rem;
-$heading-2xl-regular: 4.5rem;
-$heading-2xl-semibold: 4.5rem;
-$heading-2xl-bold: 4.5rem;
-// heading xl
-$heading-xl-regular: 3.75rem;
-$heading-xl-medium: 3.75rem;
-$heading-xl-semibold: 3.75rem;
-$heading-xl-bold: 3.75rem;
-// heading lg
-$heading-lg-regular: 3rem;
-$heading-lg-medium: 3rem;
-$heading-lg-semibold: 3rem;
-$heading-lg-bold: 3rem;
-// heading md
-$heading-md-regular: 2.25rem;
-$heading-md-medium: 2.25rem;
-$heading-md-semibold: 2.25rem;
-$heading-md-bold: 2.25rem;
-// heading sm 
-$heading-sm-regular: 1.88rem;
-$heading-sm-medium: 1.88rem;
-$heading-sm-semibold: 1.88rem;
-$heading-sm-bold: 1.88rem;
-// heading xs
-$heading-xs-regular: 1.5rem;
-$heading-xs-medium: 1.5rem;
-$heading-xs-semibold: 1.5rem;
-$heading-xs-bold: 1.5rem;
-// text xl
-$text-xl-regular: 1.25rem;
-$text-xl-medium: 1.25rem;
-$text-xl-semibold: 1.25rem;
-$text-xl-bold: 1.25rem;
-// text lg
-$text-lg-regular: 1.12rem;
-$text-lg-medium: 1.12rem;
-$text-lg-semibold: 1.12rem;
-$text-lg-bold: 1.12rem;
-//text md
-$text-md-regular: 1rem;
-$text-md-medium: 1rem;
-$text-md-semibold: 1rem;
-$text-md-bold: 1rem;
-// text sm 
-$text-sm-regular: 0.88rem;
-$text-sm-medium: 0.88rem;
-$text-sm-semibold: 0.88rem;
-$text-sm-bold: 0.88rem;
-// text xs
-$text-xs-regular: 0.75rem;
-$text-xs-medium: 0.75rem;
-$text-xs-semibold: 0.75rem;
-$text-xs-bold: 0.75rem;
+$heading-2xl: 4.5rem;
+$heading-xl: 3.75rem;
+$heading-lg: 3rem;
+$heading-md: 2.25rem;
+$heading-sm: 1.88rem;
+$heading-xs: 1.5rem;
+$text-xl: 1.25rem;
+$text-lg: 1.12rem;
+$text-md: 1rem;
+$text-sm: 0.88rem;
+$text-xs: 0.75rem;
 
 //font-weight
 $font-thin: 100;
@@ -74,4 +29,4 @@ $font-medium: 500;
 $font-semi-bold: 600;
 $font-bold: 700;
 $font-extra-bold: 800;
-$font-black: 900; 
+$font-black: 900;
