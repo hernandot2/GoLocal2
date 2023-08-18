@@ -1,66 +1,47 @@
+
 .card-sq-lg {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: $border-radius;
-  min-height: 350px;
-  min-width: 350px;
-  max-height: 652px;
-  max-width: 400px;
+  min-height: 320px;
+  width: 100%;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
-  object-fit: fill;
   position: relative;
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  padding: 16px;
 }
 
 .card-sq-lg-content {
   color: $neutral-01;
   display: flex;
   text-align: center;
-  font-size: $heading-2xl-bold;
+  font-size: $heading-lg;
   font-weight: $font-bold;
   flex-wrap: wrap;
   margin: 0;
   text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
 }
 
-.card-sq-lg img {
-  height: 100%;
-  width: 100%;
+.grid-card-sq-lg {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin: 24px 24px 24px 24px;
+  gap: 24px 24px;
 }
 
+@media screen and (max-width: 575px) {
+  .grid-card-sq-lg {
+    grid-template-columns: 1fr;
+  }
 
-.card-sq-sm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: $border-radius;
-  min-height: 106px;
-  min-width: 106px;
-  max-height: 197px;
-  max-width: 121px;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
-  object-fit: fill;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
 }
 
-.card-sq-sm-content {
-  color: $neutral-01;
-  display: flex;
-  text-align: center;
-  font-size: $heading-lg-bold;
-  font-weight: $font-bold;
-  flex-wrap: wrap;
-  margin: 0;
-  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
-}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .grid-card-sq-lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.card-sq-sm img {
-  height: 100%;
-  width: 100%;
 }

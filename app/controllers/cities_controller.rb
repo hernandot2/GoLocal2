@@ -1,61 +1,52 @@
 class CitiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show]
+  before_action :set_city, only: [:show, :edit, :update, :destroy]
 
-
-def index
-  @cities = City.all
-end
-
-def show
-  @city = City.find(params[:id])
-end
-
-def new
-  @city = City.new
-end
-
-def create
-  @city = City.new(city_params)
-
-  if @city.save
-    redirect_to city_path(@city), notice: 'A cidade foi criada com sucesso'
-  else
-    render :new
+  def index
+    @cities = City.all
   end
-end
 
-def edit
-  @city = City.find(params[:id])
-end
-
-def update
-  @city = City.find(params[:id])
-
-  if @city.update(city_params)
-    redirect_to city_path(@city), notice: ' A cidade foi atualizada com sucesso'
-
-  else
-    render :edit
+  def show
   end
-end
 
-def destroy
-  @city = City.find(params[:id])
-  @city.destroy
+  def new
+    @city = City.new
+  end
 
-  redirect_to cities_path, notice: 'A cidade foi deletada com sucesso'
+  def create
+    @city = City.new(city_params)
+    if @city.save
+      redirect_to city_path(@city), notice: 'A cidade foi criada com sucesso'
+    else
+      render :new
+    end
+  end
 
-end
+  def edit
+  end
 
-private
+  def update
+    if @city.update(city_params)
+      redirect_to city_path(@city), notice: ' A cidade foi atualizada com sucesso'
+    else
+      render :edit
+    end
+  end
 
-def set_city
-  @city = City.find(params[:id])
-end
+  def destroy
 
-def city_params
+    @city.destroy
+    redirect_to cities_path, notice: 'A cidade foi deletada com sucesso'
+  end
 
-  params.require(:city).permit(:name)
+  private
 
-end
+  def set_city
+    @city = City.find(params[:id])
+  end
+
+  def city_params
+
+    params.require(:city).permit(:name)
+
+  end
 end
