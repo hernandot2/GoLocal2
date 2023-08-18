@@ -1,7 +1,13 @@
-<div card-sq-lg>
+<%# <div card-sq-lg>
 <h1>São Paulo</h1>
 </div>
 
 <div card-sq-lg>
 <h1>Belo Horizonte</h1>
-</div>
+</div> %>
+
+<% @cities.each do |city| %>
+  <div card-sq-lg>
+    <h1><%= link_to city.name, city_path(city.id) %></h1>
+  </div>
+<% end %>
