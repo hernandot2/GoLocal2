@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   resources :rating
   resources :favorites, only: [:new, :create, :destroy]
   resources :cities
-
+  resources :neighborhoods
 end

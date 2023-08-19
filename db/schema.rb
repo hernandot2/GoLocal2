@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_17_070050) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_18_064202) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_070050) do
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
-  create_table "location", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "description"
@@ -54,15 +54,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_070050) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_location_on_user_id"
+    t.bigint "neighborhood_id", null: false
+    t.index ["neighborhood_id"], name: "index_locations_on_neighborhood_id"
+    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
-  create_table "neighborhood", force: :cascade do |t|
+  create_table "neighborhoods", force: :cascade do |t|
     t.string "name"
-    t.bigint "cities_id", null: false
+    t.bigint "city_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cities_id"], name: "index_neighborhood_on_cities_id"
+    t.index ["city_id"], name: "index_neighborhoods_on_city_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -93,7 +95,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_070050) do
   add_foreign_key "events", "users"
   add_foreign_key "favorites", "events"
   add_foreign_key "favorites", "users"
-  add_foreign_key "location", "users"
-  add_foreign_key "neighborhood", "cities", column: "cities_id"
+  add_foreign_key "locations", "neighborhoods"
+  add_foreign_key "locations", "users"
+  add_foreign_key "neighborhoods", "cities"
   add_foreign_key "ratings", "users"
 end
