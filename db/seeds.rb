@@ -85,6 +85,27 @@ locations = {
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood3].id,
     user_id: User.first.id
+  },
+  location4: {
+    name: "Restaurante Sabor Carioca",
+    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    description: "Um restaurante tradicional carioca com pratos típicos.",
+    neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    user_id: User.first.id
+  },
+  location5: {
+    name: "Restaurante Sabor Carioca",
+    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    description: "Um restaurante tradicional carioca com pratos típicos.",
+    neighborhood_id: created_neighborhoods[:neighborhood2].id,
+    user_id: User.first.id
+  },
+  location6: {
+    name: "Restaurante Sabor Carioca",
+    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    description: "Um restaurante tradicional carioca com pratos típicos.",
+    neighborhood_id: created_neighborhoods[:neighborhood3].id,
+    user_id: User.first.id
   }
 }
 

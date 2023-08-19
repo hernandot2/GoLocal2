@@ -8,6 +8,7 @@ class CitiesController < ApplicationController
   def show
     @events = Event.joins(location: { neighborhood: :city }).where("cities.id = ?", @city.id)
     @neighborhoods = @city.neighborhoods
+    @locations = Location.joins(neighborhood: :city).where("cities.id = ?", @city.id)
   end
 
   def new
