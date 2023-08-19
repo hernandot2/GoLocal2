@@ -1,13 +1,12 @@
-<div class="container"><h3> O que gostaria de fazer </h3>
-<p> o texto eh geral padrao ou especifico por cidade?
-O Rio de Janeiro provavelmente seja a cidade do Brasil com mais opções de coisas para se fazer. Há atrações super conhecidas como o Cristo Redentor...</p>
-
-<div class="category-menu d-md-flex d-none">
-
-
-  <%= link_to "Todos", events_path, class: "btn-filter" %>
-  <% %w[Cafe | Parque | Bar | Loja | Ar Livre | Museu].each do |category| %>
-    <%= link_to category, events_path(category: category), class: "btn-filter" %>
-  <% end %>
-</div>
+<div class="container">
+  <h3>O que gostaria de fazer?</h3>
+  <p> o texto eh geral padrao ou especifico por cidade?
+  O Rio de Janeiro provavelmente seja a cidade do Brasil com mais opções de coisas para se fazer. Há atrações super conhecidas como o Cristo Redentor...</p>
+  <div class="category-menu d-md-flex d-none">
+    <% Location.categories.each do |category| %>
+      <div class="card-sq-sm">
+        <%= link_to category, locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil) %>
+      </div>
+    <% end %>
+  </div>
 </div>
