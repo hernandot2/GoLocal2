@@ -57,7 +57,7 @@ neighborhoods = {
 }
 
 created_neighborhoods = {}
-5.times do ||
+5.times do
   neighborhoods.each do |key, neighborhood_data|
     created_neighborhoods[key] = Neighborhood.create!(neighborhood_data)
   end
@@ -66,45 +66,51 @@ end
 # Locations
 locations = {
   location1: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Cafe",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    category: "Cafe",
     user_id: User.first.id
   },
   location2: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Parque",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood2].id,
+    category: "Parque",
     user_id: User.first.id
   },
   location3: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Bar",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood3].id,
+    category: "Bar",
     user_id: User.first.id
   },
   location4: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Loja",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    category: "Loja",
     user_id: User.first.id
   },
   location5: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Ar Livre",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood2].id,
+    category: "Ar Livre",
     user_id: User.first.id
   },
   location6: {
-    name: "Restaurante Sabor Carioca",
+    name: "Restaurante Sabor Carioca - Museu",
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood3].id,
+    category: "Museu",
     user_id: User.first.id
   }
 }
@@ -139,7 +145,7 @@ events = {
   }
 }
 
-5.times do ||
+5.times do
   events.each do |key, event_data|
     Event.create!(event_data)
   end
