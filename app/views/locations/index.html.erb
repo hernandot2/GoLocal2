@@ -1,0 +1,11 @@
+<div class="locations-container">
+  <div class="location-list">
+    <% @locations.each do |location| %>
+      <div class="location-item" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
+        <%= link_to location.address, "#", class: "location-link" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="location-map" style="width: 100%; height: 600px;" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

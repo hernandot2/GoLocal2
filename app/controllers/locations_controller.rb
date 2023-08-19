@@ -1,8 +1,19 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @locations = Location.all
+    def index
+      @locations = Location.all
+      @markers = @locations.geocoded.map do |location|
+        {
+          id: location.id,
+          lat: location.latitude,
+          lng: location.longitude,
+          info_window_html: render_to_string(partial: "locations/info_window", locals: { location: location }),
+          marker_html: render_to_string(partial: "locations/marker")
+        }
+      end
+    end
+
   end
 
   def show
@@ -47,4 +58,3 @@ class LocationsController < ApplicationController
   def set_location
     @location = Location.find(params[:id])
   end
-end

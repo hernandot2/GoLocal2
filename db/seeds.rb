@@ -8,6 +8,8 @@
 
 # Users
 
+User.destroy_all
+
 users = {
   user1: {
     email: "test@example.com",
@@ -56,8 +58,8 @@ end
 # Locations
 locations = {
   location1: {
-    name: "Restaurante Sabor Carioca",
-    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    name: "Bar Pavão Azul ",
+    address: "Rua Hilário de Gouvêia, 71 - Copacabana, Rio de Janeiro - RJ",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood1].id,
     user_id: User.first.id
@@ -83,11 +85,10 @@ events = {
     date: Date.new(2024, 2, 25),
     description: "Desde que lançou o álbum 'Samba Meu', em 2003, Maria Rita transita com imensa desenvoltura no universo do samba e hoje está consolidada como uma das grandes artistas do gênero.",
     location_id: created_locations[:location1].id,  # Usando location1 porque location2 não foi definido
-    user_id: 2
+    user_id: User.last.id
   }
 }
 
 events.each do |key, event_data|
   Event.create!(event_data)
 end
-
