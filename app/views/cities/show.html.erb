@@ -41,5 +41,20 @@
       </div>
     <% end %>
 
+    <div class="row mb-3">
+      <div class="col-lg-10">
+        <h3>Locais mais procurados</h3>
+      </div>
+      <div class="col-lg-2 text-right">
+        <%= link_to 'Ver todos os locais', locations_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+
+    <% @locations.each do |location| %>
+      <div class="location">
+        <%= link_to location.name, location_path(location) %>
+      </div>
+    <% end %>
+
   </div>
 </div>

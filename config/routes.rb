@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :events
-  resources :location
-  resources :rating
+  resources :locations
+  resources :ratings
   resources :favorites, only: [:new, :create, :destroy]
   resources :cities
   resources :neighborhoods
