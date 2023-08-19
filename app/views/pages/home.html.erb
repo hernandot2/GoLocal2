@@ -71,3 +71,10 @@
     </div>
   </div>
 </div>
+
+<h1>Vai viajar?</h1>
+<% @cities.each do |city| %>
+  <div card-sq-lg>
+    <h1><%= link_to city.name, city_path(city.id) %></h1>
+  </div>
+<% end %>

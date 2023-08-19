@@ -43,14 +43,24 @@ end
 # Neighborhoods
 neighborhoods = {
   neighborhood1: {
-    name: "Vila Indio",
+    name: "Vila Indigena",
     city_id: created_cities[:city1].id
+  },
+  neighborhood2: {
+    name: "Vila Mar",
+    city_id: created_cities[:city2].id
+  },
+  neighborhood3: {
+    name: "Morro do Pão de Queijo",
+    city_id: created_cities[:city3].id
   }
 }
 
 created_neighborhoods = {}
-neighborhoods.each do |key, neighborhood_data|
-  created_neighborhoods[key] = Neighborhood.create!(neighborhood_data)
+5.times do ||
+  neighborhoods.each do |key, neighborhood_data|
+    created_neighborhoods[key] = Neighborhood.create!(neighborhood_data)
+  end
 end
 
 # Locations
@@ -60,6 +70,20 @@ locations = {
     address: "Rua das Palmeiras, 100, Rio de Janeiro",
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    user_id: User.first.id
+  },
+  location2: {
+    name: "Restaurante Sabor Carioca",
+    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    description: "Um restaurante tradicional carioca com pratos típicos.",
+    neighborhood_id: created_neighborhoods[:neighborhood2].id,
+    user_id: User.first.id
+  },
+  location3: {
+    name: "Restaurante Sabor Carioca",
+    address: "Rua das Palmeiras, 100, Rio de Janeiro",
+    description: "Um restaurante tradicional carioca com pratos típicos.",
+    neighborhood_id: created_neighborhoods[:neighborhood3].id,
     user_id: User.first.id
   }
 }
@@ -82,12 +106,20 @@ events = {
     title: "samba Maria",
     date: Date.new(2024, 2, 25),
     description: "Desde que lançou o álbum 'Samba Meu', em 2003, Maria Rita transita com imensa desenvoltura no universo do samba e hoje está consolidada como uma das grandes artistas do gênero.",
-    location_id: created_locations[:location1].id,  # Usando location1 porque location2 não foi definido
-    user_id: 2
+    location_id: created_locations[:location2].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event3: {
+    title: "samba Maria",
+    date: Date.new(2024, 2, 25),
+    description: "Desde que lançou o álbum 'Samba Meu', em 2003, Maria Rita transita com imensa desenvoltura no universo do samba e hoje está consolidada como uma das grandes artistas do gênero.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
   }
 }
 
-events.each do |key, event_data|
-  Event.create!(event_data)
+5.times do ||
+  events.each do |key, event_data|
+    Event.create!(event_data)
+  end
 end
-
