@@ -56,6 +56,7 @@ neighborhoods.each do |key, neighborhood_data|
 end
 
 # Locations
+# Locations
 locations = {
   location1: {
     name: "Bar Pavão Azul ",
@@ -63,8 +64,26 @@ locations = {
     description: "Um restaurante tradicional carioca com pratos típicos.",
     neighborhood_id: created_neighborhoods[:neighborhood1].id,
     user_id: User.first.id
+  },
+
+  location2: {
+    name: "Bip Bip",
+    address: "R. Alm. Gonçalves, 50 - Copacabana, Rio de Janeiro - RJ",
+    description: "Um tradicional bar carioca conhecido por suas rodas de samba.",
+    neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    user_id: User.first.id
+  },
+
+  location3: {
+    name: "Casa Carandaí",
+    address: "R. Lopes Quintas, 165 - Jardim Botânico, Rio de Janeiro - RJ",
+    description: "A Casa Carandaí é sempre uma excelente opção e é prima pela qualidade tanto dos itens do mercadinho à frente, como da padaria e do restaurante.",
+    neighborhood_id: created_neighborhoods[:neighborhood1].id,
+    user_id: User.first.id
   }
 }
+
+
 
 created_locations = {}
 locations.each do |key, location_data|

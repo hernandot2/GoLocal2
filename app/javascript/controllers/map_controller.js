@@ -19,23 +19,22 @@ export default class extends Controller {
 
     this.addMarkersToMap();
     this.fitMarkersToMap();
+
+    this.map.resize();
   }
 
   addMarkersToMap() {
     this.markersValue.forEach((markerData) => {
       const popup = new mapboxgl.Popup().setHTML(markerData.info_window_html);
       const element = document.createElement('div');
-      // element.className = 'marker';
-      // element.style.backgroundImage = 'url("/path/to/your/default/marker/image.png")';
-      // element.style.width = '50px';
-      // element.style.height = '50px';
+
          element.innerHTML = markerData.marker_html
       const mapboxMarker = new mapboxgl.Marker(element)
         .setLngLat([markerData.lng, markerData.lat])
         .setPopup(popup)
         .addTo(this.map);
 
-      // Armazena o marcador no objeto usando o ID do marcador como chave.
+
       this.markersById[markerData.id] = mapboxMarker;
     });
   }
@@ -46,21 +45,19 @@ export default class extends Controller {
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
-  highlightMarker(event) {
-    const locationId = event.currentTarget.dataset.id;
-    const marker = this.markersById[locationId];
 
-    // Lógica para destacar o marcador (por exemplo, substituir o ícone ou ampliá-lo)
-    marker.getElement().style.transform = "scale(1.5)";
-  }
+
+highlightMarker(event) {
+  console.log("Highlighting marker");
+  const locationId = event.currentTarget.dataset.id;
+  const marker = this.markersById[locationId];
+  marker.getElement().style.transform = "scale(1.5)";
 }
 
-// document.querySelectorAll('.location-link').forEach(link => {
-//   link.addEventListener('mouseover', (event) => {
-//     const markerId = event.currentTarget.parentElement.getAttribute("data-id");
 
-
-//     const controller = application.getControllerForElementAndIdentifier(event.currentTarget.parentElement, "map");
-//     controller.highlightMarker({ currentTarget: { dataset: { id: markerId } } });
-//   });
-// });
+unhighlightMarker(event) {
+  const locationId = event.currentTarget.dataset.id;
+  const marker = this.markersById[locationId];
+  marker.getElement().style.transform = "scale(1)";
+}
+}
