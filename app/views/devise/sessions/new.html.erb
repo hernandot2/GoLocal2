@@ -1,7 +1,9 @@
 <section class="h-auto login-page">
   <div class="grid-login-page m-auto">
     <div class="login-background d-flex justify-content-center">
+      <%= link_to root_path do %>
         <%= image_tag "logo-wh.svg", class: "my-4", style: "height: 96px;"%>
+      <% end %>
     </div>
     <h3 class="m-auto mb-4 mt-5">Acesse sua conta</h3>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
