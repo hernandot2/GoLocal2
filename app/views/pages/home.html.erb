@@ -6,12 +6,17 @@
   <h3>Vai viajar?</h3>
   <div class="grid-card-sq-lg">
     <% @cities.each do |city| %>
-      <div class="card-sq-lg" style="background-image: url(<%= asset_path('teste-sp.png') %>);" >
-        <%= link_to city.name, city_path(city.id), class: "card-sq-lg-content"%>
-      </div>
+      <%= link_to city_path(city.id), class: "card-sq-lg" do %>
+        <div class="card-sq-lg-content">
+          <%= city.name %>
+        </div>  
+      <% end %>
     <% end %>
   </div>
 </section>
+
+
+
 
 <section id="banner-call">
   <div class="banner-home">
