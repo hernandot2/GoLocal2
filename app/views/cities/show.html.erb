@@ -1,59 +1,38 @@
-<div>
-  <div class="city-details">
-    <span class="d-flex align-items-bottom"><h1 class="city-name"><%= @city.name %></h1> <h2>Estado</h2></span class="d-flex">
-    <p class="city-description">
-      <%= @city.description %>
-    </p>
+<section>
+<%= render "banner" %>
+</section>
 
-    <%= render 'shared/filter_category' %>
+<section class="city-details mb-5">
+  <span class="d-flex align-items-baseline">
+    <h1 class="city-name"><%= @city.name %></h1>
+    <h2>Estado</h2>
+  </span>
+  <p class="city-description">
+    <%= @city.description %>
+  </p>
+</section>
 
-    <div class="row mb-3">
-      <div class="col-lg-10">
-        <h3> Principais eventos da cidade</h3>
-      </div>
-      <div class="col-lg-2 text-right">
-        <%= link_to 'Ver todos os eventos', events_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
+<section class="mb-5">
+  <h3> O que gostaria de fazer </h3>
+  <%= render 'shared/cards/card_category', elements: Location.categories %>
+</section>
 
-    <div >
-      <% @events.each do |event| %>
-        <div class="event">
-          <h4><%= link_to event.title, event_path(event) %></h4>
-          <p><%= event.description %></p>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-lg-10">
-        <h3>Bairros mais procurados</h3>
-      </div>
-      <div class="col-lg-2 text-right">
-        <%= link_to 'Ver todos os bairros', neighborhoods_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
-
-    <% @neighborhoods.each do |neighborhood| %>
-      <div class="neighborhood">
-        <%= link_to neighborhood.name, neighborhood_path(neighborhood) %>
-      </div>
-    <% end %>
-
-    <div class="row mb-3">
-      <div class="col-lg-10">
-        <h3>Locais mais procurados</h3>
-      </div>
-      <div class="col-lg-2 text-right">
-        <%= link_to 'Ver todos os locais', locations_path, class: 'btn btn-primary' %>
-      </div>
-    </div>
-
-    <% @locations.each do |location| %>
-      <div class="location">
-        <%= link_to location.name, location_path(location) %>
-      </div>
-    <% end %>
-
+<section id="city-neighborhood" class="mb-5">
+  <div class="d-flex justify-content-between align-items-baseline">
+    <h3>Bairros mais procurados</h3>
+    <%= link_to 'Ver todos os bairros', neighborhoods_path, class: "link-text" %>
   </div>
-</div>
+  <% @elements = @neighborhoods %>
+  <%= render "shared/cards/card_neighborhood", elements: @elements %>
+</section>
+
+<section>
+  <div class="d-flex justify-content-between align-items-baseline">
+    <h3> Principais eventos da cidade</h3>
+    <span class="link-text"><%= link_to 'Ver todos os eventos', events_path, class: "link-text" %></span>
+  </div>
+  <div class="" >
+    <% @events = @events.first(4) %>
+    <%= render "shared/cards/card_event", events: @events %>
+  </div>
+</section>

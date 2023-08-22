@@ -1,2 +1,15 @@
-<h1>Neighborhood#Show</h1>
-<%= render 'shared/filter_category' %>
+<section>
+<%= render "banner" %>
+</section>
+
+<section class="nieghborhood-details">
+  <span class="d-flex align-items-baseline">
+    <h1 class="nieghborhood-name"><%= @neighborhood.name %></h1>
+    <h2><%= city_name = City.find(@neighborhood.city_id).name %></h2>
+  </span>
+</section>
+
+<section>
+  <h3> O que gostaria de fazer? </h3>
+  <%= render 'shared/cards/card_category', elements: Location.categories %>
+</section>

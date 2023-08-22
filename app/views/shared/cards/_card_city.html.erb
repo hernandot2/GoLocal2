@@ -1,0 +1,17 @@
+<div class="grid-card-city">
+  <% elements.each do |element| %>
+    <% if element.class == City %>
+      <% path_url = city_path(element.id) %>
+    <% else %>
+      <% path_url = neighborhood_path(element.id)%>
+    <% end %>
+    <%= link_to path_url, class: "card-city" do %>
+      <div class="card-city-content">
+        <%= element.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%# <% asset_url = asset_path('teste-sp.png') %>
+<%# , style: "background-image: url('#{asset_url}');"  %>

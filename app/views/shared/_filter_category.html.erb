@@ -1,7 +1,12 @@
 <div class="grid-card-sq-sm">
-  <% Location.categories.each do |category| %>
-    <div class="card-sq-sm" style="background-image: url(<%= asset_path('teste-sp.png') %>);" >
-        <%= link_to category, locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), class: "card-sq-sm-content"%>
-    </div>
+  <% elements.each do |category| %>
+    <% asset_url = asset_path('teste-sp.png') %>
+    <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), 
+                                class: "card-sq-sm text-decoration-none", 
+                                style: "background-image: url('#{asset_url}');" do %>
+      <div class="card-sq-sm-content">
+        <%= category %>
+      </div>
+    <% end %>
   <% end %>
 </div>

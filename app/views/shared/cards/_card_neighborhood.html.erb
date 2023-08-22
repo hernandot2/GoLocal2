@@ -1,0 +1,9 @@
+<div class="grid-card-neighborhood">
+  <% elements.each do |element| %>
+    <%= link_to neighborhood_path(element), class: "card-neighborhood" do %>
+      <div class="card-neighborhood-content p-5">
+        <%= element.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

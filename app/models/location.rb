@@ -5,6 +5,6 @@ class Location < ApplicationRecord
   has_many :ratings
 
   def self.categories
-    ["Cafe", "Parque", "Bar", "Loja", "Ar Livre", "Museu"]
+    ["Café", "Parque", "Bar", "Loja", "Ar Livre", "Museu"]
   end
 end
