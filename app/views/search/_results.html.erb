@@ -1,0 +1,19 @@
+<h4><%= link_to "Locais", locations_path %></h4>
+<% @locations.each do |location| %>
+  <%= link_to location.name, location %><br>
+<% end %>
+
+<h4><%= link_to "Eventos", events_path %></h4>
+<% @events.each do |event| %>
+  <%= link_to event.title, event %><br>
+<% end %>
+
+<h4><%= link_to "Cidades", cities_path %></h4>
+<% @cities.each do |city| %>
+  <%= link_to city.name, city %><br>
+<% end %>
+
+<h4><%= link_to "Bairros", neighborhoods_path %></h4>
+<% @neighborhoods.each do |neighborhood| %>
+  <%= link_to neighborhood.name, neighborhood %><br>
+<% end %>
