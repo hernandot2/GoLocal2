@@ -1,0 +1,16 @@
+<div data-controller="universal-search">
+  <%= form_with url: search_index_path, method: :get, html: { data: { universal_search_target: "form" } } do |f| %>
+    <%= f.text_field :query,
+                    id: "search_field",
+                     class: "form-control",
+                     placeholder: "Digite o nome da cidade, bairro, evento ou local",
+                     value: params[:query],
+                     data: {
+                        universal_search_target: "input",
+                        action: "keyup->universal-search#update"
+                      } %>
+  <% end %>
+  <div id="search_labels" data-universal-search-target="labels" style="display: none;">
+  </div>
+  <div data-universal-search-target="results"></div>
+</div>
