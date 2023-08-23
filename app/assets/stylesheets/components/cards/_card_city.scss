@@ -1,0 +1,57 @@
+.card-city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  min-height: 320px;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 65.10%, rgba(0, 0, 0, 0.32) 100%), lightgray 50% / cover no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.card-city-content {
+  color: $neutral-01;
+  display: flex;
+  text-align: center;
+  font-size: $heading-lg;
+  font-weight: $font-bold;
+  flex-wrap: wrap;
+  margin: 0;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+  text-decoration: none;
+}
+
+// card large responsiveness
+
+.grid-card-city {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+@media screen and (max-width: 575px) {
+  .grid-card-city {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  .grid-card-city {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+// card large hovers
+.card-city:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.025);
+}

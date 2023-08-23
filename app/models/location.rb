@@ -8,6 +8,6 @@ class Location < ApplicationRecord
 
 
   def self.categories
-    ["Cafe", "Parque", "Bar", "Loja", "Ar Livre", "Museu"]
+    ["Café", "Parque", "Bar", "Loja", "Ar Livre", "Museu"]
   end
 end
