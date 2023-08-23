@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   resources :favorites, only: [:new, :create, :destroy]
   resources :cities
   resources :neighborhoods
+  resources :profiles
   resources :search, only: :index
 end
