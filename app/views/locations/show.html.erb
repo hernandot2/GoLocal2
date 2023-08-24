@@ -1,1 +1,19 @@
-<h1>Locations#show</h1>
+
+<section>
+  <%= render "banner" %>
+</section>
+
+<section class="neighborhood-details">
+  <div class="d-flex align-items-baseline">
+    <h1 class="neighborhood-name"><%= @neighborhood.name %></h1>
+    <h2><%= location_name = Location.find(@location.neighborhood_id).name %></h2>
+  </div>
+  <div>
+    <h4><%= location_address = Location.find(@location.neighborhood_id).address %></h4>
+  </div>
+</section>
+
+<section>
+  <p> No Jardim Botânico do Rio de Janeiro, a natureza e a cultura se entrelaçam. Explore trilhas sombreadas, admire plantas exóticas, visite o orquidário e maravilhe-se com a estufa centenária. Após, saboreie refeições em restaurantes charmosos ou relaxe em bares e pubs pitorescos nas proximidades. </p>
+
+</section>
