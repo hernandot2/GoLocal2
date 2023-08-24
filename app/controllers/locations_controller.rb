@@ -20,7 +20,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
-    @neighborhood = @location.neighborhood # Supondo que Location pertence a Neighborhood
+    @neighborhood = @location.neighborhood
   end
 
   def new
