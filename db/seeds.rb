@@ -278,7 +278,7 @@ locations = {
     address: "Rua Gonçalo Afonso, 450",
     description: "Um beco colorido com grafites e esculturas.",
     neighborhood_id: Neighborhood.find(11).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp8: {
@@ -358,7 +358,7 @@ locations = {
     address: "Av. Paulista, toda",
     description: "Um passeio pela avenida mais famosa de São Paulo, com uma vista de tirar o fôlego.",
     neighborhood_id: Neighborhood.find(12).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp18: {
@@ -438,7 +438,7 @@ locations = {
     address: "Av. Pedro Álvares Cabral, s/n",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Ibirapuera.",
     neighborhood_id: Neighborhood.find(13).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp28: {
@@ -502,7 +502,7 @@ locations = {
     address: "Av. das Nações Unidas, 7161",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Villa Lobos.",
     neighborhood_id: Neighborhood.find(14).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp36: {
@@ -582,7 +582,7 @@ locations = {
     address: "Rua Augusta, 1500",
     description: "Uma atividade ao ar livre para se exercitar e aproveitar a natureza no Parque Augusta.",
     neighborhood_id: Neighborhood.find(15).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp46: {
@@ -766,7 +766,7 @@ locations = {
     address: "Avenida Pedro Álvares Cabral, s/n",
     description: "Uma atividade ao ar livre para relaxar e se exercitar no Parque Ibirapuera.",
     neighborhood_id: Neighborhood.find(19).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
   locationsp82: {
@@ -822,7 +822,7 @@ locations = {
     address: "Praça da Luz, s/n",
     description: "Uma atividade ao ar livre para explorar o Parque da Luz.",
     neighborhood_id: Neighborhood.find(18).id,
-    category: "Atividade ao ar livre",
+    category: "Parque",
     user_id: User.first.id
   },
 }
