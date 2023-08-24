@@ -40,7 +40,7 @@ class NeighborhoodsController < ApplicationController
   private
 
   def neighborhood_params
-    params.require(:neighborhood).permit(:name, :city_id)
+    params.require(:neighborhood).permit(:name, :city_id, :photo)
   end
 
   def set_neighborhood
