@@ -1,6 +1,8 @@
 <div class="grid-card-neighborhood">
   <% elements.each do |element| %>
-    <%= link_to neighborhood_path(element), class: "card-neighborhood" do %>
+    <% asset_url = element.photo.url %>
+    <% path_url = city_path(element.id) %>
+    <%= link_to neighborhood_path(element), class: "card-neighborhood", style: "background-image: url('#{asset_url}');" do %>
       <div class="card-neighborhood-content p-5">
         <%= element.name %>
       </div>

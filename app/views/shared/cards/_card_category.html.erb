@@ -1,13 +1,26 @@
 <div class="grid-card-category">
   <% elements.each do |category| %>
+    <% if category == "Café" %>
+      <% image_url = "app/assets/images/categories/cafe.jpg" %>
+    <% elsif category == "Bar" %>
+      <% image_url = "app/assets/images/categories/bar.jpg" %>
+    <% elsif category == "Parque" %>
+      <% image_url = "app/assets/images/categories/park.jpg" %>
+    <% elsif category == "Loja" %>
+      <% image_url = "app/assets/images/categories/loja.jpg" %>
+    <% elsif category == "Restaurante" %>
+      <% image_url = "app/assets/images/categories/restaurant.jpg" %>
+    <% elsif category == "Museu" %>
+      <% image_url = "app/assets/images/categories/museu.jpg" %>
+    <% end %>
     <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), 
-                                class: "card-category text-decoration-none" do %>
+                                class: "card-category text-decoration-none",
+                                style: "background-image: url('#{image_url}');" do %>
       <div class="card-category-content">
         <%= category %>
       </div>
     <% end %>
   <% end %>
 </div>
-
-<%# <% asset_url = asset_path('teste-sp.png') %>
+<%# <% asset_url = asset_path("teste-sp.png") %>
 <%# , style: "background-image: url('#{asset_url}');" %>

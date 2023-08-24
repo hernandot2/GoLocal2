@@ -5,7 +5,7 @@
 <section class="city-details mb-5">
   <span class="d-flex align-items-baseline">
     <h1 class="city-name"><%= @city.name %></h1>
-    <h2>Estado</h2>
+    <h2><% @city.state %></h2>
   </span>
   <p class="city-description">
     <%= @city.description %>
@@ -22,7 +22,7 @@
     <h3>Bairros mais procurados</h3>
     <%= link_to 'Ver todos os bairros', neighborhoods_path, class: "link-text" %>
   </div>
-  <% @elements = @neighborhoods %>
+  <% @elements = @neighborhoods.take(5) %>
   <%= render "shared/cards/card_neighborhood", elements: @elements %>
 </section>
 
