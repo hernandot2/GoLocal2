@@ -5,6 +5,7 @@ class Location < ApplicationRecord
   belongs_to :neighborhood
   has_many :events
   has_many :ratings
+  has_one_attached :photo
 
 
   def self.categories
