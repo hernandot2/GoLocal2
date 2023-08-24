@@ -1,7 +1,17 @@
 <div class="grid-card-category">
   <% elements.each do |category| %>
+      <% image_url = case category
+                   when category == "Café" then "app/assets/images/categories/cafe.jpg"
+                   when category == "Bar" then "app/assets/images/categories/bar.jpg"
+                   when category == "Parque" then "app/assets/images/categories/park.jpg"
+                   when category == "Loja" then "app/assets/images/categories/loja.jpg"
+                   when category == "Restaurante" then "app/assets/images/categories/restaurant.jpg"
+                   when category == "Museu" then "app/assets/images/categories/museu.jpg"
+                   end %>
+                   <% raise %>
     <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), 
-                                class: "card-category text-decoration-none" do %>
+                                class: "card-category text-decoration-none",
+                                style: "background-image: url('#{image_url}');" do %>
       <div class="card-category-content">
         <%= category %>
       </div>
@@ -9,5 +19,5 @@
   <% end %>
 </div>
 
-<%# <% asset_url = asset_path('teste-sp.png') %>
+<%# <% asset_url = asset_path("teste-sp.png") %>
 <%# , style: "background-image: url('#{asset_url}');" %>

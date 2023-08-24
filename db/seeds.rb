@@ -100,27 +100,32 @@ neighborhoods = {
   neighborhood11: {
     name: "Vila Madalena",
     city_id: City.find(2).id,
-    description: "Vila Madalena é um bairro boêmio em São Paulo, famoso por sua arte de rua vibrante, vida noturna eclética e comunidade artística. Suas ruas charmosas são repletas de cafés, galerias e estúdios."
+    description: "Vila Madalena é um bairro boêmio em São Paulo, famoso por sua arte de rua vibrante, vida noturna eclética e comunidade artística. Suas ruas charmosas são repletas de cafés, galerias e estúdios.",
+    photo_url: "app/assets/images/neighborhoods/vila-madalena.jpg"
   },
   neighborhood12: {
     name: "Jardins",
     city_id: City.find(2).id,
-    description: "Jardins é um bairro residencial de luxo conhecido por suas boutiques de alto padrão, restaurantes sofisticados e ruas arborizadas. É um símbolo da riqueza e do estilo cosmopolita de São Paulo."
+    description: "Jardins é um bairro residencial de luxo conhecido por suas boutiques de alto padrão, restaurantes sofisticados e ruas arborizadas. É um símbolo da riqueza e do estilo cosmopolita de São Paulo.",
+    photo_url: "app/assets/images/neighborhoods/jardins.jpg"
   },
   neighborhood13: {
     name: "Pinheiros",
     city_id: City.find(2).id,
-    description: "Pinheiros é um bairro moderno e eclético em São Paulo, famoso por sua cena cultural diversa, espaços de arte e restaurantes contemporâneos."
+    description: "Pinheiros é um bairro moderno e eclético em São Paulo, famoso por sua cena cultural diversa, espaços de arte e restaurantes contemporâneos.",
+    photo_url: "app/assets/images/neighborhoods/pinheiros.jpg"
   },
   neighborhood14: {
     name: "Bela Vista",
     city_id: City.find(2).id,
-    description: "Bela Vista é um bairro histórico e vibrante, conhecido por seu teatro, vida noturna agitada e pela famosa Feira da Liberdade, que celebra a cultura asiática."
+    description: "Bela Vista é um bairro histórico e vibrante, conhecido por seu teatro, vida noturna agitada e pela famosa Feira da Liberdade, que celebra a cultura asiática.",
+    photo_url: "app/assets/images/neighborhoods/bela-vista.jpg"
   },
   neighborhood15: {
     name: "Moema",
     city_id: City.find(2).id,
-    description: "Moema é um bairro elegante e residencial, com ruas arborizadas, lojas de grife e uma atmosfera sofisticada. É um destino popular para compras e gastronomia de alta qualidade."
+    description: "Moema é um bairro elegante e residencial, com ruas arborizadas, lojas de grife e uma atmosfera sofisticada. É um destino popular para compras e gastronomia de alta qualidade.",
+    photo_url: "app/assets/images/neighborhoods/moema.jpg"
   },
   neighborhood16: {
     name: "Itaim Bibi",
@@ -201,10 +206,18 @@ neighborhoods = {
   }
 }
 
-created_neighborhoods = {}
+
 neighborhoods.each do |key, neighborhood_data|
-  created_neighborhoods[key] = Neighborhood.create!(neighborhood_data)
+
+  neighborhood = Neighborhood.create(name: neighborhood_data[:name], city_id: neighborhood_data[:city_id], description: neighborhood_data[:description])
+  if neighborhood_data[:photo_url]
+    file = URI.open(neighborhood_data[:photo_url])
+    neighborhood.photo.attach(io: file, filename: "#{neighborhood_data[:name]}.jpg", content_type: "image/jpg")
+  end
+  neighborhood.save!
 end
+
+
 
 # Locations
 locations = {
@@ -216,7 +229,7 @@ locations = {
     name: "3 Corações Vila Madalena",
     address: "Rua Aspicuelta, 249",
     description: "Um café tradicional brasileiro com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -224,7 +237,7 @@ locations = {
     name: "Bar do Juarez",
     address: "Rua Aspicuelta, 554",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -232,7 +245,7 @@ locations = {
     name: "Bar Brahma",
     address: "Rua Aspicuelta, 227",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -240,7 +253,7 @@ locations = {
     name: "Museu da Casa Brasileira",
     address: "Av. Brigadeiro Faria Lima, 2708",
     description: "Um museu que abriga uma coleção de casas brasileiras de diferentes períodos.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -248,7 +261,7 @@ locations = {
     name: "Livraria da Vila",
     address: "Rua Fradique Coutinho, 913",
     description: "Uma livraria independente com uma seleção de livros novos e usados.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -256,7 +269,7 @@ locations = {
     name: "Parque da Aclimação",
     address: "Rua da Aclimação, 1901",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -264,7 +277,7 @@ locations = {
     name: "Beco do Batman",
     address: "Rua Gonçalo Afonso, 450",
     description: "Um beco colorido com grafites e esculturas.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -272,7 +285,7 @@ locations = {
     name: "Starbucks Vila Madalena",
     address: "Rua Augusta, 2071",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -280,7 +293,7 @@ locations = {
     name: "Bar da Dona Onça",
     address: "Rua Aspicuelta, 554",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera sofisticada.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -288,7 +301,7 @@ locations = {
     name: "Jojo Marones",
     address: "Rua Aspicuelta, 529",
     description: "Um restaurante especializado em comida brasileira com uma atmosfera informal.",
-    neighborhood_id: created_neighborhoods[:neighborhood11].id,
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -296,7 +309,7 @@ locations = {
     name: "Starbucks Jardins",
     address: "Av. Paulista, 2073",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -304,7 +317,7 @@ locations = {
     name: "Bar do Pirata",
     address: "Av. Paulista, 2899",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -312,7 +325,7 @@ locations = {
     name: "Fasano",
     address: "Av. Paulista, 1357",
     description: "Um dos hotéis mais luxuosos de São Paulo, com uma variedade de restaurantes e bares.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -320,7 +333,7 @@ locations = {
     name: "MASP",
     address: "Av. Paulista, 1578",
     description: "Um museu de arte moderna com uma coleção de obras de arte de todo o mundo.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -328,7 +341,7 @@ locations = {
     name: "Shopping Cidade Jardim",
     address: "Av. Magalhães de Castro, 12000",
     description: "Um shopping de luxo com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -336,7 +349,7 @@ locations = {
     name: "Parque Trianon",
     address: "Av. Paulista, 1700",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -344,7 +357,7 @@ locations = {
     name: "Passeio de bicicleta pela Avenida Paulista",
     address: "Av. Paulista, toda",
     description: "Um passeio pela avenida mais famosa de São Paulo, com uma vista de tirar o fôlego.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -352,7 +365,7 @@ locations = {
     name: "Le Pain Quotidien Jardins",
     address: "Rua Haddock Lobo, 1382",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -360,7 +373,7 @@ locations = {
     name: "Bar Brahma Jardins",
     address: "Av. Paulista, 227",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -368,7 +381,7 @@ locations = {
     name: "Paris 6 Jardins",
     address: "Rua Augusta, 1502",
     description: "Um restaurante francês com um ambiente elegante e sofisticado.",
-    neighborhood_id: created_neighborhoods[:neighborhood12].id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -376,7 +389,7 @@ locations = {
     name: "Starbucks Moema",
     address: "Av. Ibirapuera, 2927",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -384,7 +397,7 @@ locations = {
     name: "Bar do Juarez Moema",
     address: "Av. Ibirapuera, 2181",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -392,7 +405,7 @@ locations = {
     name: "Coco Bambu",
     address: "Av. Ibirapuera, 3727",
     description: "Um restaurante especializado em frutos do mar com um ambiente elegante.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -400,7 +413,7 @@ locations = {
     name: "Museu de Arte Contemporânea de São Paulo",
     address: "Av. Pedro Álvares Cabral, 1301",
     description: "Um museu de arte contemporânea com uma coleção de obras de arte de todo o mundo.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -408,7 +421,7 @@ locations = {
     name: "Shopping Ibirapuera",
     address: "Av. Ibirapuera, 3900",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -416,7 +429,7 @@ locations = {
     name: "Parque Ibirapuera",
     address: "Av. Pedro Álvares Cabral, s/n",
     description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -424,7 +437,7 @@ locations = {
     name: "Stand up paddle no Lago do Parque Ibirapuera",
     address: "Av. Pedro Álvares Cabral, s/n",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Ibirapuera.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -432,7 +445,7 @@ locations = {
     name: "Le Pain Quotidien Moema",
     address: "Av. Ibirapuera, 2",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-    neighborhood_id: created_neighborhoods[:neighborhood13].id,
+    neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -440,7 +453,7 @@ locations = {
     name: "Starbucks Pinheiros",
     address: "Rua dos Pinheiros, 248",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -448,7 +461,7 @@ locations = {
     name: "Bar Brahma Pinheiros",
     address: "Rua dos Pinheiros, 145",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -456,7 +469,7 @@ locations = {
     name: "Mocotó",
     address: "Rua Aspicuelta, 542",
     description: "Um restaurante especializado em comida brasileira com um ambiente informal.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -464,7 +477,7 @@ locations = {
     name: "Pinacoteca do Estado de São Paulo",
     address: "Av. Tiradentes, 615",
     description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -472,7 +485,7 @@ locations = {
     name: "Shopping Villa Lobos",
     address: "Av. das Nações Unidas, 4777",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -480,7 +493,7 @@ locations = {
     name: "Parque Villa Lobos",
     address: "Av. das Nações Unidas, 7161",
     description: "Um parque público com uma variedade de atrações, incluindo o Auditório Ibirapuera, o Museu de Arte Moderna e o Museu de Arte Contemporânea de São Paulo.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -488,7 +501,7 @@ locations = {
     name: "Stand up paddle no Lago do Parque Villa Lobos",
     address: "Av. das Nações Unidas, 7161",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Villa Lobos.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -496,7 +509,7 @@ locations = {
     name: "Le Pain Quotidien Pinheiros",
     address: "Rua dos Pinheiros, 326",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -504,7 +517,7 @@ locations = {
     name: "Bar da Esquina",
     address: "Rua dos Pinheiros, 340",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -512,7 +525,7 @@ locations = {
     name: "Jiquitaia",
     address: "Rua dos Pinheiros, 274",
     description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
-    neighborhood_id: created_neighborhoods[:neighborhood14].id,
+    neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -520,7 +533,7 @@ locations = {
     name: "Starbucks Bela Vista",
     address: "Rua Augusta, 1059",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -528,7 +541,7 @@ locations = {
     name: "Bar do Luiz",
     address: "Rua Augusta, 1246",
     description: "Um bar tradicional da Bela Vista com uma atmosfera descontraída.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -536,7 +549,7 @@ locations = {
     name: "San Gennaro",
     address: "Rua Treze de Maio, 171",
     description: "Um restaurante italiano com um ambiente familiar.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -544,7 +557,7 @@ locations = {
     name: "Edifício Itália",
     address: "Av. Ipiranga, 344",
     description: "Um edifício de 36 andares com uma vista panorâmica da cidade.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -552,7 +565,7 @@ locations = {
     name: "Shopping Pátio Paulista",
     address: "Rua Augusta, 1261",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -560,7 +573,7 @@ locations = {
     name: "Parque Augusta",
     address: "Rua Augusta, 1500",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -568,7 +581,7 @@ locations = {
     name: "Corrida no Parque Augusta",
     address: "Rua Augusta, 1500",
     description: "Uma atividade ao ar livre para se exercitar e aproveitar a natureza no Parque Augusta.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -576,7 +589,7 @@ locations = {
     name: "Le Pain Quotidien Bela Vista",
     address: "Rua Augusta, 1875",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -584,7 +597,7 @@ locations = {
     name: "Bar Brahma Bela Vista",
     address: "Av. Ipiranga, 344",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -592,7 +605,7 @@ locations = {
     name: "Bráz Trattoria",
     address: "Rua Treze de Maio, 112",
     description: "Uma trattoria italiana com um ambiente elegante.",
-    neighborhood_id: created_neighborhoods[:neighborhood15].id,
+    neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -600,7 +613,7 @@ locations = {
     name: "Le Pain Quotidien",
     address: "Rua Jerônimo da Veiga, 149",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -608,7 +621,7 @@ locations = {
     name: "SubAstor",
     address: "Rua Oscar Freire, 414",
     description: "Um bar e restaurante com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -616,7 +629,7 @@ locations = {
     name: "D.O.M.",
     address: "Rua Barão de Capanema, 549",
     description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -624,7 +637,7 @@ locations = {
     name: "Museu de Arte de São Paulo (MASP)",
     address: "Avenida Paulista, 1578",
     description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -632,7 +645,7 @@ locations = {
     name: "Daslu",
     address: "Rua Oscar Freire, 855",
     description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -640,7 +653,7 @@ locations = {
     name: "Parque do Ibirapuera",
     address: "Avenida Pedro Álvares Cabral, s/n",
     description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -648,7 +661,7 @@ locations = {
     name: "Parque Burle Marx",
     address: "Rua Medeiros de Albuquerque, 450",
     description: "Um parque público com uma variedade de jardins e esculturas.",
-    neighborhood_id: created_neighborhoods[:neighborhood16].id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -656,7 +669,7 @@ locations = {
     name: "Café Floresta",
     address: "Rua Galvão Bueno, 848",
     description: "Um café tradicional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -664,7 +677,7 @@ locations = {
     name: "Bar do Tatu",
     address: "Rua Galvão Bueno, 786",
     description: "Um bar tradicional com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -672,7 +685,7 @@ locations = {
     name: "Liberdade 99",
     address: "Rua Liberdade, 99",
     description: "Um restaurante especializado em comida japonesa.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -680,7 +693,7 @@ locations = {
     name: "Museu da Imigração Japonesa do Brasil",
     address: "Rua Galvão Bueno, 522",
     description: "Um museu dedicado à história da imigração japonesa no Brasil.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -688,7 +701,7 @@ locations = {
     name: "Loja Daiso",
     address: "Rua Galvão Bueno, 1068",
     description: "Uma loja de departamento com uma variedade de produtos japoneses.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -696,7 +709,7 @@ locations = {
     name: "Praça da Liberdade",
     address: "Rua Liberdade, 120",
     description: "Uma praça pública com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood17].id,
+    neighborhood_id: Neighborhood.find(17).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -704,7 +717,7 @@ locations = {
     name: "Starbucks",
     address: "Rua Oscar Freire, 1479",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -712,7 +725,7 @@ locations = {
     name: "Bar Brahma",
     address: "Rua São Luís, 183",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -720,7 +733,7 @@ locations = {
     name: "Aprazível",
     address: "Rua Horácio Lafer, 129",
     description: "Um restaurante com uma vista panorâmica da cidade.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -728,7 +741,7 @@ locations = {
     name: "Museu de Arte Contemporânea de São Paulo (MAC)",
     address: "Avenida Paulista, 1500",
     description: "Um museu de arte contemporânea com uma coleção de obras de todo o mundo.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -736,7 +749,7 @@ locations = {
     name: "Shopping JK Iguatemi",
     address: "Avenida Juscelino Kubitschek, 2041",
     description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -744,7 +757,7 @@ locations = {
     name: "Parque Ibirapuera",
     address: "Avenida Pedro Álvares Cabral, s/n",
     description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -752,7 +765,7 @@ locations = {
     name: "Ioga no Parque Ibirapuera",
     address: "Avenida Pedro Álvares Cabral, s/n",
     description: "Uma atividade ao ar livre para relaxar e se exercitar no Parque Ibirapuera.",
-    neighborhood_id: created_neighborhoods[:neighborhood19].id,
+    neighborhood_id: Neighborhood.find(19).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },
@@ -760,7 +773,7 @@ locations = {
     name: "Café Santa Clara",
     address: "Rua Conselheiro Moreira de Barros, 1823",
     description: "Um café tradicional com uma variedade de bebidas e comidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Café",
     user_id: User.first.id
   },
@@ -768,7 +781,7 @@ locations = {
     name: "Bar São Bento",
     address: "Rua São Bento, 416",
     description: "Um bar tradicional com uma variedade de pratos e bebidas.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Bar",
     user_id: User.first.id
   },
@@ -776,7 +789,7 @@ locations = {
     name: "Empório Santa Maria",
     address: "Rua Conselheiro Moreira de Barros, 2424",
     description: "Um restaurante especializado em comida brasileira.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Restaurante",
     user_id: User.first.id
   },
@@ -784,7 +797,7 @@ locations = {
     name: "Pinacoteca de São Paulo",
     address: "Praça da Luz, 2",
     description: "Um museu de arte com uma coleção de obras de arte brasileiras.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Museu",
     user_id: User.first.id
   },
@@ -792,7 +805,7 @@ locations = {
     name: "Rua 25 de Março",
     address: "Rua 25 de Março, s/n",
     description: "Uma rua comercial com uma variedade de lojas e vendedores ambulantes.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Loja",
     user_id: User.first.id
   },
@@ -800,7 +813,7 @@ locations = {
     name: "Parque da Luz",
     address: "Praça da Luz, s/n",
     description: "Um parque público com uma variedade de atrações, incluindo a Pinacoteca de São Paulo e o Museu da Língua Portuguesa.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Parque",
     user_id: User.first.id
   },
@@ -808,7 +821,7 @@ locations = {
     name: "Passeio de bicicleta pelo Parque da Luz",
     address: "Praça da Luz, s/n",
     description: "Uma atividade ao ar livre para explorar o Parque da Luz.",
-    neighborhood_id: created_neighborhoods[:neighborhood18].id,
+    neighborhood_id: Neighborhood.find(18).id,
     category: "Atividade ao ar livre",
     user_id: User.first.id
   },

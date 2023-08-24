@@ -22,7 +22,7 @@
     <h3>Bairros mais procurados</h3>
     <%= link_to 'Ver todos os bairros', neighborhoods_path, class: "link-text" %>
   </div>
-  <% @elements = @neighborhoods %>
+  <% @elements = @neighborhoods.take(5) %>
   <%= render "shared/cards/card_neighborhood", elements: @elements %>
 </section>
 
