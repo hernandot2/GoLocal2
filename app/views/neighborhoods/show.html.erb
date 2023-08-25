@@ -2,14 +2,26 @@
 <%= render "banner" %>
 </section>
 
-<section class="nieghborhood-details">
+<section class="neighborhood-details mb-5">
   <span class="d-flex align-items-baseline">
-    <h1 class="nieghborhood-name"><%= @neighborhood.name %></h1>
-    <h2><%= city_name = City.find(@neighborhood.city_id).name %></h2>
+    <h1 class="neighborhood-name"><%= @neighborhood.name %></h1>
+    <h2><%= @neighborhood.city.name %></h2>
   </span>
+  <p class="neighborhood-description">
+    <%= @neighborhood.description %>
+  </p>
 </section>
 
-<section>
-  <h3> O que gostaria de fazer? </h3>
+<section class="mb-5">
+  <h3> O que gostaria de fazer </h3>
   <%= render 'shared/cards/card_category', elements: Location.categories %>
+</section>
+
+<section id="neighborhood-neighborhood" class="mb-5">
+  <div class="d-flex justify-content-between align-items-baseline">
+    <h3>Locais mais procurados</h3>
+    <%= link_to 'Ver todos os locais', locations_path, class: "link-text" %>
+  </div>
+  <% @elements = @locations.take(5) %>
+  <%= render "shared/cards/card_neighborhood", elements: @elements %>
 </section>

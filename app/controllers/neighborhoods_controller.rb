@@ -6,6 +6,7 @@ class NeighborhoodsController < ApplicationController
   end
 
   def show
+    @locations = @neighborhood.locations
   end
 
   def new
