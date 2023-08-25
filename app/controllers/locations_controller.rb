@@ -2,16 +2,16 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   def index
-    category = params[:category]
-    city_id = params[:city]
-    neighborhood_id = params[:neighborhood]
-    if category.present?
-      if city_id.present?
-        @locations = Location.joins(neighborhood: :city).where(category: category).where("cities.id = ?", city_id)
-      elsif neighborhood_id.present?
-        @locations = Location.where(category: category).where(neighborhood_id: neighborhood_id)
+    @category = params[:category]
+    @city_id = params[:city]
+    @neighborhood_id = params[:neighborhood]
+    if @category.present?
+      if @city_id.present?
+        @locations = Location.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
+      elsif @neighborhood_id.present?
+        @locations = Location.where(category: @category).where(neighborhood_id: @neighborhood_id)
       else
-        @locations = Location.where(category: category)
+        @locations = Location.where(category: @category)
       end
     else
       @locations = Location.all

@@ -1,0 +1,19 @@
+<div class="grid-card-event">
+  <% @locations.each do |location| %>
+    <%= link_to location_path(location), class: "card-event" do %>
+      <div class="card-event-content">
+        <div class="card-event-img">
+      </div>
+        <div class="card-event-title clamp-2">
+          <h4><%= location.name %></h4>
+        </div>
+        <div class="card-event-description clamp-2">
+          <%= location.description %>
+        </div>
+        <div class="card-event-description clamp-2">
+          <%= location.address %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
