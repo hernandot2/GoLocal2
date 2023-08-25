@@ -1,1 +1,19 @@
-<h1>Locations#show</h1>
+
+<section>
+  <%= render "banner" %>
+</section>
+
+<section class="neighborhood-details">
+  <div class="d-flex align-items-baseline">
+    <h1 class="neighborhood-name"><%= @neighborhood.name %></h1>
+    <h2><%= location_name = Location.find(@location.neighborhood_id).name %></h2>
+  </div>
+  <div>
+    <h4><%= location_address = Location.find(@location.neighborhood_id).address %></h4>
+  </div>
+</section>
+
+<section>
+  <p> <%= location_description = Location.find(@location.neighborhood_id).description %></p>
+
+</section>

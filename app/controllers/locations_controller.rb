@@ -19,6 +19,8 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @location = Location.find(params[:id])
+    @neighborhood = @location.neighborhood
   end
 
   def new
