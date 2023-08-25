@@ -23,5 +23,5 @@
     <%= link_to 'Ver todos os locais', locations_path, class: "link-text" %>
   </div>
   <% @elements = @locations.take(5) %>
-  <%= render "shared/cards/card_neighborhood", elements: @elements %>
+  <%= render "shared/cards/card_location", elements: @elements %>
 </section>
