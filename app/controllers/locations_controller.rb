@@ -5,6 +5,7 @@ class LocationsController < ApplicationController
     @category = params[:category]
     @city_id = params[:city]
     @neighborhood_id = params[:neighborhood]
+    # @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
     if @category.present?
       if @city_id.present?
         @locations = Location.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
@@ -19,7 +20,6 @@ class LocationsController < ApplicationController
   end
 
   def show
-
     @neighborhood = @location.neighborhood
   end
 
