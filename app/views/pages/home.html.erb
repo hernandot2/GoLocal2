@@ -1,13 +1,19 @@
-<section id="banner-home">
-  <%= render "banner" %>
-</section>
+<div data-controller="universal-search">
+  <section id="banner-home">
+    <%= render "banner" %>
+  </section>
 
-<section id="city-suggest">
-  <h3>Vai viajar?</h3>
-    <% @elements = @cities.take(3) %>
-    <%= render "shared/cards/card_city", elements: @elements %>
-</section>
-
+  <section id="city-suggest">
+    <h3>Vai viajar?</h3>
+    <div>
+      <div data-universal-search-target="results"></div>
+    </div>
+     <div>
+      <% @elements = @cities.take(3) %>
+      <%= render "shared/cards/card_city", elements: @elements %>
+      </div>
+  </section>
+</div>
 <%# <section id="banner-call">
   <div class="banner-home">
     <h1>BANNER</h1>
