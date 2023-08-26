@@ -27,7 +27,6 @@ export default class extends Controller {
     this.markersValue.forEach((markerData) => {
       const popup = new mapboxgl.Popup().setHTML(markerData.info_window_html);
       const element = document.createElement('div');
-
          element.innerHTML = markerData.marker_html
       const mapboxMarker = new mapboxgl.Marker(element)
         .setLngLat([markerData.lng, markerData.lat])
