@@ -1,0 +1,33 @@
+.grid-card-neighborhood {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+
+}
+
+.card-neighborhood {
+  display: flex;
+  width: 240px;
+  height: 350px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: $border-radius;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 65.10%, rgba(0, 0, 0, 0.32) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+.card-neighborhood-content {
+  color: $neutral-01;
+  display: flex;
+  text-align: center;
+  font-size: $heading-md;
+  font-weight: $font-bold;
+  flex-wrap: wrap;
+  margin: 0;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
+}

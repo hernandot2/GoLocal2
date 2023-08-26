@@ -9,3 +9,5 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+import UniversalSearchController from "./universal_search_controller"
+application.register("universal-search", UniversalSearchController)

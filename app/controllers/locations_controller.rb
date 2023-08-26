@@ -1,22 +1,37 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
-    def index
-      @locations = Location.all
-      @markers = @locations.geocoded.map do |location|
-        {
-          id: location.id,
-          lat: location.latitude,
-          lng: location.longitude,
-          info_window_html: render_to_string(partial: "locations/info_window", locals: { location: location }),
-          marker_html: render_to_string(partial: "locations/marker")
-        }
+  def index
+    @category = params[:category]
+    @city_id = params[:city]
+    @neighborhood_id = params[:neighborhood]
+    if @category.present?
+      if @city_id.present?
+        @locations = Location.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
+      elsif @neighborhood_id.present?
+        @locations = Location.where(category: @category).where(neighborhood_id: @neighborhood_id)
+      else
+        @locations = Location.where(category: @category)
       end
+    else
+      @locations = Location.all
     end
-
+    @markers = @locations.geocoded.map do |location|
+      {
+        id: location.id,
+        lat: location.latitude,
+        lng: location.longitude,
+        info_window_html: render_to_string(partial: "locations/info_window", locals: { location: location }),
+        marker_html: render_to_string(partial: "locations/marker")
+      }
+    end
+  end
 
   def show
+
+    @neighborhood = @location.neighborhood
   end
+
 
   def new
     @location = Location.new
@@ -51,7 +66,7 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:name, :address, :description, :category)
+    params.require(:location).permit(:name, :address, :description, :category, :photo)
   end
 
   def set_location

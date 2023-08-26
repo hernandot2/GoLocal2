@@ -1,13 +1,20 @@
-<%# <div card-sq-lg>
-<h1>São Paulo</h1>
-</div>
+<section id="banner-home">
+  <%= render "banner" %>
+</section>
 
-<div card-sq-lg>
-<h1>Belo Horizonte</h1>
-</div> %>
+<section id="city-suggest">
+  <h3>Vai viajar?</h3>
+    <% @elements = @cities.take(3) %>
+    <%= render "shared/cards/card_city", elements: @elements %>
+</section>
 
-<% @cities.each do |city| %>
-  <div card-sq-lg>
-    <h1><%= link_to city.name, city_path(city.id) %></h1>
+<%# <section id="banner-call">
+  <div class="banner-home">
+    <h1>BANNER</h1>
   </div>
-<% end %>
+</section> %>
+
+<section>
+  <h3>O que gostaria de fazer?</h3>
+  <%= render 'shared/cards/card_category', elements: Location.categories %>
+</section>

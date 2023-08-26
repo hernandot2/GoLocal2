@@ -1,0 +1,26 @@
+<div class="grid-card-category">
+  <% elements.each do |category| %>
+    <% if category == "Café" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/cafe_jyqnjk.jpg" %>
+    <% elsif category == "Bar" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/bar_fpzyxr.jpg" %>
+    <% elsif category == "Parque" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/park_b4uj1i.jpg" %>
+    <% elsif category == "Loja" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/loja_so6q69.jpg" %>
+    <% elsif category == "Restaurante" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/restaurant_ifm8ds.jpg" %>
+    <% elsif category == "Museu" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/museu_k6bxkl.jpg" %>
+    <% end %>
+    <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), 
+                                class: "card-category text-decoration-none",
+                                style: "background-image: url('#{image_url}');" do %>
+      <div class="card-category-content">
+        <%= category %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%# <% asset_url = asset_path("teste-sp.png") %>
+<%# , style: "background-image: url('#{asset_url}');" %>

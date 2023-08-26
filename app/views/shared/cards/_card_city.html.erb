@@ -1,0 +1,11 @@
+<div class="grid-card-city">
+  <% elements.each do |element| %>
+    <% asset_url = element.photo.url %>
+    <% path_url = city_path(element.id) %>
+    <%= link_to path_url, class: "card-city", style: "background-image: url('#{asset_url}');"  do %>
+      <div class="card-city-content">
+        <%= element.name %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

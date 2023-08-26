@@ -1,0 +1,71 @@
+.grid-card-event {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+.card-event {
+  display: flex;
+  border: 1px $neutral-03 solid;
+  flex-direction: column;
+  border-radius: $border-radius;
+  min-height: 320px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card-event-content {
+  color: $neutral-01;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-event-img {
+  overflow: hidden;
+  height: 140px;
+  width: inherit;
+  background-color: $neutral-03;
+}
+
+.card-event-img img {
+  object-position: bottom;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-event-date {
+  color: $primary-06;
+  font-size: $text-lg;
+  font-weight: $font-semibold;
+}
+
+.card-event-description,
+.clamp-2 {
+  color: $neutral-07;
+  font-size: $text-lg;
+  font-weight: $font-medium;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+  max-height: 3em;
+  -webkit-line-clamp: 2;
+}
+
+.card-event-title.clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.25;
+  height: 3em;
+  -webkit-line-clamp: 2;
+}
