@@ -1,5 +1,7 @@
 class Location < ApplicationRecord
   include PgSearch::Model
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   pg_search_scope :search, against: [:name, :description]
   belongs_to :user
   belongs_to :neighborhood
