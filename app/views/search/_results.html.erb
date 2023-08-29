@@ -1,19 +1,32 @@
-<h4><%= link_to "Locais", locations_path %></h4>
-<% @locations.each do |location| %>
-  <%= link_to location.name, location %><br>
-<% end %>
-
-<h4><%= link_to "Eventos", events_path %></h4>
-<% @events.each do |event| %>
-  <%= link_to event.title, event %><br>
-<% end %>
-
-<h4><%= link_to "Cidades", cities_path %></h4>
-<% @cities.each do |city| %>
-  <%= link_to city.name, city %><br>
-<% end %>
-
-<h4><%= link_to "Bairros", neighborhoods_path %></h4>
-<% @neighborhoods.each do |neighborhood| %>
-  <%= link_to neighborhood.name, neighborhood %><br>
-<% end %>
+<div class="search-results">
+  <div class="left-column">
+    <h4>Cidades</h4>
+    <div class="cities-search">
+      <% @cities.each do |city| %>
+        <%= link_to city.name, city, class: "tag-link" %>
+      <% end %>
+    </div>
+    <h4>Bairros</h4>
+    <div class="neighborhoods-search">
+      <% @neighborhoods.each do |neighborhood| %>
+        <%= link_to neighborhood.name, neighborhood, class: "tag-link" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="middle-column">
+    <h4>Eventos</h4>
+    <div class="events-search">
+      <% @events.each do |event| %>
+        <%= link_to event.title, event, class: "tag-link" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="right-column">
+    <h4>Locais</h4>
+    <div class="locations-search">
+      <% @locations.each do |location| %>
+        <%= link_to location.name, location, class: "tag-link" %>
+      <% end %>
+    </div>
+  </div>
+</div>

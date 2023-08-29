@@ -1,0 +1,29 @@
+.tag-link {
+text-decoration: none;
+font-size: 15px;
+background-color: gray;
+color:white;
+padding: 10px 20px;
+border-radius: 15px;
+}
+
+.tag-container{
+  line-height: 46px;
+  margin: 0;
+
+}
+
+.search-results {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column, .middle-column, .right-column {
+  width: 30%;
+}
+
+.cities-search, .neighborhoods-search, .events-search, .locations-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; // Espaçamento entre as tags
+}

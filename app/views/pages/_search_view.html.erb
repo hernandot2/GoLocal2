@@ -1,4 +1,4 @@
-<div data-controller="universal-search">
+<!--<div data-controller="universal-search">-->
   <%= form_with url: search_index_path, method: :get, html: { data: { universal_search_target: "form" } } do |f| %>
     <%= f.text_field :query,
                     id: "search_field",
@@ -12,5 +12,5 @@
   <% end %>
   <div id="search_labels" data-universal-search-target="labels" style="display: none;">
   </div>
-  <div data-universal-search-target="results"></div>
-</div>
+ <!-- <div data-universal-search-target="results"></div>-->
+<!--</div>-->
