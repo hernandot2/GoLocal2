@@ -580,14 +580,14 @@ locations = {
     category: "Parque",
     user_id: User.first.id
   },
-  locationsp45: {
-    name: "Corrida no Parque Augusta",
-    address: "Rua Augusta, 1500",
-    description: "Uma atividade ao ar livre para se exercitar e aproveitar a natureza no Parque Augusta.",
-    neighborhood_id: Neighborhood.find(15).id,
-    category: "Parque",
-    user_id: User.first.id
-  },
+  # locationsp45: {
+  #   name: "Corrida no Parque Augusta",
+  #   address: "Rua Augusta, 1500",
+  #   description: "Uma atividade ao ar livre para se exercitar e aproveitar a natureza no Parque Augusta.",
+  #   neighborhood_id: Neighborhood.find(15).id,
+  #   category: "Parque",
+  #   user_id: User.first.id
+  # },
   locationsp46: {
     name: "Le Pain Quotidien Bela Vista",
     address: "Rua Augusta, 1875",
