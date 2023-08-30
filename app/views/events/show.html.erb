@@ -1,1 +1,14 @@
-<h1>Um evento</h1>
+<section>
+  <span class="d-flex align-items-baseline">
+    <h1><%= @event.title %></h1>
+    <h2><%= @event.location.name %></h2>
+  </span>
+  <h3><%= @event.date.strftime("%A, %d %B, %Y - %H:%M") %></h3>
+  <p>
+    <%= @event.description %>
+  </p>
+  <% if @event.user == current_user %>
+    <%= link_to "Editar evento", edit_event_path, class: "btn-main" %>
+  <% end %>
+  <%= link_to "Todos os eventos", events_path, class: "btn-main" %>
+</section>

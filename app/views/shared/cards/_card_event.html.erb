@@ -1,5 +1,5 @@
 <div class="grid-card-event">
-  <% events.each do |event| %>
+  <% @events.each do |event| %>
     <%= link_to event_path(event), class: "card-event" do %>
       <div class="card-event-img">
         <%= image_tag asset_path('teste-sp.png') %>
