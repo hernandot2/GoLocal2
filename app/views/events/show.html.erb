@@ -3,16 +3,18 @@
     <h1><%= @event.title %></h1>
     <h2><%= @event.location.name %></h2>
   </span>
-  <h3><%= @event.date.strftime("%A, %d %B, %Y - %H:%M") %></h3>
-  <p>
-    <%= @event.description %>
-  </p>
-  <% if @event.user == current_user %>
-    <%= link_to "Editar evento", edit_event_path, class: "btn-main" %>
-    <%= link_to "Excluir evento", event_path(@event), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse evento?" }, class: "btn-sub" %>
-  <% end %>
-  <div class="mt-4">
-    <%= link_to "Todos os eventos", events_path, class: "btn-main" %>
+  <h4><%= @event.date.strftime("%A, %d %B, %Y - %H:%M") %></h4>
+  <p class="mt-2"><%= @event.description %></p>
+  <div class="d-flex justify-content-between mt-3">
+    <div>
+      <% if @event.user == current_user %>
+        <%= link_to "Editar evento", edit_event_path, class: "btn-main" %>
+        <%= link_to "Excluir evento", event_path(@event), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse evento?" }, class: "btn-sub" %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "Todos os eventos", events_path, class: "btn-main" %>
+    </div>
   </div>
 
 </section>

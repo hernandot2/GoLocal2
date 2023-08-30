@@ -4,7 +4,7 @@
     <h2><%= @neighborhood.name %></h2>
   </span>
   <h4><%= @location.address %></h4>
-  <p><%= @location.description %></p>
+  <p class="mt-2"><%= @location.description %></p>
   <div class="d-flex justify-content-between mt-3">
     <div>
       <% if @location.user == current_user %>
