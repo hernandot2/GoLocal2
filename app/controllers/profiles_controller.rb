@@ -2,8 +2,8 @@ class ProfilesController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update]
 
   def show
-    @user_locations = @user.favorites
-    @user_events = @user.events
+    @locations = @user.locations
+    @events = @user.events
   end
 
   def edit

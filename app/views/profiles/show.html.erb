@@ -1,6 +1,30 @@
 <h1>Profile#Show</h1>
-
-<h2>Meus favoritos</h2>
-
 <h2>Meus eventos</h2>
+  <% if @user == current_user %>
+    <% if current_user.events.empty? %>
+      <p class="mb-5">Você ainda não cadastrou nenhum evento</p>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_event" %>
+      </div>
+    <% end %>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_event" %>
+      </div>
+  <% end %>
+<h2>Meus locais</h2>
+  <% if @user == current_user %>
+    <% if current_user.locations.empty? %>
+      <p class="mb-5">Você ainda não cadastrou nenhum local</p>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_location" %>
+      </div>
+    <% end %>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_location" %>
+      </div>
+  <% end %>
 <%= link_to "Adicionar um evento", new_event_path %>
