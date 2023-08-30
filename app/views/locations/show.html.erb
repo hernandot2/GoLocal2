@@ -4,10 +4,8 @@
     <h2><%= @neighborhood.name %></h2>
   </span>
   <h4><%= @location.address %></h4>
-  <p>
-    <p><%= @location.description %></p>
-  </p>
-  <div class="d-flex justify-content-between">
+  <p><%= @location.description %></p>
+  <div class="d-flex justify-content-between mt-3">
     <div>
       <% if @location.user == current_user %>
         <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
