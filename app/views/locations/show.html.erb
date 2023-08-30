@@ -1,16 +1,14 @@
-<%#
 <section>
-  <%= render "banner" %>
-<%# </section>  %>
-
-<div class="d-flex align-items-baseline">
-  <h1><%= @location.name %></h1>
-
-  <h2><%= @neighborhood.name %></h2>
-</div>
-<div>
+  <span class="d-flex align-items-baseline">
+    <h1><%= @location.name %></h1>
+    <h2><%= @neighborhood.name %></h2>
+  </span>
   <h4><%= @location.address %></h4>
-</div>
- <div>
- <p><%= @location.description %></p>
- </div>
+  <p>
+    <p><%= @location.description %></p>
+  </p>
+  <% if @location.user == current_user %>
+    <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
+  <% end %>
+  <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+</section>
