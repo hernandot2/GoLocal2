@@ -1,5 +1,9 @@
-<h1>Profile#Show</h1>
-<h2>Meus eventos</h2>
+<h1 class="mb-3">Perfil de <%= current_user.name %></h1>
+<section>
+  <div class="d-flex justify-content-between">
+    <h3>Meus eventos</h3>
+    <%= link_to "Adicionar um evento", new_event_path, class: "btn-main" %>
+  </div>
   <% if @user == current_user %>
     <% if current_user.events.empty? %>
       <p class="mb-5">Você ainda não cadastrou nenhum evento</p>
@@ -8,12 +12,17 @@
         <%= render "shared/cards/card_event" %>
       </div>
     <% end %>
-    <% else %>
-      <div>
-        <%= render "shared/cards/card_event" %>
-      </div>
+  <% else %>
+    <div>
+      <%= render "shared/cards/card_event" %>
+    </div>
   <% end %>
-<h2>Meus locais</h2>
+</section>
+<section>
+  <div class="d-flex justify-content-between">
+    <h3>Meus locais</h3>
+    <%= link_to "Adicionar um local", new_location_path, class: "btn-main" %>
+  </div>
   <% if @user == current_user %>
     <% if current_user.locations.empty? %>
       <p class="mb-5">Você ainda não cadastrou nenhum local</p>
@@ -22,9 +31,9 @@
         <%= render "shared/cards/card_location" %>
       </div>
     <% end %>
-    <% else %>
-      <div>
-        <%= render "shared/cards/card_location" %>
-      </div>
+  <% else %>
+    <div>
+      <%= render "shared/cards/card_location" %>
+    </div>
   <% end %>
-<%= link_to "Adicionar um evento", new_event_path, class: "btn-main" %>
+</section>
