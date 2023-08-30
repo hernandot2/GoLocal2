@@ -9,6 +9,9 @@
   </p>
   <% if @location.user == current_user %>
     <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
+    <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
   <% end %>
-  <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+  <div class="mt-4">
+    <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+  </div>
 </section>
