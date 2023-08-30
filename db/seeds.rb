@@ -857,3 +857,118 @@ end
 #     user_id: User.first.id
 #   }
 # }
+# Events
+events = {
+  event1: {
+    title: "Festival de Arte Urbana Vila Colorida",
+    date: Date.new(2023, 9, 9),
+    description: "Um festival de arte urbana que transformará as ruas da Vila Madalena em uma galeria a céu aberto. Artistas locais e internacionais criarão murais incríveis.",
+    location_id: created_locations[:location1].id,
+    user_id: User.first.id
+  },
+  event2: {
+    title: "Concerto ao Pôr do Sol no Parque das Artes",
+    date: Date.new(2024, 2, 25),
+    description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
+    location_id: created_locations[:location2].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event3: {
+    title: "Feira de Artesanato da Vila",
+    date: Date.new(2024, 2, 25),
+    description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event4: {
+    title: "Exposição de Fotografia Cenas Urbanas",
+    date: Date.new(2024, 2, 25),
+    description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
+    location_id: created_locations[:location4].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event5: {
+    title: "Noite de Comédia Stand-up no Bar do Riso",
+    date: Date.new(2024, 2, 25),
+    description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event6: {
+    title: "Workshop de Yoga ao Ar Livre",
+    date: Date.new(2024, 2, 25),
+    description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event7: {
+    title: "Exposição de Arte Contemporânea Visões Abstratas",
+    date: Date.new(2024, 2, 25),
+    description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event8: {
+    title: "Festa da Cultura Brasileira",
+    date: Date.new(2024, 2, 25),
+    description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event9: {
+    title: "Passeio de Bicicleta pela Vila Madalena",
+    date: Date.new(2024, 2, 25),
+    description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
+    location_id: created_locations[:location1].id,
+    user_id: User.first.id
+  },
+  event10: {
+    title: "Noite de Jazz no Café Harmonia",
+    date: Date.new(2024, 2, 25),
+    description: "Relaxe ao som suave do jazz em um dos cafés mais aconchegantes da Vila.",
+    location_id: created_locations[:location2].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event11: {
+    title: "Noite de Karaokê no Bar da Karla",
+    date: Date.new(2024, 2, 25),
+    description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event12: {
+    title: "Exposição de Esculturas no Espaço Criativo",
+    date: Date.new(2024, 2, 25),
+    description: "Admire esculturas impressionantes criadas por artistas locais.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event13: {
+    title: "Festival de Food Trucks na Rua das Delícias",
+    date: Date.new(2024, 2, 25),
+    description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event14: {
+    title: "Festival de Jazz na Rua dos Artistas",
+    date: Date.new(2024, 2, 25),
+    description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event15: {
+    title: "Noite de MPB no Bar do Zé",
+    date: Date.new(2024, 2, 25),
+    description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+  event16: {
+    title: "Sessão de Cinema ao Ar Livre no Beco Cultural",
+    date: Date.new(2024, 2, 25),
+    description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
+    location_id: created_locations[:location3].id,  # Usando location1 porque location2 não foi definido
+    user_id: User.first.id
+  },
+}
