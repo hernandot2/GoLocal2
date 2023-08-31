@@ -320,114 +320,114 @@ locations = {
     user_id: User.first.id,
     photo_url: "app/assets/images/locations/jojo-maronez.jpg"
   },
-#  locationsp11: {
-#  #  name: "Starbucks Jardins",
-#  #  address: "Av. Paulista, 1499, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/starbucks-jardins.jpg"
-#  },
-#  locationsp12: {
-#  #  name: "Bar do Pirata",
-#  #  address: "Av. Paulista, 2899, São Paulo, SP",
-#  #  description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-do-pirata.jpg"
-#  },
-#  locationsp13: {
-#  #  name: "Fasano",
-#  #  address: "Av. Paulista, 1357, São Paulo, SP",
-#  #  description: "Um dos hotéis mais luxuosos de São Paulo, com uma variedade de restaurantes e bares.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/hotel-fasano.jpg"
-#  },
-#  locationsp14: {
-#  #  name: "MASP",
-#  #  address: "Av. Paulista, 1578, São Paulo, SP",
-#  #  description: "Um museu de arte moderna com uma coleção de obras de arte de todo o mundo.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/masp.jpg"
-#  },
-#  locationsp15: {
-#  #  name: "Shopping Cidade Jardim, São Paulo, SP",
-#  #  address: "Av. Magalhães de Castro, 12000",
-#  #  description: "Um shopping de luxo com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/shopping-cidade-jardim.jpg"
-#  },
-#  locationsp16: {
-#  #  name: "Parque Trianon",
-#  #  address: "Av. Paulista, 1700, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de árvores, flores e animais.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-trianon.jpg"
-#  },
-#  locationsp17: {
-#  #  name: "Passeio de bicicleta pela Avenida Paulista",
-#  #  address: "Av. Paulista, São Paulo, SP",
-#  #  description: "Um passeio pela avenida mais famosa de São Paulo, com uma vista de tirar o fôlego.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bike-av-paulista.jpg"
-#  },
-#  locationsp18: {
-#  #  name: "Le Pain Quotidien Jardins",
-#  #  address: "Rua Haddock Lobo, 1382, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/le-pain-jardins.jpg"
-#  },
-#  locationsp19: {
-#  #  name: "Bar Brahma Jardins",
-#  #  address: "Av. Paulista, 227, São Paulo, SP",
-#  #  description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-brahma.jpg"
-#  },
-#  locationsp20: {
-#  #  name: "Paris 6 Jardins",
-#  #  address: "Rua Augusta, 1502, São Paulo, SP",
-#  #  description: "Um restaurante francês com um ambiente elegante e sofisticado.",
-#  #  neighborhood_id: Neighborhood.find(12).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/paris6-jardins.jpg"
-#  },
-#  locationsp21: {
-#  #  name: "Starbucks Moema",
-#  #  address: "Av. Ibirapuera, 2927, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/starbucks-moema.jpg"
-#  },
-#  locationsp22: {
-#  #  name: "Bar do Juarez Moema",
-#  #  address: "Av. Ibirapuera, 2181, São Paulo, SP",
-#  #  description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
-#  },
+  locationsp11: {
+    name: "Starbucks Jardins",
+    address: "Av. Paulista, 1499, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/starbucks-jardins.jpg"
+  },
+  locationsp12: {
+    name: "Bar do Pirata",
+    address: "Av. Paulista, 2899, São Paulo, SP",
+    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-do-pirata.jpg"
+  },
+  locationsp13: {
+    name: "Fasano",
+    address: "Av. Paulista, 1357, São Paulo, SP",
+    description: "Um dos hotéis mais luxuosos de São Paulo, com uma variedade de restaurantes e bares.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/hotel-fasano.jpg"
+  },
+  locationsp14: {
+    name: "MASP",
+    address: "Av. Paulista, 1578, São Paulo, SP",
+    description: "Um museu de arte moderna com uma coleção de obras de arte de todo o mundo.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Museu",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/masp.jpg"
+  },
+  locationsp15: {
+    name: "Shopping Cidade Jardim, São Paulo, SP",
+    address: "Av. Magalhães de Castro, 12000",
+    description: "Um shopping de luxo com uma variedade de lojas e restaurantes.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Loja",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/shopping-cidade-jardim.jpg"
+  },
+  locationsp16: {
+    name: "Parque Trianon",
+    address: "Av. Paulista, 1700, São Paulo, SP",
+    description: "Um parque público com uma variedade de árvores, flores e animais.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/parque-trianon.jpg"
+  },
+  locationsp17: {
+    name: "Passeio de bicicleta pela Avenida Paulista",
+    address: "Av. Paulista, São Paulo, SP",
+    description: "Um passeio pela avenida mais famosa de São Paulo, com uma vista de tirar o fôlego.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bike-av-paulista.jpg"
+  },
+  locationsp18: {
+    name: "Le Pain Quotidien Jardins",
+    address: "Rua Haddock Lobo, 1382, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/le-pain-jardins.jpg"
+  },
+  locationsp19: {
+    name: "Bar Brahma Jardins",
+    address: "Av. Paulista, 227, São Paulo, SP",
+    description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+  },
+  locationsp20: {
+    name: "Paris 6 Jardins",
+    address: "Rua Augusta, 1502, São Paulo, SP",
+    description: "Um restaurante francês com um ambiente elegante e sofisticado.",
+    neighborhood_id: Neighborhood.find(12).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/paris6-jardins.jpg"
+  },
+  locationsp21: {
+    name: "Starbucks Moema",
+    address: "Av. Ibirapuera, 2927, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/starbucks-moema.jpg"
+  },
+  locationsp22: {
+    name: "Bar do Juarez Moema",
+    address: "Av. Ibirapuera, 2181, São Paulo, SP",
+    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
+  },
 #  locationsp23: {
 #  #  name: "Coco Bambu",
 #  #  address: "Av. Ibirapuera, 3727, São Paulo, SP",
