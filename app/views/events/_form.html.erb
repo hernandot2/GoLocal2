@@ -1,0 +1,11 @@
+  <%= form_with(model: event, class: "edit-form") do |f| %>
+    <%= f.label :title, "Título do evento" %>
+    <%= f.text_field :title %>
+    <%= f.label :date, "Data do evento" %>
+    <%= f.datetime_local_field :date %>
+    <%= f.label :location_id, "Selecione o local do evento" %>
+    <%= f.select :location_id, Location.order(:name).map { |location| [location.name, location.id] } %>
+    <%= f.label :description, "Descrição do evento" %>
+    <%= f.text_area :description %>
+    <%= f.submit "Enviar", class: "btn btn-flat" %>
+  <% end %>
