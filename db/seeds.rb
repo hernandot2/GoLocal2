@@ -2,6 +2,8 @@ require "open-uri"
 
 # Users
 
+User.destroy_all
+
 users = {
   user1: {
     email: "test@teste.com",
@@ -221,6 +223,7 @@ end
 
 
 
+# Locations
 # Locations
 locations = {
   # rio de janeiro

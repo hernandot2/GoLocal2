@@ -1,16 +1,20 @@
-<%#
 <section>
-  <%= render "banner" %>
-<%# </section>  %>
-
-<div class="d-flex align-items-baseline">
-  <h1><%= @location.name %></h1>
-
-  <h2><%= @neighborhood.name %></h2>
-</div>
-<div>
+  <span class="d-flex align-items-baseline">
+    <h1><%= @location.name %></h1>
+    <h2><%= @neighborhood.name %></h2>
+  </span>
   <h4><%= @location.address %></h4>
-</div>
- <div>
- <p><%= @location.description %></p>
- </div>
+  <p class="mt-2"><%= @location.description %></p>
+  <div class="d-flex justify-content-between mt-3">
+    <div>
+      <% if @location.user == current_user %>
+        <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
+        <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+    </div>
+  </div>
+</section>
+
