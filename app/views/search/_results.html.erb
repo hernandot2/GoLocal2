@@ -1,19 +1,26 @@
 <div class="search-results">
-  <div class="left-column">
+ <div class="left-column <%= 'd-none' if @cities.count.zero? && @neighborhoods.count.zero? %>">
+  <% if @cities.count > 0 %>
     <h4>Cidades</h4>
     <div class="cities-search">
       <% @cities.each do |city| %>
         <%= link_to city.name, city, class: "tag-link" %>
       <% end %>
     </div>
+  <% end %>
+
+  <% if @neighborhoods.count > 0 %>
     <h4>Bairros</h4>
     <div class="neighborhoods-search">
       <% @neighborhoods.each do |neighborhood| %>
         <%= link_to neighborhood.name, neighborhood, class: "tag-link" %>
       <% end %>
     </div>
+  <% end %>
+</div>
+
   </div>
-  <div class="middle-column">
+  <div class="middle-column <%= 'd-none' if @events.count.zero? %>">
     <h4>Eventos</h4>
     <div class="events-search">
       <% @events.each do |event| %>
@@ -21,7 +28,7 @@
       <% end %>
     </div>
   </div>
-  <div class="right-column">
+  <div class="right-column <%= 'd-none' if @locations.count.zero? %>">
     <h4>Locais</h4>
     <div class="locations-search">
       <% @locations.each do |location| %>

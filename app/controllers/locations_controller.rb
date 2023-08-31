@@ -30,8 +30,14 @@ class LocationsController < ApplicationController
 
   def show
     @neighborhood = @location.neighborhood
+    @marker = {
+      id: @location.id,
+      lat: @location.latitude,
+      lng: @location.longitude,
+      info_window_html: render_to_string(partial: "locations/info_window", locals: { location: @location }),
+      marker_html: render_to_string(partial: "locations/marker")
+    }
   end
-
 
   def new
     @location = Location.new
