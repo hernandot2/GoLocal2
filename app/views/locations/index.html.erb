@@ -16,7 +16,7 @@
           <div class="card-event sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
             <div class="card-event-content sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
               <div class="card-event-img" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"></div>
-              <div><h4><%= location.name %></h4></div>
+              <div><h5><%= location.name %></h5></div>
               <%= link_to "#{location.address}", location_path(location), class: "map-marker-link location-link", data: { id: location.id } %>
             </div>
           </div>
