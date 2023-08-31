@@ -12,11 +12,6 @@
   </p>
 </section>
 
-<section class="mb-5">
-  <h3> O que gostaria de fazer </h3>
-  <%= render 'shared/cards/card_category', elements: Location.categories %>
-</section>
-
 <section id="city-neighborhood" class="mb-5">
   <div class="d-flex justify-content-between align-items-baseline">
     <h3>Bairros mais procurados</h3>
@@ -35,4 +30,9 @@
     <% @events = @events.first(4) %>
     <%= render "shared/cards/card_event", events: @events %>
   </div>
+</section>
+
+<section class="mb-5">
+  <h3> O que gostaria de fazer </h3>
+  <%= render 'shared/cards/card_category', elements: Location.categories %>
 </section>
