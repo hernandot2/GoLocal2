@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      redirect_to event_path, notice: "Evento criado com sucesso!"
+      redirect_to event_path(@event), notice: "Evento criado com sucesso!"
     else
       render :new
     end
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date)
+    params.require(:event).permit(:title, :description, :date, :location_id)
   end
 
   def set_event
