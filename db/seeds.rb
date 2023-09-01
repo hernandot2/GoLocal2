@@ -428,60 +428,60 @@ locations = {
     user_id: User.first.id,
     photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
   },
-#  locationsp23: {
-#  #  name: "Coco Bambu",
-#  #  address: "Av. Ibirapuera, 3727, São Paulo, SP",
-#  #  description: "Um restaurante especializado em frutos do mar com um ambiente elegante.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/coco-bambu.jpg"
-#  },
-#  locationsp24: {
-#  #  name: "Museu de Arte Contemporânea de São Paulo",
-#  #  address: "Av. Pedro Álvares Cabral, 1301, São Paulo, SP",
-#  #  description: "Um museu de arte contemporânea com uma coleção de obras de arte de todo o mundo.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/mac-sp.jpg"
-#  },
-#  locationsp25: {
-#  #  name: "Shopping Ibirapuera",
-#  #  address: "Av. Ibirapuera, 3900, São Paulo, SP",
-#  #  description: "Um shopping center com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/shopping-ibirapuera.jpg"
-#  },
-#  locationsp26: {
-#  #  name: "Parque Ibirapuera",
-#  #  address: "Av. Pedro Álvares Cabral, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
-#  },
-#  locationsp27: {
-#  #  name: "Stand up paddle no Lago do Parque Ibirapuera",
-#  #  address: "Av. Pedro Álvares Cabral, São Paulo, SP",
-#  #  description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Ibirapuera.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
-#  },
-#  locationsp28: {
-#  #  name: "Le Pain Quotidien Moema",
-#  #  address: "Av. Ibirapuera, 2, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-#  #  neighborhood_id: Neighborhood.find(13).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/le-pain-moema.jpg"
-#  },
+  locationsp23: {
+    name: "Coco Bambu",
+    address: "Av. Ibirapuera, 3727, São Paulo, SP",
+    description: "Um restaurante especializado em frutos do mar com um ambiente elegante.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/coco-bambu.jpg"
+  },
+  locationsp24: {
+    name: "Museu de Arte Contemporânea de São Paulo",
+    address: "Av. Pedro Álvares Cabral, 1301, São Paulo, SP",
+    description: "Um museu de arte contemporânea com uma coleção de obras de arte de todo o mundo.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Museu",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/mac-sp.jpg"
+  },
+  locationsp25: {
+    name: "Shopping Ibirapuera",
+    address: "Av. Ibirapuera, 3900, São Paulo, SP",
+    description: "Um shopping center com uma variedade de lojas e restaurantes.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Loja",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/shopping-ibirapuera.jpg"
+  },
+  locationsp26: {
+    name: "Parque Ibirapuera",
+    address: "Av. Pedro Álvares Cabral, São Paulo, SP",
+    description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+  },
+  locationsp27: {
+    name: "Stand up paddle no Lago do Parque Ibirapuera",
+    address: "Av. Pedro Álvares Cabral, São Paulo, SP",
+    description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Ibirapuera.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+  },
+  locationsp28: {
+    name: "Le Pain Quotidien Moema",
+    address: "Av. Ibirapuera, 2, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
+    neighborhood_id: Neighborhood.find(13).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/le-pain-moema.jpg"
+  },
 #  locationsp29: {
 #  #  name: "Starbucks Pinheiros",
 #  #  address: "Rua dos Pinheiros, 248, São Paulo, SP",
