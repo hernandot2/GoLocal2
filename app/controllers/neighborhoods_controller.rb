@@ -6,6 +6,7 @@ class NeighborhoodsController < ApplicationController
   end
 
   def show
+    authorize @neighborhood
     @locations = @neighborhood.locations
   end
 
