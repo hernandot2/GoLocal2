@@ -19,7 +19,7 @@ class LocationPolicy < ApplicationPolicy
   end
 
   def update?
-    owner?
+    owner? || admin?
   end
 
   def edit?
