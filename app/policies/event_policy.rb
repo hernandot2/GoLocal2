@@ -35,4 +35,8 @@ class EventPolicy < ApplicationPolicy
   def owner?
     record.user == user
   end
+
+  def admin?
+    record.user.admin
+  end
 end
