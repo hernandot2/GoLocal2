@@ -221,9 +221,6 @@ neighborhoods.each do |key, neighborhood_data|
   neighborhood.save!
 end
 
-
-
-# Locations
 # Locations
 locations = {
   # rio de janeiro
@@ -303,7 +300,7 @@ locations = {
     photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
   },
   locationsp9: {
-    name: "Bar da Dona Onça",
+    name: "Bar Bossa Lounge",
     address: "Av. Ipiranga, 200, Vila Madalena, São Paulo, SP",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera sofisticada.",
     neighborhood_id: Neighborhood.find(11).id,
@@ -908,10 +905,20 @@ locations = {
 }
 
 locations.each do |key, location_data|
-  file = URI.open(location_data[:photo_url])
 
-  location = Location.create(name: location_data[:name], description: location_data[:description], address: location_data[:address], category: location_data[:category], neighborhood_id: location_data[:neighborhood_id], user_id: location_data[:user_id])
-  location.photo.attach(io: file, filename: "#{location_data[:name]}.jpg", content_type: "image/jpg")
+  location = Location.create(
+    name: location_data[:name],
+    description: location_data[:description],
+    address: location_data[:address],
+    category: location_data[:category],
+    neighborhood_id: location_data[:neighborhood_id],
+    user_id: location_data[:user_id]
+  )
+  if location_data[:photo_url]
+    file = URI.open(location_data[:photo_url])
+    location.photo.attach(io: file, filename: "#{location_data[:name]}.jpg", content_type: "image/jpg")
+  end
+
   location.save!
 end
 
@@ -921,160 +928,178 @@ events = {
     title: "Festival de Arte Urbana Vila Colorida",
     date: Date.new(2023, 9, 9),
     description: "Um festival de arte urbana que transformará as ruas da Vila Madalena em uma galeria a céu aberto. Artistas locais e internacionais criarão murais incríveis.",
-    location_id: created_locations[:location1].id,
+    location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/festival-arte-urbana.jpg"
   },
   event2: {
-    title: "Concerto ao Pôr do Sol no Parque das Artes",
-    date: Date.new(2024, 2, 25),
+    title: "Concerto ao Pôr do Sol no Parque da Aclimação",
+    date: Date.new(2023, 9, 9),
     description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
-    location_id: created_locations[:location2].id,
+    location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/concerto-por-do-sol.jpg"
   },
   event3: {
     title: "Feira de Artesanato da Vila",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/feira-artesanato.jpg"
   },
   event4: {
     title: "Exposição de Fotografia Cenas Urbanas",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
-    location_id: created_locations[:location4].id,
+    location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/exposicao-fotografica.jpg"
   },
   event5: {
-    title: "Noite de Comédia Stand-up no Bar do Riso",
-    date: Date.new(2024, 2, 25),
+    title: "Noite de Comédia Stand-up no Bar do Juarez",
+    date: Date.new(2023, 9, 9),
     description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(2).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/standup-comedy.jpg"
   },
   event6: {
     title: "Workshop de Yoga ao Ar Livre",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/yoga-ar-livre.jpg"
   },
   event7: {
     title: "Exposição de Arte Contemporânea Visões Abstratas",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/arte-contemporanea.jpg"
   },
   event8: {
     title: "Festa da Cultura Brasileira",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(12).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/festa-cultura-brasileira.jpg"
   },
   event9: {
     title: "Passeio de Bicicleta pela Vila Madalena",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
-    location_id: created_locations[:location1].id,
+    location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/passeio-bike.jpg"
   },
   event10: {
     title: "Noite de Jazz no Café Harmonia",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Relaxe ao som suave do jazz em um dos cafés mais aconchegantes da Vila.",
-    location_id: created_locations[:location2].id,
+    location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/noite-jazz.jpg"
   },
   event11: {
-    title: "Noite de Karaokê no Bar da Karla",
-    date: Date.new(2024, 2, 25),
+    title: "Noite de Karaokê no Bar do Juarez",
+    date: Date.new(2023, 9, 10),
     description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(2).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/noite-karaoke.jpg"
   },
   event12: {
     title: "Exposição de Esculturas no Espaço Criativo",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Admire esculturas impressionantes criadas por artistas locais.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/exposicao-esculturas.jpg"
   },
   event13: {
-    title: "Festival de Food Trucks na Rua das Delícias",
-    date: Date.new(2024, 2, 25),
+    title: "Festival de Food Trucks na Rua Medeiros",
+    date: Date.new(2023, 9, 9),
     description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/festival-foodtruck.jpg"
   },
   event14: {
-    title: "Festival de Jazz na Rua dos Artistas",
-    date: Date.new(2024, 2, 25),
+    title: "Festival de Jazz no Parque Trianon",
+    date: Date.new(2023, 9, 9),
     description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(16).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/festival-jazz.jpg"
   },
   event15: {
-    title: "Noite de MPB no Bar do Zé",
-    date: Date.new(2024, 2, 25),
+    title: "Noite de MPB no Bar do Pirata",
+    date: Date.new(2023, 9, 9),
     description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(12).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/noite-mpb1.jpg"
   },
   event16: {
-    title: "Sessão de Cinema ao Ar Livre no Beco Cultural",
-    date: Date.new(2024, 2, 25),
+    title: "Sessão de Cinema ao Ar Livre no Ibirapuera",
+    date: Date.new(2023, 9, 9),
     description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(26).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/cinema-arlivre.jpg"
   },
   event17: {
     title: "Feira Gastronômica na Praça da Vila Madalena",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 9),
     description: "Saboreie pratos deliciosos de diferentes culturas em um evento gastronômico diversificado.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/feira-gastronomica.jpg"
   },
   event18: {
-    title: "Sessão de Cinema ao Ar Livre no Beco Cultural",
-    date: Date.new(2024, 2, 25),
-    description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
-    location_id: created_locations[:location3].id,
+    title: "Degustação de Cerveja Artesanal no Bar Bossa Lounge",
+    date: Date.new(2023, 9, 9),
+    description: "Experimente cervejas artesanais locais com especialistas em cerveja.",
+    location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/cerveja-artesanal.jpg"
   },
   event19: {
     title: "Noite de Bossa Nova no Bossa Lounge",
-    date: Date.new(2024, 2, 25),
+    date: Date.new(2023, 9, 10),
     description: "Desfrute de uma atmosfera sofisticada com músicas de bossa nova e coquetéis exclusivos.",
-    location_id: created_locations[:location3].id,
+    location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url:
+    photo_url: "app/assets/images/events/noite-bossa-nova.jpg"
   },
   event20: {
-    title: "Noite de Eletrônica no Club Euphoria",
-    date: Date.new(2024, 2, 25),
-    description: "DJs de renome internacional fazem você dançar a noite toda.",
-    location_id: created_locations[:location3].id,
+    title: "Noite de Samba no Bar Brahma",
+    date: Date.new(2023, 9, 9),
+    description: "O melhor do samba ao vivo com deliciosos petiscos brasileiros e caipirinhas especiais.",
+    location_id: Location.find(3).id,
     user_id: User.first.id,
-    photo_url:
-  },
+    photo_url: "app/assets/images/events/noite-samba.jpg"
+  }
 }
+
+events.each do |key, event_data|
+
+  event = Event.create(
+    title: event_data[:title],
+    description: event_data[:description],
+    date: event_data[:date],
+    location_id: event_data[:location_id],
+    neighborhood_id: event_data[:neighborhood_id],
+    user_id: event_data[:user_id]
+  )
+  if event_data[:photo_url]
+    file = URI.open(event_data[:photo_url])
+    event.photo.attach(io: file, filename: "#{event_data[:title]}.jpg", content_type: "image/jpg")
+  end
+
+  event.save!
+end

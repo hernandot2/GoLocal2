@@ -17,8 +17,6 @@ class FavoritesController < ApplicationController
     redirect_to favorites_path, notice: "Favorito excluido com sucesso!"
   end
 
-end
-
 
   private
 
