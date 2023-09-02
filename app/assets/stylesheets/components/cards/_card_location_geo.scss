@@ -1,0 +1,67 @@
+
+.grid-card-event-geo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+.card-geo {
+  display: flex;
+  border: 1px $neutral-03 solid;
+  flex-direction: column;
+  border-radius: $border-radius;
+  min-height: 320px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card-content-geo {
+  color: $neutral-01;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-location-img-geo {
+  overflow: hidden;
+  height: 100px;
+  width: inherit;
+  background-color: $neutral-03;
+}
+
+
+.locations-container-geo {
+  display: flex;
+  overflow-y: hidden; /* Isso é importante para o sticky funcionar */
+}
+
+.location-map {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura da janela de visualização */
+}
+
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+.scrollable-content {
+  flex: 1;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.fixed-map {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura da janela de visualização */
+
+}

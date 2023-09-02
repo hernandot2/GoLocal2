@@ -16,3 +16,11 @@ class FavoritesController < ApplicationController
     render json: { favorited: false }
   end
 end
+
+
+  private
+
+  def set_location
+    @location = Location.find(params[:location_id])
+  end
+end
