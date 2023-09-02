@@ -42,11 +42,13 @@ class LocationsController < ApplicationController
 
   def new
     @location = Location.new
+    authorize @location
   end
 
   def create
     @location = Location.new(location_params)
     @location.user = current_user
+    authorize @location
     if @location.save
       redirect_to location_path(@location), notice: "Local criado com sucesso!"
     else
@@ -55,9 +57,11 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    authorize @location
   end
 
   def update
+    authorize @location
     if @location.update(location_params)
       redirect_to location_path, notice: "Local atualizado com sucesso!"
     else
@@ -66,6 +70,7 @@ class LocationsController < ApplicationController
   end
 
   def destroy
+    authorize @location
     @location.destroy
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end

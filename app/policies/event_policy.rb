@@ -29,6 +29,7 @@ class EventPolicy < ApplicationPolicy
   def destroy?
     is_owner?
   end
+  
   private
 
   def is_owner?
