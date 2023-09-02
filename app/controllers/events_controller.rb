@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    authorize @event
   end
 
   def create
@@ -21,12 +22,15 @@ class EventsController < ApplicationController
     else
       render :new
     end
+    authorize @event
   end
 
   def edit
+    authorize @event
   end
 
   def update
+    authorize @event
     if @event.update(event_params)
       redirect_to event_path, notice: "Evento atualizado com sucesso!"
     else
@@ -35,6 +39,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    authorize @event
     @event.destroy
     redirect_to events_path, notice: "Evento excluido com sucesso!"
   end
