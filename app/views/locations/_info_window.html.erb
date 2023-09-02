@@ -3,6 +3,8 @@
 <h2><%= location.name %></h2>
 <p><%= location.address %></p>
 
-<div class="location-item" data-controller="favorite">
-  <i data-action="click->favorite#toggle" data-favorite-location-id="<%= location.id %>" class="far fa-heart favorite-btn"></i>
+
+<div class="location-item" data-controller="favorite-controller">
+  <i data-action="click->favorite-controller#toggle" data-favorite-location-id="<%= location.id %>" class="far fa-heart favorite-btn"></i>
 </div>
+
