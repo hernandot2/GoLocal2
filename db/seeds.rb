@@ -6,8 +6,16 @@ User.destroy_all
 
 users = {
   user1: {
+    name: "Usuário simples",
     email: "test@example.com",
-    password: "123123"
+    password: "123123",
+    admin: false
+  },
+  user2: {
+    name: "Usuário admin",
+    email: "admin@example.com",
+    password: "123123",
+    admin: true
   }
 }
 
