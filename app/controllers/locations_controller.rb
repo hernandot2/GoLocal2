@@ -69,6 +69,26 @@ class LocationsController < ApplicationController
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end
 
+
+  # def toggle_favorite
+  #   Rails.logger.debug "toggle_favorite called"
+  #   @location = Location.find(params[:id])
+  #   favorite = current_user.favorites.find_by(location_id: @location.id)
+
+  #   if favorite
+  #     favorite.destroy!
+  #     render json: { favorited: false }
+  #   else
+  #     new_favorite = current_user.favorites.new(location_id: @location.id)
+  #     if new_favorite.save
+  #       render json: { favorited: true }
+  #     else
+  #       render json: { error: new_favorite.errors.full_messages }, status: :unprocessable_entity
+  #     end
+  #   end
+  # end
+
+
   private
 
   def location_params

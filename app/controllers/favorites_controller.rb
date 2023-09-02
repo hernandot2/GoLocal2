@@ -18,3 +18,11 @@ class FavoritesController < ApplicationController
   end
 
 end
+
+
+  private
+
+  def set_location
+    @location = Location.find(params[:location_id])
+  end
+end

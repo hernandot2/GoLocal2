@@ -6,6 +6,7 @@
   <div class="card-event-img"></div>
 <h2><%= location.name %></h2>
 <p><%= location.address %></p>
+  
   <!-- Ícone do coração com posicionamento absoluto -->
   <div class="heart-icon">
      <% if current_user && current_user.favorites.where(location_id: location.id).exists? %>

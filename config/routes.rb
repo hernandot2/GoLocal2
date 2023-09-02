@@ -9,10 +9,13 @@ Rails.application.routes.draw do
   resources :locations do
     resources :favorites, only: [:create]
   end
+
   resources :ratings
   resources :favorites, only: [:index]
   resources :cities
   resources :neighborhoods
   resources :profiles
   resources :search, only: :index
+  resources :locations
+
 end
