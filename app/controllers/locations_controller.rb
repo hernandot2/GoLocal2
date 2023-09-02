@@ -37,6 +37,8 @@ class LocationsController < ApplicationController
       info_window_html: render_to_string(partial: "locations/info_window", locals: { location: @location }),
       marker_html: render_to_string(partial: "locations/marker")
     }
+    @location = Location.find(params[:id])
+    @location_id = @location.id
   end
 
   def new
