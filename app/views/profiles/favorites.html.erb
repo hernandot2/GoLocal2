@@ -1,0 +1,4 @@
+<!-- app/views/profiles/favorites.html.erb -->
+<% @favorites.each do |favorite| %>
+  <%= link_to favorite.location.name, location_path(favorite.location) %>
+<% end %>

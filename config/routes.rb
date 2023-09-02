@@ -6,13 +6,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :events
-  # resources :locations do # recurso relac. ao favorito
-  #   member do
-  #     match 'toggle_favorite', via: [:get, :post]
-  #   end
-  # end
+  resources :locations do
+    resources :favorites, only: [:create]
+  end
+
   resources :ratings
-  resources :favorites, only: [:new, :create, :destroy]
+  resources :favorites, only: [:index]
   resources :cities
   resources :neighborhoods
   resources :profiles

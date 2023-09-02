@@ -1,0 +1,24 @@
+
+<!-- app/views/favorites/index.html.erb -->
+<h1>Seus Favoritos</h1>
+
+<% if @favorites.empty? %>
+  <p>Nenhum favorito ainda.</p>
+<% else %>
+  <div class="d-flex flex-row">
+    <!-- Left: Favorite Location Cards -->
+    <div class="flex-grow-1 overflow-auto scrollable-content" style="height: 100vh;">
+      <div class="grid-card-event-geo sq-md">
+        <% @favorites.each do |favorite| %>
+          <div class="card-geo sq-md" data-id="<%= favorite.location.id %>" data-lat="<%= favorite.location.latitude %>" data-lng="<%= favorite.location.longitude %>">
+            <div class="card-content-geo sq-md">
+              <div class="card-location-img-geo"></div>
+              <div><h5><%= favorite.location.name %></h5></div>
+              <%= link_to "#{favorite.location.address}", location_path(favorite.location), class: "map-marker-link location-link", data: { id: favorite.location.id } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
