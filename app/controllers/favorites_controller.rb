@@ -17,12 +17,9 @@ class FavoritesController < ApplicationController
     redirect_to favorites_path, notice: "Favorito excluido com sucesso!"
   end
 
-end
-
 
   private
 
   def set_location
     @location = Location.find(params[:location_id])
   end
-end
