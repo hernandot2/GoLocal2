@@ -1,0 +1,13 @@
+  <%= form_with(model: @location, class: "edit-form") do |f| %>
+    <%= f.label :name, "Nome do local" %>
+    <%= f.text_field :name %>
+    <%= f.label :address, "Endereço completo" %>
+    <%= f.text_field :address %>
+    <%= f.label :neighborhood_id, "Selecione o bairro" %>
+    <%= f.select :neighborhood_id, Neighborhood.order(:name).map { |neighborhood| [neighborhood.name, neighborhood.id] } %>
+    <%= f.label :category, "Selecione o tipo de local" %>
+    <%= f.select :category, Location.categories %>
+    <%= f.label :description, "Descrição do local" %>
+    <%= f.text_area :description %>
+    <%= f.submit "Enviar", class: "btn btn-flat" %>
+  <% end %>

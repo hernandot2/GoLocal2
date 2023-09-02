@@ -1,6 +1,6 @@
-<%# <section>
+<section>
 <%= render "banner" %>
-<%# </section>  %>
+</section>
 
 <section class="neighborhood-details mb-5">
   <span class="d-flex align-items-baseline">
@@ -15,6 +15,15 @@
 <section class="mb-5">
   <h3> O que gostaria de fazer </h3>
   <%= render 'shared/cards/card_category', elements: Location.categories %>
+</section>
+
+<section id="neighborhood-neighborhood" class="mb-5">
+  <div class="d-flex justify-content-between align-items-baseline">
+    <h3>Próximos eventos</h3>
+    <%= link_to 'Ver todos os eventos', events_path, class: "link-text" %>
+  </div>
+  <%# @elements = @events.take(5) %>
+  <%#= render "shared/cards/card_event", elements: @elements %>
 </section>
 
 <section id="neighborhood-neighborhood" class="mb-5">

@@ -6,11 +6,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :events
-  resources :locations
+  resources :locations do
+    resources :favorites, only: [:create]
+  end
+
   resources :ratings
-  resources :favorites, only: [:new, :create, :destroy]
+  resources :favorites, only: [:index]
   resources :cities
   resources :neighborhoods
   resources :profiles
   resources :search, only: :index
+  resources :locations
+
 end

@@ -1,13 +1,22 @@
-<section id="banner-home">
-  <%= render "banner" %>
-</section>
+<div data-controller="universal-search">
+  <section id="banner-home">
+    <%= render "banner" %>
+  </section>
 
-<section id="city-suggest">
-  <h3>Vai viajar?</h3>
-    <% @elements = @cities.take(3) %>
-    <%= render "shared/cards/card_city", elements: @elements %>
-</section>
-
+  <section id="city-suggest">
+    <div>
+      <div data-universal-search-target="results"></div>
+    </div>
+     <div>
+     <br>
+     <h3>Vai viajar?</h3>
+     <p>
+     Viajar é dar asas para a vida. É descobrir novos horizontes. É encontrar em novos lugares memórias incríveis e guardá-las na cabeça e no coração.</p>
+      <% @elements = @cities.take(3) %>
+      <%= render "shared/cards/card_city", elements: @elements %>
+      </div>
+  </section>
+</div>
 <%# <section id="banner-call">
   <div class="banner-home">
     <h1>BANNER</h1>

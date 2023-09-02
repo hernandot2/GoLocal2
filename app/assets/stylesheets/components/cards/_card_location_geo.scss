@@ -1,0 +1,144 @@
+
+.grid-card-event-geo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+.card-geo {
+  display: flex;
+  border: 1px $neutral-03 solid;
+  flex-direction: column;
+  border-radius: $border-radius;
+  min-height: 320px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card-content-geo {
+  color: $neutral-01;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.card-location-img-geo {
+  overflow: hidden;
+  height: 100px;
+  width: inherit;
+  background-color: $neutral-03;
+}
+
+
+.locations-container-geo {
+  display: flex;
+  overflow-y: hidden; /* Isso é importante para o sticky funcionar */
+}
+
+.location-map {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura da janela de visualização */
+}
+
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+.scrollable-content {
+  flex: 1;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.fixed-map {
+  flex: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura da janela de visualização */
+
+}
+
+.disabled-heart {
+  color: grey;
+  cursor: not-allowed;
+}
+
+
+.card-event-wrapper {
+  position: relative;
+}
+
+
+.heart-icon {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+}
+
+
+.fa-heart:hover {
+  color: #cd4754;
+}
+
+.fa-heart {
+  color: #707888;
+}
+
+.favorited-heart {
+  color: #cd4754 !important; /* Usando !important para garantir que esta regra tenha prioridade */
+}
+
+
+/* Tamanho padrão */
+.heart-icon .fa-heart {
+  font-size: 0.5em;
+}
+
+/* Tamanho maior para tablets e dispositivos maiores */
+@media (min-width: 768px) {
+  .heart-icon .fa-heart {
+    font-size: 1em;
+  }
+}
+
+/* Tamanho ainda maior para desktops e dispositivos maiores */
+@media (min-width: 992px) {
+  .heart-icon .fa-heart {
+    font-size: 1.5em;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Posição */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

@@ -7,14 +7,19 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
     <%= favicon_link_tag "logo.svg", rel: "icon", type: "image/svg" %>
   </head>
+
   <body>
     <%= render "shared/navbar" %>
     <div class="container">
       <%= render "shared/flashes" %>
       <%= yield %>
-    </div>  
+    </div>
   </body>
   <footer>
     <%= render 'shared/footer' %>
