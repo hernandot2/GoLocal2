@@ -19,20 +19,20 @@ class EventPolicy < ApplicationPolicy
   end
 
   def update?
-    is_owner?
+    owner? || admin?
   end
 
   def edit?
-    is_owner?
+    owner? || admin?
   end
 
   def destroy?
-    is_owner?
+    owner? || admin?
   end
-  
+
   private
 
-  def is_owner?
+  def owner?
     record.user == user
   end
 end
