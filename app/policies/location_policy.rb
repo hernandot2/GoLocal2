@@ -23,11 +23,11 @@ class LocationPolicy < ApplicationPolicy
   end
 
   def edit?
-    owner?
+    owner? || admin?
   end
 
   def destroy?
-    owner?
+    owner? || admin?
   end
 
   private
@@ -36,7 +36,7 @@ class LocationPolicy < ApplicationPolicy
     record.user == user
   end
 
-  # def admin?
-  #   record.user.admin
-  # end
+  def admin?
+    user.admin
+  end
 end
