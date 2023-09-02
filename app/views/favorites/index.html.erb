@@ -1,0 +1,12 @@
+<!-- app/views/favorites/index.html.erb -->
+<h1>Seus Favoritos</h1>
+
+<% if @favorites.empty? %>
+  <p>Nenhum favorito ainda.</p>
+<% else %>
+  <% @favorites.each do |favorite| %>
+    <%= link_to favorite.location.name, location_path(favorite.location) %>
+  <% end %>
+<% end %>
+
+

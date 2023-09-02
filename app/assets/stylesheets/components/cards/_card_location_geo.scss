@@ -65,3 +65,49 @@
   height: 100vh; /* Altura da janela de visualização */
 
 }
+
+.disabled-heart {
+  color: grey;
+  cursor: not-allowed;
+}
+
+
+.card-event-wrapper {
+  position: relative;
+}
+
+
+.heart-icon {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+}
+
+
+.fa-heart:hover {
+  color: blueviolet;
+}
+
+.fa-heart {
+  color: gray;
+}
+
+
+/* Tamanho padrão */
+.heart-icon .fa-heart {
+  font-size: 0.5em;
+}
+
+/* Tamanho maior para tablets e dispositivos maiores */
+@media (min-width: 768px) {
+  .heart-icon .fa-heart {
+    font-size: 1em;
+  }
+}
+
+/* Tamanho ainda maior para desktops e dispositivos maiores */
+@media (min-width: 992px) {
+  .heart-icon .fa-heart {
+    font-size: 1.5em;
+  }
+}
