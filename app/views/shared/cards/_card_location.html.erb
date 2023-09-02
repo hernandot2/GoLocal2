@@ -1,9 +1,9 @@
 <div class="grid-card-event">
   <% @locations.each do |location| %>
-    <%= link_to location_path(location), class: "card-event", data: {id: location.id, action: "mouseover->map#highlightMarker mouseout->map#unhighlightMarker"} do %>
+    <%= link_to location_path(location), class: "card-event" do %>
       <div class="card-event-content">
         <div class="card-event-img">
-        </div>
+      </div>
         <div class="card-event-title clamp-2">
           <h4><%= location.name %></h4>
         </div>
