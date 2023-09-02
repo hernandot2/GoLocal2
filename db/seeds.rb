@@ -482,132 +482,132 @@ locations = {
     user_id: User.first.id,
     photo_url: "app/assets/images/locations/le-pain-moema.jpg"
   },
-#  locationsp29: {
-#  #  name: "Starbucks Pinheiros",
-#  #  address: "Rua dos Pinheiros, 248, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
-#  },
-#  locationsp30: {
-#  #  name: "Bar Brahma Pinheiros",
-#  #  address: "Rua dos Pinheiros, 145, São Paulo, SP",
-#  #  description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-brahma.jpg"
-#  },
-#  locationsp31: {
-#  #  name: "Mocotó",
-#  #  address: "Rua Aspicuelta, 542, São Paulo, SP",
-#  #  description: "Um restaurante especializado em comida brasileira com um ambiente informal.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/mocoto.jpg"
-#  },
-#  locationsp32: {
-#  #  name: "Pinacoteca do Estado de São Paulo",
-#  #  address: "Av. Tiradentes, 615, São Paulo, SP",
-#  #  description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/pinacoteca.jpg"
-#  },
-#  locationsp33: {
-#  #  name: "Shopping Villa Lobos",
-#  #  address: "Av. das Nações Unidas, 4777, São Paulo, SP",
-#  #  description: "Um shopping center com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/shopping-villa-lobos.jpg"
-#  },
-#  locationsp34: {
-#  #  name: "Parque Villa Lobos",
-#  #  address: "Av. das Nações Unidas, 7161, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de atrações, incluindo o Auditório Ibirapuera, o Museu de Arte Moderna e o Museu de Arte Contemporânea de São Paulo.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-villa-lobos.jpg"
-#  },
-#  locationsp35: {
-#  #  name: "Stand up paddle no Lago do Parque Villa Lobos",
-#  #  address: "Av. das Nações Unidas, 716, São Paulo, SP",
-#  #  description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Villa Lobos.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
-#  },
-#  locationsp36: {
-#  #  name: "Le Pain Quotidien Pinheiros",
-#  #  address: "Rua dos Pinheiros, 326, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/le-pain-pinheiros.jpg"
-#  },
-#  locationsp37: {
-#  #  name: "Bar da Esquina",
-#  #  address: "Rua dos Pinheiros, 340, São Paulo, SP",
-#  #  description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-da-esquina.jpg"
-#  },
-#  locationsp38: {
-#  #  name: "Jiquitaia",
-#  #  address: "Rua dos Pinheiros, 274, São Paulo, SP",
-#  #  description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
-#  #  neighborhood_id: Neighborhood.find(14).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/jiquitaia.jpg"
-#  },
-#  locationsp39: {
-#  #  name: "Starbucks Bela Vista",
-#  #  address: "Rua Augusta, 1059, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/starbucks-bela-vista.jpg"
-#  },
-#  locationsp40: {
-#  #  name: "Bar do Luiz",
-#  #  address: "Rua Augusta, 1246, São Paulo, SP",
-#  #  description: "Um bar tradicional da Bela Vista com uma atmosfera descontraída.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-do-luiz.jpg"
-#  },
-#  locationsp41: {
-#  #  name: "San Gennaro",
-#  #  address: "Rua Treze de Maio, 171, São Paulo, SP",
-#  #  description: "Um restaurante italiano com um ambiente familiar.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/san-gennaro.jpg"
-#  },
-#  locationsp42: {
-#  #  name: "Edifício Itália",
-#  #  address: "Av. Ipiranga, 344, São Paulo, SP",
-#  #  description: "Um edifício de 36 andares com uma vista panorâmica da cidade.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/edificio-italia.jpg"
-#  },
+  locationsp29: {
+    name: "Starbucks Pinheiros",
+    address: "Rua dos Pinheiros, 248, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
+  },
+  locationsp30: {
+    name: "Bar Brahma Pinheiros",
+    address: "Rua dos Pinheiros, 145, São Paulo, SP",
+    description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+  },
+  locationsp31: {
+    name: "Mocotó",
+    address: "Rua Aspicuelta, 542, São Paulo, SP",
+    description: "Um restaurante especializado em comida brasileira com um ambiente informal.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/mocoto.jpg"
+  },
+  locationsp32: {
+    name: "Pinacoteca do Estado de São Paulo",
+    address: "Av. Tiradentes, 615, São Paulo, SP",
+    description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Museu",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/pinacoteca.jpg"
+  },
+  locationsp33: {
+    name: "Shopping Villa Lobos",
+    address: "Av. das Nações Unidas, 4777, São Paulo, SP",
+    description: "Um shopping center com uma variedade de lojas e restaurantes.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Loja",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/shopping-villa-lobos.jpg"
+  },
+  locationsp34: {
+    name: "Parque Villa Lobos",
+    address: "Av. das Nações Unidas, 7161, São Paulo, SP",
+    description: "Um parque público com uma variedade de atrações, incluindo o Auditório Ibirapuera, o Museu de Arte Moderna e o Museu de Arte Contemporânea de São Paulo.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/parque-villa-lobos.jpg"
+  },
+  locationsp35: {
+    name: "Stand up paddle no Lago do Parque Villa Lobos",
+    address: "Av. das Nações Unidas, 716, São Paulo, SP",
+    description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Villa Lobos.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+  },
+  locationsp36: {
+    name: "Le Pain Quotidien Pinheiros",
+    address: "Rua dos Pinheiros, 326, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/le-pain-pinheiros.jpg"
+  },
+  locationsp37: {
+    name: "Bar da Esquina",
+    address: "Rua dos Pinheiros, 340, São Paulo, SP",
+    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-da-esquina.jpg"
+  },
+  locationsp38: {
+    name: "Jiquitaia",
+    address: "Rua dos Pinheiros, 274, São Paulo, SP",
+    description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
+    neighborhood_id: Neighborhood.find(14).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/jiquitaia.jpg"
+  },
+  locationsp39: {
+    name: "Starbucks Bela Vista",
+    address: "Rua Augusta, 1059, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/starbucks-bela-vista.jpg"
+  },
+  locationsp40: {
+    name: "Bar do Luiz",
+    address: "Rua Augusta, 1246, São Paulo, SP",
+    description: "Um bar tradicional da Bela Vista com uma atmosfera descontraída.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-do-luiz.jpg"
+  },
+  locationsp41: {
+    name: "San Gennaro",
+    address: "Rua Treze de Maio, 171, São Paulo, SP",
+    description: "Um restaurante italiano com um ambiente familiar.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/san-gennaro.jpg"
+  },
+  locationsp42: {
+    name: "Edifício Itália",
+    address: "Av. Ipiranga, 344, São Paulo, SP",
+    description: "Um edifício de 36 andares com uma vista panorâmica da cidade.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Museu",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/edificio-italia.jpg"
+  },
 #  locationsp43: {
 #  #  name: "Shopping Pátio Paulista",
 #  #  address: "Rua Augusta, 1261, São Paulo, SP",

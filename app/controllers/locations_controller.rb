@@ -30,6 +30,7 @@ class LocationsController < ApplicationController
 
   def show
     @neighborhood = @location.neighborhood
+    @locations = Location.find(params[:id])
   end
 
 
