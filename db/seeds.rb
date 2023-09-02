@@ -910,30 +910,11 @@ locations = {
 locations.each do |key, location_data|
   file = URI.open(location_data[:photo_url])
 
-# Events
-# events = {
-#   event1: {
-#     title: "Carnaval Carioca",
-#     date: Date.new(2024, 2, 25),
-#     description: "O mais famoso carnaval do mundo, com desfiles de escolas de samba e festas por toda a cidade.",
-#     location_id: created_locations[:location1].id,
-#     user_id: User.first.id
-#   },
-#   event2: {
-#     title: "samba Maria",
-#     date: Date.new(2024, 2, 25),
-#     description: "Desde que lançou o álbum 'Samba Meu', em 2003, Maria Rita transita com imensa desenvoltura no universo do samba e hoje está consolidada como uma das grandes artistas do gênero.",
-#     location_id: created_locations[:location2].id,
-#     user_id: User.first.id
-#   },
-#   event3: {
-#     title: "samba Maria",
-#     date: Date.new(2024, 2, 25),
-#     description: "Desde que lançou o álbum 'Samba Meu', em 2003, Maria Rita transita com imensa desenvoltura no universo do samba e hoje está consolidada como uma das grandes artistas do gênero.",
-#     location_id: created_locations[:location3].id,
-#     user_id: User.first.id
-#   }
-# }
+  location = Location.create(name: location_data[:name], description: location_data[:description], address: location_data[:address], category: location_data[:category], neighborhood_id: location_data[:neighborhood_id], user_id: location_data[:user_id])
+  location.photo.attach(io: file, filename: "#{location_data[:name]}.jpg", content_type: "image/jpg")
+  location.save!
+end
+
 # Events
 events = {
   event1: {
@@ -950,6 +931,7 @@ events = {
     description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
     location_id: created_locations[:location2].id,
     user_id: User.first.id,
+    photo_url:
   },
   event3: {
     title: "Feira de Artesanato da Vila",
@@ -957,6 +939,7 @@ events = {
     description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event4: {
     title: "Exposição de Fotografia Cenas Urbanas",
@@ -964,6 +947,7 @@ events = {
     description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
     location_id: created_locations[:location4].id,
     user_id: User.first.id,
+    photo_url:
   },
   event5: {
     title: "Noite de Comédia Stand-up no Bar do Riso",
@@ -971,6 +955,7 @@ events = {
     description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event6: {
     title: "Workshop de Yoga ao Ar Livre",
@@ -978,6 +963,7 @@ events = {
     description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event7: {
     title: "Exposição de Arte Contemporânea Visões Abstratas",
@@ -985,6 +971,7 @@ events = {
     description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event8: {
     title: "Festa da Cultura Brasileira",
@@ -992,6 +979,7 @@ events = {
     description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event9: {
     title: "Passeio de Bicicleta pela Vila Madalena",
@@ -999,6 +987,7 @@ events = {
     description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
     location_id: created_locations[:location1].id,
     user_id: User.first.id,
+    photo_url:
   },
   event10: {
     title: "Noite de Jazz no Café Harmonia",
@@ -1006,6 +995,7 @@ events = {
     description: "Relaxe ao som suave do jazz em um dos cafés mais aconchegantes da Vila.",
     location_id: created_locations[:location2].id,
     user_id: User.first.id,
+    photo_url:
   },
   event11: {
     title: "Noite de Karaokê no Bar da Karla",
@@ -1013,6 +1003,7 @@ events = {
     description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event12: {
     title: "Exposição de Esculturas no Espaço Criativo",
@@ -1020,6 +1011,7 @@ events = {
     description: "Admire esculturas impressionantes criadas por artistas locais.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event13: {
     title: "Festival de Food Trucks na Rua das Delícias",
@@ -1027,6 +1019,7 @@ events = {
     description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event14: {
     title: "Festival de Jazz na Rua dos Artistas",
@@ -1034,6 +1027,7 @@ events = {
     description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event15: {
     title: "Noite de MPB no Bar do Zé",
@@ -1041,6 +1035,7 @@ events = {
     description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
   },
   event16: {
     title: "Sessão de Cinema ao Ar Livre no Beco Cultural",
@@ -1048,5 +1043,38 @@ events = {
     description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
     location_id: created_locations[:location3].id,
     user_id: User.first.id,
+    photo_url:
+  },
+  event17: {
+    title: "Feira Gastronômica na Praça da Vila Madalena",
+    date: Date.new(2024, 2, 25),
+    description: "Saboreie pratos deliciosos de diferentes culturas em um evento gastronômico diversificado.",
+    location_id: created_locations[:location3].id,
+    user_id: User.first.id,
+    photo_url:
+  },
+  event18: {
+    title: "Sessão de Cinema ao Ar Livre no Beco Cultural",
+    date: Date.new(2024, 2, 25),
+    description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
+    location_id: created_locations[:location3].id,
+    user_id: User.first.id,
+    photo_url:
+  },
+  event19: {
+    title: "Noite de Bossa Nova no Bossa Lounge",
+    date: Date.new(2024, 2, 25),
+    description: "Desfrute de uma atmosfera sofisticada com músicas de bossa nova e coquetéis exclusivos.",
+    location_id: created_locations[:location3].id,
+    user_id: User.first.id,
+    photo_url:
+  },
+  event20: {
+    title: "Noite de Eletrônica no Club Euphoria",
+    date: Date.new(2024, 2, 25),
+    description: "DJs de renome internacional fazem você dançar a noite toda.",
+    location_id: created_locations[:location3].id,
+    user_id: User.first.id,
+    photo_url:
   },
 }
