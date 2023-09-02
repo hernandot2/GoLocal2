@@ -608,15 +608,15 @@ locations = {
     user_id: User.first.id,
     photo_url: "app/assets/images/locations/edificio-italia.jpg"
   },
-#  locationsp43: {
-#  #  name: "Shopping Pátio Paulista",
-#  #  address: "Rua Augusta, 1261, São Paulo, SP",
-#  #  description: "Um shopping center com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/shopping-patio-paulista.jpg"
-#  },
+  locationsp43: {
+    name: "Shopping Pátio Paulista",
+    address: "Rua Augusta, 1261, São Paulo, SP",
+    description: "Um shopping center com uma variedade de lojas e restaurantes.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Loja",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/shopping-patio-paulista.jpg"
+  },
 #  locationsp44: {
 #  #  name: "Parque Augusta",
 #  #  address: "Rua Augusta, 1500, São Paulo, SP",
@@ -635,96 +635,96 @@ locations = {
 #  #  user_id: User.first.id,
 #  #  photo_url: "app/assets/images/locations/corrida-parque-augusta.jpg"
 #  },
-#  locationsp46: {
-#  #  name: "Le Pain Quotidien Bela Vista",
-#  #  address: "Rua Augusta, 1875, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/le-pain-bela-vista.jpg"
-#  },
-#  locationsp47: {
-#  #  name: "Bar Brahma Bela Vista",
-#  #  address: "Av. Ipiranga, 344, São Paulo, SP",
-#  #  description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-brahma.jpg"
-#  },
-#  locationsp48: {
-#  #  name: "Bráz Trattoria",
-#  #  address: "Rua Treze de Maio, 112, São Paulo, SP",
-#  #  description: "Uma trattoria italiana com um ambiente elegante.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/braz-trattoria.jpg"
-#  },
-#  locationsp49: {
-#  #  name: "Le Pain Quotidien",
-#  #  address: "Rua Jerônimo da Veiga, 149, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/le-pain-quotidien-2.jpg"
-#  },
-#  locationsp50: {
-#  #  name: "SubAstor",
-#  #  address: "Rua Oscar Freire, 414, São Paulo, SP",
-#  #  description: "Um bar e restaurante com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/subastor.jpg"
-#  },
-#  locationsp51: {
-#  #  name: "D.O.M.",
-#  #  address: "Rua Barão de Capanema, 549, São Paulo, SP",
-#  #  description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/dom.jpg"
-#  },
-#  locationsp52: {
-#  #  name: "Museu de Arte de São Paulo (MASP)",
-#  #  address: "Avenida Paulista, 1578, São Paulo, SP",
-#  #  description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/masp1.jpg"
-#  },
-#  locationsp53: {
-#  #  name: "Daslu",
-#  #  address: "Rua Oscar Freire, 855, São Paulo, SP",
-#  #  description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/daslu.jpg"
-#  },
-#  locationsp54: {
-#  #  name: "Parque do Ibirapuera",
-#  #  address: "Avenida Pedro Álvares Cabral, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
-#  },
-#  locationsp55: {
-#  #  name: "Parque Burle Marx",
-#  #  address: "Rua Medeiros de Albuquerque, 450, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de jardins e esculturas.",
-#  #  neighborhood_id: Neighborhood.find(16).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-burle-marx.jpg"
-#  },
+  locationsp46: {
+    name: "Le Pain Quotidien Bela Vista",
+    address: "Rua Augusta, 1875, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/le-pain-bela-vista.jpg"
+  },
+  locationsp47: {
+    name: "Bar Brahma Bela Vista",
+    address: "Av. Ipiranga, 344, São Paulo, SP",
+    description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+  },
+  locationsp48: {
+    name: "Bráz Trattoria",
+    address: "Rua Treze de Maio, 112, São Paulo, SP",
+    description: "Uma trattoria italiana com um ambiente elegante.",
+    neighborhood_id: Neighborhood.find(15).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/braz-trattoria.jpg"
+  },
+  locationsp49: {
+    name: "Le Pain Quotidien",
+    address: "Rua Jerônimo da Veiga, 149, São Paulo, SP",
+    description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/le-pain-quotidien-2.jpg"
+  },
+  locationsp50: {
+    name: "SubAstor",
+    address: "Rua Oscar Freire, 414, São Paulo, SP",
+    description: "Um bar e restaurante com uma variedade de pratos e bebidas.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/subastor.jpg"
+  },
+  locationsp51: {
+    name: "D.O.M.",
+    address: "Rua Barão de Capanema, 549, São Paulo, SP",
+    description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/dom.jpg"
+  },
+  locationsp52: {
+    name: "Museu de Arte de São Paulo (MASP)",
+    address: "Avenida Paulista, 1578, São Paulo, SP",
+    description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Museu",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/masp1.jpg"
+  },
+  locationsp53: {
+    name: "Daslu",
+    address: "Rua Oscar Freire, 855, São Paulo, SP",
+    description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Loja",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/daslu.jpg"
+  },
+  locationsp54: {
+    name: "Parque do Ibirapuera",
+    address: "Avenida Pedro Álvares Cabral, São Paulo, SP",
+    description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+  },
+  locationsp55: {
+    name: "Parque Burle Marx",
+    address: "Rua Medeiros de Albuquerque, 450, São Paulo, SP",
+    description: "Um parque público com uma variedade de jardins e esculturas.",
+    neighborhood_id: Neighborhood.find(16).id,
+    category: "Parque",
+    user_id: User.first.id,
+    photo_url: "app/assets/images/locations/parque-burle-marx.jpg"
+  },
 #  locationsp56: {
 #  #  name: "Café Floresta",
 #  #  address: "Rua Galvão Bueno, 848, São Paulo, SP",

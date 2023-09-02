@@ -8,10 +8,10 @@ export default class extends Controller {
   }
 
   initialize() {
-    const locationLinks = document.querySelectorAll('.map-marker-link');
-    locationLinks.forEach(link => {
-      link.addEventListener('mouseover', this.highlightMarker.bind(this));
-      link.addEventListener('mouseout', this.unhighlightMarker.bind(this));
+    const cardEvents = document.querySelectorAll('.card-event, .card-event-content, .card-event-img');
+    cardEvents.forEach(card => {
+      card.addEventListener('mouseover', this.highlightMarker.bind(this));
+      card.addEventListener('mouseout', this.unhighlightMarker.bind(this));
     });
   }
 
@@ -26,6 +26,7 @@ export default class extends Controller {
 
 
   connect() {
+
     mapboxgl.accessToken = this.apiKeyValue;
     this.map = new mapboxgl.Map({
       container: this.element,
@@ -44,9 +45,23 @@ export default class extends Controller {
     //   console.log("Evento de clique capturado");
   }
 
+
+  // toggleMap() {
+  //   const fixedMap = document.querySelector('.fixed-map');
+  //   if (fixedMap.style.width === '100%') {
+  //     fixedMap.style.width = '';
+  //     fixedMap.style.flexGrow = '0';
+  //   } else {
+  //     fixedMap.style.width = '100%';
+  //     fixedMap.style.flexGrow = '1';
+  //   }
+  //   this.map.resize();
+  // }
+
+
   addMarkersToMap() {
     this.markersValue.forEach((markerData) => {
-      const popup = new mapboxgl.Popup().setHTML(`<div style="font-size: 12px;">${markerData.info_window_html.replace('<h2>', '<h2 style="font-size: 14px;">')}
+      const popup = new mapboxgl.Popup().setHTML(`<div style="font-size: 12px;">${markerData.info_window_html.replace('<h2>', '<h2 style="font-size: 16px;">')}
       </div>
     `);
       const element = document.createElement('div');
@@ -94,3 +109,15 @@ export default class extends Controller {
     }
   }
 }
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const toggleButton = document.querySelector('.toggle-button');
+//   const fixedMap = document.querySelector('.fixed-map');
+//   toggleButton.addEventListener('click', function() {
+//     if (fixedMap.style.width === '100%') {
+//       fixedMap.style.width = '';
+//     } else {
+//       fixedMap.style.width = '100%';
+//     }
+//   });
+// });
