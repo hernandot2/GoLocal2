@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :ratings
-  resources :favorites, only: [:index]
+  resources :favorites, only: [:index, :destroy]
   resources :cities
   resources :neighborhoods
   resources :profiles

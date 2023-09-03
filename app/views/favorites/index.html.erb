@@ -1,4 +1,3 @@
-
 <!-- app/views/favorites/index.html.erb -->
 <h1>Seus Favoritos</h1>
 
@@ -11,24 +10,24 @@
       <div class="grid-card-event-geo sq-md">
         <% @favorites.each do |favorite| %>
           <div class="card-geo sq-md" data-id="<%= favorite.location.id %>" data-lat="<%= favorite.location.latitude %>" data-lng="<%= favorite.location.longitude %>">
+            <!-- Botão de exclusão no canto superior direito -->
+            <%= link_to 'X', favorite_path(favorite), method: :delete, data: { turbo_method: :delete, turbo_confirm: "tem certeza que gostaria de deletar?" }, class:"no-style-link", style: "position: absolute; top: 0; right: 6px; z-index: 1; font-size: 15px; transform: scaleX(1.33);" %>
+
             <%= link_to location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } do %>
-
-            <div class="card-content-geo sq-md">
-              <div class="card-location-img-geo"></div>
-              <div class="card-event-title clamp-2">
-                <h5 style="margin-top: 5px;"><%= favorite.location.name %></h5>
+              <div class="card-content-geo sq-md">
+                <div class="card-location-img-geo"></div>
+                <div class="card-event-title clamp-2">
+                  <h5 style="margin-top: 5px;"><%= favorite.location.name %></h5>
                 </div>
-
-          <div class="card-event-description clamp-2">
-            <%= link_to "#{favorite.location.description}", location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } %>
-          </div>
-
                 <div class="card-event-description clamp-2">
-            <%= link_to "#{favorite.location.address}", location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } %>
+                  <%= link_to "#{favorite.location.description}", location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } %>
+                </div>
+                <div class="card-event-description clamp-2">
+                  <%= link_to "#{favorite.location.address}", location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } %>
+                </div>
+              </div>
+            <% end %>
           </div>
-            </div>
-          </div>
-        <% end %>
         <% end %>
       </div>
     </div>

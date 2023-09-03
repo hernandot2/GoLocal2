@@ -1,20 +1,32 @@
-<div class="grid-card-event">
+
+
+<div class="grid-card-event-geo-neigh sq-md">
   <% @locations.each do |location| %>
-    <%= link_to location_path(location), class: "card-event" do %>
-      <div class="card-event-content">
-        <div class="card-event-img">
+    <div class="card-geo sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
+      <%= link_to location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } do %>
+      <div class="card-content-geo sq-md" >
+       <div class="card-location-img-geo"></div>
+          <div class="card-event-title clamp-2"><h4 style="margin-top: 2.5px;"><%= location.name %></h4></div>
+          <!-- Ícone do coração com posicionamento absoluto -->
+          <div class="heart-icon-geo">
+            <% if current_user && current_user.favorites.where(location_id: location.id).exists? %>
+              <i class="fa fa-heart favorited-heart"></i>
+            <% else %>
+              <%= link_to location_favorites_path(location), data: {turbo_method: :post} do %>
+                <i class="fa fa-heart"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="card-event-description clamp-2">
+            <%= link_to "#{location.description}", location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } %>
+          </div>
+          <div class="card-event-description clamp-2">
+            <%= link_to "#{location.address}", location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } %>
+          </div>
       </div>
-        <div class="card-event-title clamp-2">
-          <h4><%= location.name %></h4>
-        </div>
-        <div class="card-event-description clamp-2">
-          <%= location.description %>
-        </div>
-        <div class="card-event-description clamp-2">
-          <%= location.address %>
-        </div>
-      </div>
-    <% end %>
+    </div>
+  <% end %>
   <% end %>
 </div>
+
 
