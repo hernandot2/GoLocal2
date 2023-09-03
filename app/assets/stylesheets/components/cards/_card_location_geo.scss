@@ -1,4 +1,13 @@
 
+.grid-card-event-geo-neigh {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+
+
 .grid-card-event-geo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,6 +27,7 @@
   text-decoration: none;
 }
 
+
 .card-content-geo {
   color: $neutral-01;
   padding: 16px;
@@ -28,6 +38,8 @@
   margin: 0;
   text-decoration: none;
 }
+
+
 
 .card-location-img-geo {
   overflow: hidden;
@@ -81,6 +93,12 @@
   position: absolute;
   top: 4px;
   right: 7px;
+}
+
+.heart-icon-geo {
+  position: absolute;
+  top: 16px;
+  right: 22px;
 }
 
 
@@ -141,4 +159,9 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.no-style-link {
+  text-decoration: none;
+  color: inherit; /* ou a cor que você deseja */
 }

@@ -11,7 +11,7 @@
   <div class="heart-icon">
      <% if current_user && current_user.favorites.where(location_id: location.id).exists? %>
       <i class="fa fa-heart favorited-heart"></i>
-    
+
     <% else %>
       <%= link_to location_favorites_path(location), data: {turbo_method: :post} do %>
         <i class="fa fa-heart"></i>
