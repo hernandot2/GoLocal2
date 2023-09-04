@@ -22,8 +22,8 @@
     <h3>Próximos eventos</h3>
     <%= link_to 'Ver todos os eventos', events_path, class: "link-text" %>
   </div>
-  <%# @elements = @events.take(5) %>
-  <%#= render "shared/cards/card_event", elements: @elements %>
+  <% @events = @events.last(4) %>
+  <%= render "shared/cards/card_event", elements: @elements %>
 </section>
 
 <section id="neighborhood-neighborhood" class="mb-5">
@@ -32,7 +32,5 @@
     <%= link_to 'Ver todos os locais', locations_path, class: "link-text" %>
   </div>
 </section>
-
-  <!-- Implementado em 03-09-23  -->
 
    <%= render "shared/cards/card_location", elements: @elements %>

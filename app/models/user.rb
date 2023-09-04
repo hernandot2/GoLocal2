@@ -6,6 +6,5 @@ class User < ApplicationRecord
   has_many :events
   has_many :locations, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_one_attached :photo
 end
-
-

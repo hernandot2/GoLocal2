@@ -1,1 +1,11 @@
-<h1>Profile#Edit</h1>
+<h2>Editar Perfil</h2>
+
+<%= form_with(model: @user, url: profile_path, method: :patch) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= f.file_field :photo %>
+  </div>
+
+  <%= f.submit "Atualizar", class: "btn btn-primary" %>
+<% end %>
