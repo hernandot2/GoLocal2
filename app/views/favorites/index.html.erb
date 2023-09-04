@@ -15,7 +15,8 @@
 
             <%= link_to location_path(favorite.location), class: "map-marker-link location-link no-style-link", data: { id: favorite.location.id } do %>
               <div class="card-content-geo sq-md">
-                <div class="card-location-img-geo"></div>
+                <div class="card-location-img-geo"><% asset_url = favorite.location.photo.url %>
+         <%= image_tag asset_path(asset_url) %></div>
                 <div class="card-event-title clamp-2">
                   <h5 style="margin-top: 5px;"><%= favorite.location.name %></h5>
                 </div>
