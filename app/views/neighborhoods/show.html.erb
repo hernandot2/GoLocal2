@@ -22,7 +22,7 @@
     <h3>Próximos eventos</h3>
     <%= link_to 'Ver todos os eventos', events_path, class: "link-text" %>
   </div>
-  <% @elements = @events.take(5) %>
+    <% @events = @events.first(4) %>
   <%= render "shared/cards/card_event", elements: @elements %>
 </section>
 
