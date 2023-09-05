@@ -1,5 +1,5 @@
 <section>
-<%= render "banner" %>
+  <%= render "banner" %>
 </section>
 
 <section class="city-details mb-5">
@@ -29,6 +29,19 @@
   <div class="" >
     <% @events = @events.first(4) %>
     <%= render "shared/cards/card_event", events: @events %>
+  </div>
+</section>
+
+<section id="travel-info">
+  <div class="travel-info">
+    <div class="travel-image-container">
+      <div class="travel-info-image" style="background-image: url('<%= image_url("cities/sp-metro.jpg") %>');" ></div>
+    </div>
+    <div class="travel-info-content">
+      <p class="travel-info-small mb-2">Dicas dos nossos colaboradores</p>
+      <h3 class="" >Mobilidade</h3>
+      <p class="travel-info-text" >Precisa se locomover pela cidade? Temos um guia preparado para que você possa andar por aí como um local, com informações sobre os principais meios de transporte e dicas para garantir sua segurança nas ruas.</p>
+    </div>
   </div>
 </section>
 

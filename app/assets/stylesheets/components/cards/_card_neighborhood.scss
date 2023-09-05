@@ -31,3 +31,10 @@
   margin: 0;
   text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.40);
 }
+
+// card hovers
+
+.card-neighborhood:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.025);
+}

@@ -2,26 +2,31 @@
   <section id="banner-home">
     <%= render "banner" %>
   </section>
-
   <section id="city-suggest">
     <div>
       <div data-universal-search-target="results"></div>
     </div>
-     <div>
-     <br>
-     <h3>Vai viajar?</h3>
-     <p>
-     Viajar é dar asas para a vida. É descobrir novos horizontes. É encontrar em novos lugares memórias incríveis e guardá-las na cabeça e no coração.</p>
+    <div>
+      <h3>Vai viajar?</h3>
+      <p>Explore seus destinos com o que selecionamos de melhor em cada lugar.</p>
       <% @elements = @cities.take(3) %>
       <%= render "shared/cards/card_city", elements: @elements %>
-      </div>
+    </div>
   </section>
 </div>
-<%# <section id="banner-call">
-  <div class="banner-home">
-    <h1>BANNER</h1>
+
+<section id="travel-info">
+  <div class="travel-info">
+    <div class="travel-image-container">
+      <div class="travel-info-image" style="background-image: url('<%= image_url("cities/sp-metro.jpg") %>');" ></div>
+    </div>
+    <div class="travel-info-content">
+      <p class="travel-info-small mb-2">Dicas dos nossos colaboradores</p>
+      <h3 class="" >Mobilidade</h3>
+      <p class="travel-info-text" >Precisa se locomover pela cidade? Temos um guia preparado para que você possa andar por aí como um local, com informações sobre os principais meios de transporte e dicas para garantir sua segurança nas ruas.</p>
+    </div>
   </div>
-</section> %>
+</section>
 
 <section>
   <h3>O que gostaria de fazer?</h3>
