@@ -1,39 +1,44 @@
 <h1 class="mb-3">Perfil de <%= current_user.name %></h1>
-<section>
-  <div class="d-flex justify-content-between">
-    <h3>Meus eventos</h3>
-    <%= link_to "Adicionar um evento", new_event_path, class: "btn-main" %>
-  </div>
-  <% if @user == current_user %>
-    <% if current_user.events.empty? %>
-      <p class="mb-5">Você ainda não cadastrou nenhum evento</p>
+<% if current_user.admin %>
+    <h3>Eventos para aprovação</h3>
+    <h3>Locais para aprovação</h3>
+<% else %>
+  <section>
+    <div class="d-flex justify-content-between">
+      <h3>Meus eventos</h3>
+      <%= link_to "Adicionar um evento", new_event_path, class: "btn-main" %>
+    </div>
+    <% if @user == current_user %>
+      <% if current_user.events.empty? %>
+        <p class="mb-5">Você ainda não cadastrou nenhum evento</p>
+      <% else %>
+        <div>
+          <%= render "shared/cards/card_event" %>
+        </div>
+      <% end %>
     <% else %>
       <div>
         <%= render "shared/cards/card_event" %>
       </div>
     <% end %>
-  <% else %>
-    <div>
-      <%= render "shared/cards/card_event" %>
+  </section>
+  <section>
+    <div class="d-flex justify-content-between">
+      <h3>Meus locais</h3>
+      <%= link_to "Adicionar um local", new_location_path, class: "btn-main" %>
     </div>
-  <% end %>
-</section>
-<section>
-  <div class="d-flex justify-content-between">
-    <h3>Meus locais</h3>
-    <%= link_to "Adicionar um local", new_location_path, class: "btn-main" %>
-  </div>
-  <% if @user == current_user %>
-    <% if current_user.locations.empty? %>
-      <p class="mb-5">Você ainda não cadastrou nenhum local</p>
+    <% if @user == current_user %>
+      <% if current_user.locations.empty? %>
+        <p class="mb-5">Você ainda não cadastrou nenhum local</p>
+      <% else %>
+        <div>
+          <%= render "shared/cards/card_location" %>
+        </div>
+      <% end %>
     <% else %>
       <div>
         <%= render "shared/cards/card_location" %>
       </div>
     <% end %>
-  <% else %>
-    <div>
-      <%= render "shared/cards/card_location" %>
-    </div>
-  <% end %>
-</section>
+  </section>
+<% end %>
