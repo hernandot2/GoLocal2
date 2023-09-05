@@ -9,14 +9,14 @@ class LocationsController < ApplicationController
     @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
     if @category.present?
       if @city_id.present?
-        @locations = Location.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
+        @locations = policy_scope(Location).joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
       elsif @neighborhood_id.present?
-        @locations = Location.where(category: @category).where(neighborhood_id: @neighborhood_id)
+        @locations = policy_scope(Location).where(category: @category).where(neighborhood_id: @neighborhood_id)
       else
-        @locations = Location.where(category: @category)
+        @locations = policy_scope(Location).where(category: @category)
       end
     else
-      @locations = Location.all
+      @locations = policy_scope(Location)
     end
     @markers = @locations.geocoded.map do |location|
       {
@@ -30,6 +30,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+    authorize @location
     @neighborhood = @location.neighborhood
     @marker = {
       id: @location.id,
@@ -44,11 +45,13 @@ class LocationsController < ApplicationController
 
   def new
     @location = Location.new
+    authorize @location
   end
 
   def create
     @location = Location.new(location_params)
     @location.user = current_user
+    authorize @location
     if @location.save
       redirect_to location_path(@location), notice: "Local criado com sucesso!"
     else
@@ -57,9 +60,11 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    authorize @location
   end
 
   def update
+    authorize @location
     if @location.update(location_params)
       redirect_to location_path, notice: "Local atualizado com sucesso!"
     else
@@ -68,6 +73,7 @@ class LocationsController < ApplicationController
   end
 
   def destroy
+    authorize @location
     @location.destroy
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end

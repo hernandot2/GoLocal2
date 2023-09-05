@@ -6,6 +6,7 @@ class CitiesController < ApplicationController
   end
 
   def show
+    authorize @city
     @events = Event.joins(location: { neighborhood: :city }).where("cities.id = ?", @city.id)
     @neighborhoods = @city.neighborhoods
     @locations = Location.joins(neighborhood: :city).where("cities.id = ?", @city.id)
@@ -48,8 +49,6 @@ class CitiesController < ApplicationController
   end
 
   def city_params
-
     params.require(:city).permit(:name, :photo)
-
   end
 end

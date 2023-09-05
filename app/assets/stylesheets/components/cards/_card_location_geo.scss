@@ -1,4 +1,12 @@
 
+.grid-card-event-geo-neigh {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 24px 0;
+  gap: 24px 24px;
+}
+
+
 .grid-card-event-geo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,6 +26,7 @@
   text-decoration: none;
 }
 
+
 .card-content-geo {
   color: $neutral-01;
   padding: 16px;
@@ -29,11 +38,19 @@
   text-decoration: none;
 }
 
+
 .card-location-img-geo {
   overflow: hidden;
   height: 100px;
   width: inherit;
   background-color: $neutral-03;
+}
+
+.card-location-img-geo img {
+  object-position: bottom;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -67,6 +84,15 @@
   position: absolute;
   top: 4px;
   right: 7px;
+
+}
+
+.heart-icon-geo {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  z-index: 1;
+
 }
 
 
@@ -82,6 +108,9 @@
   color: #cd4754 !important; /* Usando !important para garantir que esta regra tenha prioridade */
 }
 
+.fa-heart, .favorited-heart {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
 
 /* Tamanho padrão */
 .heart-icon .fa-heart {
@@ -102,29 +131,8 @@
   }
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Posição */
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+.no-style-link {
+  text-decoration: none;
+  color: inherit;
 }

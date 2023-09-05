@@ -6,8 +6,16 @@ User.destroy_all
 
 users = {
   user1: {
-    email: "test@teste.com",
-    password: "123123"
+    name: "Usuário simples",
+    email: "test@example.com",
+    password: "123123",
+    admin: false
+  },
+  user2: {
+    name: "Usuário admin",
+    email: "admin@example.com",
+    password: "123123",
+    admin: true
   }
 }
 
@@ -210,9 +218,7 @@ neighborhoods = {
   }
 }
 
-
 neighborhoods.each do |key, neighborhood_data|
-
   neighborhood = Neighborhood.create(name: neighborhood_data[:name], city_id: neighborhood_data[:city_id], description: neighborhood_data[:description])
   if neighborhood_data[:photo_url]
     file = URI.open(neighborhood_data[:photo_url])
@@ -239,7 +245,8 @@ locations = {
   locationsp2: {
     name: "Bar do Juarez",
     address: "Rua Aspicuelta, 554, Vila Madalena, São Paulo, SP",
-    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
+    description: "O Bar do Juarez é um estabelecimento icônico e querido localizado na cidade de São Paulo, Brasil.
+    Com uma história que remonta a várias décadas, este bar conquistou um lugar especial no coração dos paulistanos e dos visitantes que desejam experimentar a autêntica cultura de boteco brasileira.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
