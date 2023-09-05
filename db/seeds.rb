@@ -240,7 +240,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/3coracoes-vila-madalena.jpg"
+    photo_url: "app/assets/images/locations/3coracoes-vila-madalena.jpg",
+    approved: true
   },
   locationsp2: {
     name: "Bar do Juarez",
@@ -249,7 +250,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
+    photo_url: "app/assets/images/locations/bar-do-juarez.jpg",
+    approved: true
   },
   locationsp3: {
     name: "Bar Brahma",
@@ -258,7 +260,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "app/assets/images/locations/bar-brahma.jpg",
+    approved: true
   },
   locationsp4: {
     name: "Museu da Casa Brasileira",
@@ -267,7 +270,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/museu-da-casa-brasileira.jpg"
+    photo_url: "app/assets/images/locations/museu-da-casa-brasileira.jpg",
+    approved: true
   },
   locationsp5: {
     name: "Livraria da Vila",
@@ -276,7 +280,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/livraria-da-vila-1.jpg"
+    photo_url: "app/assets/images/locations/livraria-da-vila-1.jpg",
+    approved: true
   },
   locationsp6: {
     name: "Parque da Aclimação",
@@ -285,7 +290,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-aclimacao.jpg"
+    photo_url: "app/assets/images/locations/parque-aclimacao.jpg",
+    approved: true
   },
   locationsp7: {
     name: "Beco do Batman",
@@ -294,7 +300,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/beco-do-batman.jpg"
+    photo_url: "app/assets/images/locations/beco-do-batman.jpg",
+    approved: true
   },
   locationsp8: {
     name: "Starbucks Vila Madalena",
@@ -303,7 +310,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
+    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg",
+    approved: true
   },
   locationsp9: {
     name: "Bar Bossa Lounge",
@@ -312,7 +320,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-da-onca.jpg"
+    photo_url: "app/assets/images/locations/bar-da-onca.jpg",
+    approved: true
   },
   locationsp10: {
     name: "Jojo Maronez",
@@ -321,7 +330,8 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/jojo-maronez.jpg"
+    photo_url: "app/assets/images/locations/jojo-maronez.jpg",
+    approved: true
   },
   locationsp11: {
     name: "Starbucks Jardins",
@@ -330,7 +340,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-jardins.jpg"
+    photo_url: "app/assets/images/locations/starbucks-jardins.jpg",
+    approved: true
   },
   locationsp12: {
     name: "Bar do Pirata",
@@ -339,7 +350,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-pirata.jpg"
+    photo_url: "app/assets/images/locations/bar-do-pirata.jpg",
+    approved: true
   },
   locationsp13: {
     name: "Fasano",
@@ -348,7 +360,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/hotel-fasano.jpg"
+    photo_url: "app/assets/images/locations/hotel-fasano.jpg",
+    approved: true
   },
   locationsp14: {
     name: "MASP",
@@ -357,7 +370,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/masp.jpg"
+    photo_url: "app/assets/images/locations/masp.jpg",
+    approved: true
   },
   locationsp15: {
     name: "Shopping Cidade Jardim, São Paulo, SP",
@@ -366,7 +380,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-cidade-jardim.jpg"
+    photo_url: "app/assets/images/locations/shopping-cidade-jardim.jpg",
+    approved: true
   },
   locationsp16: {
     name: "Parque Trianon",
@@ -375,7 +390,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-trianon.jpg"
+    photo_url: "app/assets/images/locations/parque-trianon.jpg",
+    approved: true
   },
   locationsp17: {
     name: "Passeio de bicicleta pela Avenida Paulista",
@@ -384,7 +400,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bike-av-paulista.jpg"
+    photo_url: "app/assets/images/locations/bike-av-paulista.jpg",
+    approved: true
   },
   locationsp18: {
     name: "Le Pain Quotidien Jardins",
@@ -393,7 +410,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-jardins.jpg"
+    photo_url: "app/assets/images/locations/le-pain-jardins.jpg",
+    approved: true
   },
   locationsp19: {
     name: "Bar Brahma Jardins",
@@ -402,7 +420,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "app/assets/images/locations/bar-brahma.jpg",
+    approved: true
   },
   locationsp20: {
     name: "Paris 6 Jardins",
@@ -411,7 +430,8 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/paris6-jardins.jpg"
+    photo_url: "app/assets/images/locations/paris6-jardins.jpg",
+    approved: true
   },
   locationsp21: {
     name: "Starbucks Moema",
@@ -420,7 +440,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-moema.jpg"
+    photo_url: "app/assets/images/locations/starbucks-moema.jpg",
+    approved: true
   },
   locationsp22: {
     name: "Bar do Juarez Moema",
@@ -429,7 +450,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
+    photo_url: "app/assets/images/locations/bar-do-juarez.jpg",
+    approved: true
   },
   locationsp23: {
     name: "Coco Bambu",
@@ -438,7 +460,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/coco-bambu.jpg"
+    photo_url: "app/assets/images/locations/coco-bambu.jpg",
+    approved: true
   },
   locationsp24: {
     name: "Museu de Arte Contemporânea de São Paulo",
@@ -447,7 +470,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/mac-sp.jpg"
+    photo_url: "app/assets/images/locations/mac-sp.jpg",
+    approved: true
   },
   locationsp25: {
     name: "Shopping Ibirapuera",
@@ -456,7 +480,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-ibirapuera.jpg"
+    photo_url: "app/assets/images/locations/shopping-ibirapuera.jpg",
+    approved: true
   },
   locationsp26: {
     name: "Parque Ibirapuera",
@@ -465,7 +490,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg",
+    approved: true
   },
   locationsp27: {
     name: "Stand up paddle no Lago do Parque Ibirapuera",
@@ -474,7 +500,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg",
+    approved: true
   },
   locationsp28: {
     name: "Le Pain Quotidien Moema",
@@ -483,7 +510,8 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-moema.jpg"
+    photo_url: "app/assets/images/locations/le-pain-moema.jpg",
+    approved: true
   },
   locationsp29: {
     name: "Starbucks Pinheiros",
@@ -492,7 +520,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
+    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg",
+    approved: true
   },
   locationsp30: {
     name: "Bar Brahma Pinheiros",
@@ -501,7 +530,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "app/assets/images/locations/bar-brahma.jpg",
+    approved: true
   },
   locationsp31: {
     name: "Mocotó",
@@ -510,7 +540,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/mocoto.jpg"
+    photo_url: "app/assets/images/locations/mocoto.jpg",
+    approved: true
   },
   locationsp32: {
     name: "Pinacoteca do Estado de São Paulo",
@@ -519,7 +550,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/pinacoteca.jpg"
+    photo_url: "app/assets/images/locations/pinacoteca.jpg",
+    approved: true
   },
   locationsp33: {
     name: "Shopping Villa Lobos",
@@ -528,7 +560,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-villa-lobos.jpg"
+    photo_url: "app/assets/images/locations/shopping-villa-lobos.jpg",
+    approved: true
   },
   locationsp34: {
     name: "Parque Villa Lobos",
@@ -537,7 +570,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-villa-lobos.jpg"
+    photo_url: "app/assets/images/locations/parque-villa-lobos.jpg",
+    approved: true
   },
   locationsp35: {
     name: "Stand up paddle no Lago do Parque Villa Lobos",
@@ -546,7 +580,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg",
+    approved: true
   },
   locationsp36: {
     name: "Le Pain Quotidien Pinheiros",
@@ -555,7 +590,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-pinheiros.jpg"
+    photo_url: "app/assets/images/locations/le-pain-pinheiros.jpg",
+    approved: true
   },
   locationsp37: {
     name: "Bar da Esquina",
@@ -564,7 +600,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-da-esquina.jpg"
+    photo_url: "app/assets/images/locations/bar-da-esquina.jpg",
+    approved: true
   },
   locationsp38: {
     name: "Jiquitaia",
@@ -573,7 +610,8 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/jiquitaia.jpg"
+    photo_url: "app/assets/images/locations/jiquitaia.jpg",
+    approved: true
   },
   locationsp39: {
     name: "Starbucks Bela Vista",
@@ -582,7 +620,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-bela-vista.jpg"
+    photo_url: "app/assets/images/locations/starbucks-bela-vista.jpg",
+    approved: true
   },
   locationsp40: {
     name: "Bar do Luiz",
@@ -591,7 +630,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-luiz.jpg"
+    photo_url: "app/assets/images/locations/bar-do-luiz.jpg",
+    approved: true
   },
   locationsp41: {
     name: "San Gennaro",
@@ -600,7 +640,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/san-gennaro.jpg"
+    photo_url: "app/assets/images/locations/san-gennaro.jpg",
+    approved: true
   },
   locationsp42: {
     name: "Edifício Itália",
@@ -609,7 +650,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/edificio-italia.jpg"
+    photo_url: "app/assets/images/locations/edificio-italia.jpg",
+    approved: true
   },
   locationsp43: {
     name: "Shopping Pátio Paulista",
@@ -618,7 +660,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-patio-paulista.jpg"
+    photo_url: "app/assets/images/locations/shopping-patio-paulista.jpg",
+    approved: true
   },
 #  locationsp44: {
 #  #  name: "Parque Augusta",
@@ -645,7 +688,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-bela-vista.jpg"
+    photo_url: "app/assets/images/locations/le-pain-bela-vista.jpg",
+    approved: true
   },
   locationsp47: {
     name: "Bar Brahma Bela Vista",
@@ -654,7 +698,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "app/assets/images/locations/bar-brahma.jpg",
+    approved: true
   },
   locationsp48: {
     name: "Bráz Trattoria",
@@ -663,7 +708,8 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/braz-trattoria.jpg"
+    photo_url: "app/assets/images/locations/braz-trattoria.jpg",
+    approved: true
   },
   locationsp49: {
     name: "Le Pain Quotidien",
@@ -672,7 +718,8 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-quotidien-2.jpg"
+    photo_url: "app/assets/images/locations/le-pain-quotidien-2.jpg",
+    approved: true
   },
   locationsp50: {
     name: "SubAstor",
@@ -681,7 +728,8 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/subastor.jpg"
+    photo_url: "app/assets/images/locations/subastor.jpg",
+    approved: true
   },
   locationsp51: {
     name: "D.O.M.",
@@ -690,7 +738,8 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/dom.jpg"
+    photo_url: "app/assets/images/locations/dom.jpg",
+    approved: true
   },
   locationsp52: {
     name: "Museu de Arte de São Paulo (MASP)",
@@ -699,7 +748,8 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/masp1.jpg"
+    photo_url: "app/assets/images/locations/masp1.jpg",
+    approved: true
   },
   locationsp53: {
     name: "Daslu",
@@ -717,7 +767,8 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg",
+    approved: true
   },
   locationsp55: {
     name: "Parque Burle Marx",
@@ -936,7 +987,8 @@ events = {
     description: "Um festival de arte urbana que transformará as ruas da Vila Madalena em uma galeria a céu aberto. Artistas locais e internacionais criarão murais incríveis.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-arte-urbana.jpg"
+    photo_url: "app/assets/images/events/festival-arte-urbana.jpg",
+    approved: true
   },
   event2: {
     title: "Concerto ao Pôr do Sol no Parque da Aclimação",
@@ -944,7 +996,8 @@ events = {
     description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/concerto-por-do-sol.jpg"
+    photo_url: "app/assets/images/events/concerto-por-do-sol.jpg",
+    approved: true
   },
   event3: {
     title: "Feira de Artesanato da Vila",
@@ -952,7 +1005,8 @@ events = {
     description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/feira-artesanato.jpg"
+    photo_url: "app/assets/images/events/feira-artesanato.jpg",
+    approved: true
   },
   event4: {
     title: "Exposição de Fotografia Cenas Urbanas",
@@ -960,7 +1014,8 @@ events = {
     description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
     location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/exposicao-fotografica.jpg"
+    photo_url: "app/assets/images/events/exposicao-fotografica.jpg",
+    approved: true
   },
   event5: {
     title: "Noite de Comédia Stand-up no Bar do Juarez",
@@ -968,7 +1023,8 @@ events = {
     description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
     location_id: Location.find(2).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/standup-comedy.jpg"
+    photo_url: "app/assets/images/events/standup-comedy.jpg",
+    approved: true
   },
   event6: {
     title: "Workshop de Yoga ao Ar Livre",
@@ -976,7 +1032,8 @@ events = {
     description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/yoga-ar-livre.jpg"
+    photo_url: "app/assets/images/events/yoga-ar-livre.jpg",
+    approved: true
   },
   event7: {
     title: "Exposição de Arte Contemporânea Visões Abstratas",
@@ -984,7 +1041,8 @@ events = {
     description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
     location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/arte-contemporanea.jpg"
+    photo_url: "app/assets/images/events/arte-contemporanea.jpg",
+    approved: true
   },
   event8: {
     title: "Festa da Cultura Brasileira",
@@ -992,7 +1050,8 @@ events = {
     description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
     location_id: Location.find(12).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festa-cultura-brasileira.jpg"
+    photo_url: "app/assets/images/events/festa-cultura-brasileira.jpg",
+    approved: true
   },
   event9: {
     title: "Passeio de Bicicleta pela Vila Madalena",
@@ -1000,7 +1059,8 @@ events = {
     description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/passeio-bike.jpg"
+    photo_url: "app/assets/images/events/passeio-bike.jpg",
+    approved: true
   },
   event10: {
     title: "Noite de Jazz no Café Harmonia",
@@ -1008,7 +1068,8 @@ events = {
     description: "Relaxe ao som suave do jazz em um dos cafés mais aconchegantes da Vila.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-jazz.jpg"
+    photo_url: "app/assets/images/events/noite-jazz.jpg",
+    approved: true
   },
   event11: {
     title: "Noite de Karaokê no Bar do Juarez",
@@ -1016,7 +1077,8 @@ events = {
     description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
     location_id: Location.find(2).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-karaoke.jpg"
+    photo_url: "app/assets/images/events/noite-karaoke.jpg",
+    approved: true
   },
   event12: {
     title: "Exposição de Esculturas no Espaço Criativo",
@@ -1024,7 +1086,8 @@ events = {
     description: "Admire esculturas impressionantes criadas por artistas locais.",
     location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/exposicao-esculturas.jpg"
+    photo_url: "app/assets/images/events/exposicao-esculturas.jpg",
+    approved: true
   },
   event13: {
     title: "Festival de Food Trucks na Rua Medeiros",
@@ -1032,7 +1095,8 @@ events = {
     description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-foodtruck.jpg"
+    photo_url: "app/assets/images/events/festival-foodtruck.jpg",
+    approved: true
   },
   event14: {
     title: "Festival de Jazz no Parque Trianon",
@@ -1040,7 +1104,8 @@ events = {
     description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
     location_id: Location.find(16).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-jazz.jpg"
+    photo_url: "app/assets/images/events/festival-jazz.jpg",
+    approved: true
   },
   event15: {
     title: "Noite de MPB no Bar do Pirata",
@@ -1048,7 +1113,8 @@ events = {
     description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
     location_id: Location.find(12).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-mpb1.jpg"
+    photo_url: "app/assets/images/events/noite-mpb1.jpg",
+    approved: true
   },
   event16: {
     title: "Sessão de Cinema ao Ar Livre no Ibirapuera",
@@ -1056,7 +1122,8 @@ events = {
     description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
     location_id: Location.find(26).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/cinema-arlivre.jpg"
+    photo_url: "app/assets/images/events/cinema-arlivre.jpg",
+    approved: true
   },
   event17: {
     title: "Feira Gastronômica na Praça da Vila Madalena",
@@ -1064,7 +1131,8 @@ events = {
     description: "Saboreie pratos deliciosos de diferentes culturas em um evento gastronômico diversificado.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/feira-gastronomica.jpg"
+    photo_url: "app/assets/images/events/feira-gastronomica.jpg",
+    approved: true
   },
   event18: {
     title: "Degustação de Cerveja Artesanal no Bar Bossa Lounge",
@@ -1072,7 +1140,8 @@ events = {
     description: "Experimente cervejas artesanais locais com especialistas em cerveja.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/cerveja-artesanal.jpg"
+    photo_url: "app/assets/images/events/cerveja-artesanal.jpg",
+    approved: true
   },
   event19: {
     title: "Noite de Bossa Nova no Bossa Lounge",
@@ -1080,7 +1149,8 @@ events = {
     description: "Desfrute de uma atmosfera sofisticada com músicas de bossa nova e coquetéis exclusivos.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-bossa-nova.jpg"
+    photo_url: "app/assets/images/events/noite-bossa-nova.jpg",
+    approved: true
   },
   event20: {
     title: "Noite de Samba no Bar Brahma",
