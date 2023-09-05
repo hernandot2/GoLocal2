@@ -1,17 +1,16 @@
-<div class="grid-card-event">
+<div class="grid-card-location">
   <% @locations.each do |location| %>
-    <%= link_to location_path(location), class: "card-event" do %>
-      <div class="card-event-content">
-        <div class="card-event-img">
-      </div>
-        <div class="card-event-title clamp-2">
+    <%= link_to location_path(location), class: "card-location" do %>
+      <div class="card-location-img" style="background-image: url('<%= location.photo.url %>');" ></div>
+      <div class="card-location-content">
+        <div class="card-location-title clamp-2">
           <h4><%= location.name %></h4>
         </div>
-        <div class="card-event-description clamp-2">
+        <div class="card-location-description clamp-2">
           <%= location.description %>
         </div>
-        <div class="card-event-description clamp-2">
-          <%= location.address %>
+        <div class="card-location-description clamp-2">
+          <p><%= location.address %></p> 
         </div>
       </div>
     <% end %>

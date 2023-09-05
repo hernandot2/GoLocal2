@@ -51,6 +51,11 @@
   margin-right: 48px;
 }
 
+.travel-info-image:hover {
+  border-radius: $border-radius-lg;
+  transition: ease 0.3s;
+}
+
 .travel-info-content {
   margin: auto 0;
   width: 100%;
@@ -61,6 +66,7 @@
   font-size: 20px;
 }
 .travel-info-small {
-  color: $neutral_09;
+  color: $neutral_08;
   font-size: 14px;
 }
+

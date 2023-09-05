@@ -1,6 +1,7 @@
 class LocationsController < ApplicationController
+  layout "map_page"
   before_action :set_location, only: [:show, :edit, :update, :destroy]
-
+  
   def index
     @category = params[:category]
     @city_id = params[:city]
