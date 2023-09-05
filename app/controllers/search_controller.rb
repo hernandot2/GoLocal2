@@ -2,10 +2,10 @@
 class SearchController < ApplicationController
   def index
     query = params[:query]
-    @locations = Location.search(query)
-    @events = Event.search(query)
-    @cities = City.search(query)
-    @neighborhoods = Neighborhood.search(query)
+    @locations = policy_scope(Location).search(query)
+    @events = policy_scope(Event).search(query)
+    @cities = policy_scope(City).search(query)
+    @neighborhoods = policy_scope(Neighborhood).search(query)
 
     respond_to do |format|
       format.html

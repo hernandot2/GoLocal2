@@ -16,7 +16,8 @@
         <div class="card-geo sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
           <%= link_to location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } do %>
           <div class="card-content-geo sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
-            <div class="card-location-img-geo" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"></div>
+            <div class="card-location-img-geo" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"><% asset_url = location.photo.url %>
+         <%= image_tag asset_path(asset_url) %></div>
             <div>
               <h5><%= location.name %></h5>
               <!-- Ícone do coração com posicionamento absoluto -->

@@ -20,14 +20,22 @@
   </div>
 
   <div class="d-flex justify-content-between mt-3">
-    <div>
-      <% if @location.user == current_user %>
-        <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
-        <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
-      <% end %>
-    </div>
-    <div>
-      <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
-    </div>
+    <% if user_signed_in? %>
+      <div>
+        <% if policy(@location).edit? %>
+          <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
+        <% end %>
+        <% if policy(@location).destroy? %>
+          <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+      </div>
+    <% end %>
   </div>
 </section>

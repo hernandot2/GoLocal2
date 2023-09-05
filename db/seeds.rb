@@ -6,8 +6,16 @@ User.destroy_all
 
 users = {
   user1: {
-    email: "test@teste.com",
-    password: "123123"
+    name: "Usuário simples",
+    email: "test@example.com",
+    password: "123123",
+    admin: false
+  },
+  user2: {
+    name: "Usuário admin",
+    email: "admin@example.com",
+    password: "123123",
+    admin: true
   }
 }
 
@@ -210,9 +218,7 @@ neighborhoods = {
   }
 }
 
-
 neighborhoods.each do |key, neighborhood_data|
-
   neighborhood = Neighborhood.create(name: neighborhood_data[:name], city_id: neighborhood_data[:city_id], description: neighborhood_data[:description])
   if neighborhood_data[:photo_url]
     file = URI.open(neighborhood_data[:photo_url])

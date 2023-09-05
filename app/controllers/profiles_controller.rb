@@ -7,10 +7,11 @@ before_action :set_user, only: [:show, :edit, :update]
   end
 
   def edit
+    authorize @user
   end
 
   def update
-    @user = User.find(params[:id])
+    authorize @user
     if @user.update(user_params)
       redirect_to profile_path(@user), notice: 'Dados atualizados com sucesso!'
     else
