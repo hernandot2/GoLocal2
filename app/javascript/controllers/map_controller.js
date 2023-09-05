@@ -8,7 +8,7 @@ export default class extends Controller {
   }
 
   initialize() {
-    const cardEvents = document.querySelectorAll('.card-event, .card-event-content, .card-event-img');
+    const cardEvents = document.querySelectorAll('.card-geo, .card-content-geo, .card-location-img-geo');
     cardEvents.forEach(card => {
       card.addEventListener('mouseover', this.highlightMarker.bind(this));
       card.addEventListener('mouseout', this.unhighlightMarker.bind(this));

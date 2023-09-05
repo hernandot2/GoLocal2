@@ -1,8 +1,21 @@
 
-<div class="card-event-img"></div>
+
+<!-- Div pai com posicionamento relativo -->
+<div class="card-event-wrapper">
+  <!-- Div da imagem -->
+  <div class="card-event-img"></div>
 <h2><%= location.name %></h2>
 <p><%= location.address %></p>
 
-<div class="location-item" data-controller="favorite">
-  <i data-action="click->favorite#toggle" data-favorite-location-id="<%= location.id %>" class="far fa-heart favorite-btn"></i>
+  <!-- Ícone do coração com posicionamento absoluto -->
+  <div class="heart-icon">
+     <% if current_user && current_user.favorites.where(location_id: location.id).exists? %>
+      <i class="fa fa-heart favorited-heart"></i>
+
+    <% else %>
+      <%= link_to location_favorites_path(location), data: {turbo_method: :post} do %>
+        <i class="fa fa-heart"></i>
+      <% end %>
+    <% end %>
+  </div>
 </div>

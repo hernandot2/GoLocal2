@@ -1,36 +1,52 @@
-<div class="d-flex flex-column locations-container">
+<div class="d-flex flex-column locations-container-geo">
 
   <!-- Title -->
   <div class="d-flex justify-content-between align-items-center">
     <h1><%= @category %></h1>
-    <!-- Você pode adicionar algo aqui para o lado direito, se necessário -->
+
   </div>
 
-  <!-- Content -->
-  <div class="d-flex flex-row">
+ <!-- Content -->
+<div class="d-flex flex-row">
 
-    <!-- Left: Location Cards -->
-    <div class="flex-grow-1 overflow-auto scrollable-content" style="height: 100vh;">
-      <div class="grid-card-event sq-md">
-        <% @locations.each do |location| %>
-          <div class="card-event sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
-            <div class="card-event-content sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
-              <div class="card-event-img" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"></div>
-              <div><h5><%= location.name %></h5></div>
-              <%= link_to "#{location.address}", location_path(location), class: "map-marker-link location-link", data: { id: location.id } %>
+  <!-- Left: Cards -->
+  <div class="flex-grow-1 overflow-auto scrollable-content" style="height: 100vh;">
+    <div class="grid-card-event-geo sq-md">
+      <% @locations.each do |location| %>
+        <div class="card-geo sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
+          <%= link_to location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } do %>
+          <div class="card-content-geo sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
+            <div class="card-location-img-geo" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"></div>
+            <div>
+              <h5><%= location.name %></h5>
+              <!-- Ícone do coração com posicionamento absoluto -->
+              <div class="heart-icon-geo">
+                <% if current_user && current_user.favorites.where(location_id: location.id).exists? %>
+                  <i class="fa fa-heart favorited-heart"></i>
+                <% else %>
+                  <%= link_to location_favorites_path(location), data: {turbo_method: :post} do %>
+                    <i class="fa fa-heart"></i>
+                  <% end %>
+                <% end %>
+                <% end %>
+              </div>
             </div>
+              <div class="card-event-description clamp-2">
+            <%= link_to "#{location.description}", location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } %>
           </div>
-        <% end %>
-      </div>
+          <div class="card-event-description clamp-2">
+            <%= link_to "#{location.address}", location_path(location), class: "map-marker-link location-link no-style-link", data: { id: location.id } %>
+          </div>
+          </div>
+        </div>
+      <% end %>
     </div>
+  </div>
 
-    <!-- Right: Map -->
-    <div class="fixed-map position-sticky" style="top: 0; height: 100vh; padding:10px;">
-      <%# <button class="toggle-button" style="position: absolute; top: 6px; left: 6px; z-index: 9999;" data-action="click->map#toggleMap">←</button> %>
-      <div class="location-map" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+  <!-- Right: Map -->
+  <div class="fixed-map position-sticky" style="top: 0; height: 100vh; padding:10px;">
+    <div class="location-map" data-controller="map" data-map-markers-value="<%= @markers.to_json %>" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-
   </div>
 
 </div>

@@ -7,6 +7,7 @@ class EventsController < ApplicationController
 
   def show
     authorize @event
+    @event_id = @event.id
   end
 
   def new
@@ -47,7 +48,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :location_id, :user_id, :neighborhood_id)
+    params.require(:event).permit(:title, :description, :date, :location_id, :user_id, :neighborhood_id, :photo)
   end
 
   def set_event

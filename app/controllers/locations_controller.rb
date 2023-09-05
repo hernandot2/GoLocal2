@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
     @category = params[:category]
     @city_id = params[:city]
     @neighborhood_id = params[:neighborhood]
-    # @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
+    @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
     if @category.present?
       if @city_id.present?
         @locations = policy_scope(Location).joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
@@ -38,6 +38,8 @@ class LocationsController < ApplicationController
       info_window_html: render_to_string(partial: "locations/info_window", locals: { location: @location }),
       marker_html: render_to_string(partial: "locations/marker")
     }
+    @location = Location.find(params[:id])
+    @location_id = @location.id
   end
 
   def new
@@ -74,6 +76,26 @@ class LocationsController < ApplicationController
     @location.destroy
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end
+
+
+  # def toggle_favorite
+  #   Rails.logger.debug "toggle_favorite called"
+  #   @location = Location.find(params[:id])
+  #   favorite = current_user.favorites.find_by(location_id: @location.id)
+
+  #   if favorite
+  #     favorite.destroy!
+  #     render json: { favorited: false }
+  #   else
+  #     new_favorite = current_user.favorites.new(location_id: @location.id)
+  #     if new_favorite.save
+  #       render json: { favorited: true }
+  #     else
+  #       render json: { error: new_favorite.errors.full_messages }, status: :unprocessable_entity
+  #     end
+  #   end
+  # end
+
 
   private
 

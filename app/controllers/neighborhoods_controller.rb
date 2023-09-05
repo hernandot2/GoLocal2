@@ -8,6 +8,7 @@ class NeighborhoodsController < ApplicationController
   def show
     authorize @neighborhood
     @locations = @neighborhood.locations
+    #@events = @neighborhood.events
   end
 
   def new

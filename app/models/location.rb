@@ -10,9 +10,10 @@ class Location < ApplicationRecord
   has_many :events
   has_many :ratings
   has_one_attached :photo
-
+  has_many :favorites
 
   def self.categories
     ["Café", "Parque", "Bar", "Loja", "Restaurante", "Museu"]
   end
 end
+

@@ -41,4 +41,10 @@
       </div>
     <% end %>
   </section>
+  <section>
+    <h3>Meus favoritos</h3>
+    <% current_user.favorites.each do |favorite| %>
+      <%= link_to favorite.location.name, location_path(favorite.location) %>
+    <% end %>
+  </section>
 <% end %>
