@@ -11,10 +11,7 @@ import MapController from "./map_controller"
 application.register("map", MapController)
 
 import UniversalSearchController from "./universal_search_controller"
-application.register("universal-search", UniversalSearchController)
-
-import OpenLogin from "./open_login"
-application.register("open-login", OpenLogin)
+application.register("universal-search", UniversalSearchController)ga
 
 // import FavoriteController from "./favorite_controller"
 // application.register("favorite-controller", FavoriteController)
