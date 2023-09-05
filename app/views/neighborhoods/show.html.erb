@@ -22,7 +22,7 @@
     <h3>Próximos eventos</h3>
     <%= link_to 'Ver todos os eventos', events_path, class: "link-text" %>
   </div>
-    <% @events = @events.first(4) %>
+  <% @events = @events.last(4) %>
   <%= render "shared/cards/card_event", elements: @elements %>
 </section>
 
@@ -32,7 +32,5 @@
     <%= link_to 'Ver todos os locais', locations_path, class: "link-text" %>
   </div>
 </section>
-
-  <!-- Implementado em 03-09-23  -->
 
    <%= render "shared/cards/card_location", elements: @elements %>
