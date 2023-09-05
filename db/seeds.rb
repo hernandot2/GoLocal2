@@ -245,7 +245,8 @@ locations = {
   locationsp2: {
     name: "Bar do Juarez",
     address: "Rua Aspicuelta, 554, Vila Madalena, São Paulo, SP",
-    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
+    description: "O Bar do Juarez é um estabelecimento icônico e querido localizado na cidade de São Paulo, Brasil.
+    Com uma história que remonta a várias décadas, este bar conquistou um lugar especial no coração dos paulistanos e dos visitantes que desejam experimentar a autêntica cultura de boteco brasileira.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
