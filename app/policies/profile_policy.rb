@@ -5,4 +5,22 @@ class ProfilePolicy < ApplicationPolicy
     #   scope.all
     # end
   end
+
+  def show?
+    true
+  end
+
+  def update?
+    owner?
+  end
+
+  def edit?
+    owner?
+  end
+
+  private
+
+  def owner?
+    record.user == user
+  end
 end
