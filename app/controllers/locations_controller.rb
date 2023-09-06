@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   layout "map_page"
-  before_action :set_location, only: [:show, :edit, :update, :destroy]
+  before_action :set_location, only: [:show, :edit, :update, :destroy, :approve]
 
   def index
     @category = params[:category]
@@ -78,6 +78,15 @@ class LocationsController < ApplicationController
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end
 
+  def approve
+    authorize @location
+    @location.approved = true
+    if @location.save!
+      redirect_to profile_path(current_user), notice: "Local aprovado com sucesso!"
+    else
+      redirect_to location_path
+    end
+  end
 
   # def toggle_favorite
   #   Rails.logger.debug "toggle_favorite called"

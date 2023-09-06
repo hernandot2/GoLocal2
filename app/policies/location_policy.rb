@@ -30,6 +30,10 @@ class LocationPolicy < ApplicationPolicy
     owner? || admin?
   end
 
+  def approve?
+    admin?
+  end
+  
   private
 
   def owner?

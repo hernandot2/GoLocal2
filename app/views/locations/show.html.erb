@@ -29,6 +29,9 @@
         <% if policy(@location).destroy? %>
           <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
         <% end %>
+        <% if policy(@location).approve? %>
+          <%= link_to "Aprovar local", approve_location_path(@location) , class: "btn-sub" %>
+        <% end %>
       </div>
       <div>
         <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
