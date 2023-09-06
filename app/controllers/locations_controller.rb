@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
   layout "map_page"
   before_action :set_location, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @category = params[:category]
     @city_id = params[:city]
@@ -101,7 +101,7 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:name, :address, :description, :neighborhood_id, :category, :photo)
+    params.require(:location).permit(:name, :address, :description, :neighborhood_id, :category, :photo, :approved)
   end
 
   def set_location
