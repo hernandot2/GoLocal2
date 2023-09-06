@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy, :approve]
 
   def index
-    @events = policy_scope(Event)
+    @events = policy_scope(Event).where(approved: true)
   end
 
   def show

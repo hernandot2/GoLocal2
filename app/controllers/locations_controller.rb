@@ -7,16 +7,17 @@ class LocationsController < ApplicationController
     @city_id = params[:city]
     @neighborhood_id = params[:neighborhood]
     @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
+    @locations = policy_scope(Location).where(approved: true)
     if @category.present?
       if @city_id.present?
-        @locations = policy_scope(Location).joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
+        @locations = @locations.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
       elsif @neighborhood_id.present?
-        @locations = policy_scope(Location).where(category: @category).where(neighborhood_id: @neighborhood_id)
+        @locations = @locations.where(category: @category).where(neighborhood_id: @neighborhood_id)
       else
-        @locations = policy_scope(Location).where(category: @category)
+        @locations = @locations.where(category: @category)
       end
     else
-      @locations = policy_scope(Location)
+      @locations
     end
     @markers = @locations.geocoded.map do |location|
       {

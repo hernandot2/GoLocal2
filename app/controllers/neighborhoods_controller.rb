@@ -8,7 +8,8 @@ class NeighborhoodsController < ApplicationController
   def show
     authorize @neighborhood
     @locations = @neighborhood.locations
-    @events = Event.joins(location: :neighborhood).where("neighborhoods.id = ?", @neighborhood.id)
+    @locations = @locations.where(approved: true)
+    @events = Event.joins(location: :neighborhood).where("neighborhoods.id = ?", @neighborhood.id).where(approved: true)
   end
 
   def new
