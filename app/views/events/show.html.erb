@@ -11,6 +11,9 @@
         <% if policy(@event).edit? %>
           <%= link_to "Editar evento", edit_event_path, class: "btn-main" %>
         <% end %>
+        <% if policy(@event).approve? %>
+          <%= link_to "Aprovar evento", approve_event_path(@event) , class: "btn-main" %>
+        <% end %>
         <% if policy(@event).destroy? %>
           <%= link_to "Excluir evento", event_path(@event), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse evento?" }, class: "btn-sub" %>
         <% end %>

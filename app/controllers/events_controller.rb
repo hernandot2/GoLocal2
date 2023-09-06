@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :approve]
 
   def index
     @events = policy_scope(Event)
@@ -43,6 +43,16 @@ class EventsController < ApplicationController
     authorize @event
     @event.destroy
     redirect_to events_path, notice: "Evento excluido com sucesso!"
+  end
+
+  def approve
+    authorize @event
+    @event.approved = true
+    if @event.save!
+      redirect_to profile_path(current_user), notice: "Evento aprovado com sucesso!"
+    else
+      redirect_to event_path
+    end
   end
 
   private
