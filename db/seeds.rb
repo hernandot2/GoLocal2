@@ -234,41 +234,46 @@ locations = {
   # são paulo--------------------------
 
   locationsp1: {
-    name: "3 Corações Vila Madalena",
-    address: "Rua Aspicuelta, 249, Vila Madalena, São Paulo, SP",
-    description: "Um café tradicional brasileiro com uma variedade de bebidas e comidas.",
+    name: "Coffee Lab",
+    address: "Rua Fradique Coutinho, 1340, Vila Madalena, São Paulo, SP",
+    description: "O Coffee Lab, localizado na Rua Fradique Coutinho, em São Paulo, é reconhecido como o melhor lugar para apreciar café na cidade. Sob a orientação de Isabella Raposeiras e sua equipe especializada em barismo,
+    você terá a oportunidade de aprofundar seu conhecimento sobre café, independentemente de preferir com ou sem açúcar.
+    Eles pacientemente ensinam sobre métodos de preparo, moagem e torrefação dos grãos. Além disso, oferecem deliciosos quitutes, como queijo quente e bolos caseiros.
+    Embora seja um pouco mais caro do que outros lugares, a atenção aos detalhes justifica o preço.
+    A única ressalva são os horários de pico durante o almoço e nos fins de semana.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/3coracoes-vila-madalena.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694007300/locations/coffee-lab_wqbwqe.jpg"
   },
   locationsp2: {
-    name: "Bar do Juarez",
-    address: "Rua Aspicuelta, 554, Vila Madalena, São Paulo, SP",
-    description: "O Bar do Juarez é um estabelecimento icônico e querido localizado na cidade de São Paulo, Brasil.
-    Com uma história que remonta a várias décadas, este bar conquistou um lugar especial no coração dos paulistanos e dos visitantes que desejam experimentar a autêntica cultura de boteco brasileira.",
+    name: "Bar do Beco",
+    address: "Rua Aspicuelta, 17, Vila Madalena, São Paulo, SP",
+    description: "O Bar do Beco é um lugar único situado na icônica viela do Beco do Batman, na Vila Madalena. Com suas mesas ao ar livre, um amplo quintal cercado por árvores frutíferas e paredes grafitadas,
+    este bar oferece um descontraído happy hour, com uma variedade de sanduíches no cardápio, cervejas especiais e coquetéis. Além disso, o Bar do Beco se destaca como um centro cultural no bairro, com diversas exposições e projeções.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029637/locations/bar9_sudbmb.jpg"
   },
   locationsp3: {
-    name: "Bar Brahma",
-    address: "Rua Aspicuelta, 227, Vila Madalena, São Paulo, SP",
-    description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
+    name: "Pracinha do Seu Justino",
+    address: "Rua Harmonia, 117, Vila Madalena, São Paulo, SP",
+    description: "A Pracinha do Seu Justino é o mais recente espaço gastronômico da Vila Madalena, pertencente aos mesmos proprietários do Bar Vila Seu Justino. Este ambiente ao ar livre oferece um ambiente descontraído, com mesas de boteco,
+    jardins verticais, uma fonte de desejos e uma barraca com opções de petiscos e bebidas. O local abre para o happy hour de terça a sexta-feira e a partir do meio-dia nos fins de semana, com entrada gratuita.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029649/locations/bar_rqdldb.jpg"
   },
   locationsp4: {
     name: "Museu da Casa Brasileira",
     address: "Av. Brigadeiro Faria Lima, 2705, Jardim Paulistano, São Paulo, SP",
     description: "Um museu que abriga uma coleção de casas brasileiras de diferentes períodos.",
-    neighborhood_id: Neighborhood.find(11).id,
+    neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/museu-da-casa-brasileira.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960171/locations/museu-da-casa-brasileira_kvm54v.jpg"
   },
   locationsp5: {
     name: "Livraria da Vila",
@@ -277,7 +282,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/livraria-da-vila-1.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960160/locations/livraria-da-vila-1_zdndh1.jpg"
   },
   locationsp6: {
     name: "Parque da Aclimação",
@@ -286,7 +291,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-aclimacao.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960173/locations/parque-aclimacao_k0psll.jpg"
   },
   locationsp7: {
     name: "Beco do Batman",
@@ -295,620 +300,534 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/beco-do-batman.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960133/locations/beco-do-batman_x7elez.jpg"
   },
   locationsp8: {
-    name: "Starbucks Vila Madalena",
-    address: "Av. Brigadeiro Faria Lima, 1194, Jardim Paulistano, São Paulo, SP",
-    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
+    name: "Olívio Bar",
+    address: "Rua Delfina, 196, Vila Madalena, São Paulo, SP",
+    description: "O Olívio Bar, recentemente inaugurado na Rua Delfina, apresenta uma proposta única com ênfase em drinks exclusivos. Um destaque é o 22,
+    uma bebida que combina rum, licor de pêssego, licor de laranja, rum de coco, limonada, espuma de limão siciliano, lima da Pérsia e leite de coco, servida em uma banheira de plástico com dois patinhos de borracha.
+    O salão possui teto retrátil para os dias mais quentes, bancos confortáveis e uma varanda cercada por um belo jardim.",
     neighborhood_id: Neighborhood.find(11).id,
-    category: "Café",
+    category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029659/locations/bar2_ofhypp.jpg"
   },
   locationsp9: {
-    name: "Bar Bossa Lounge",
-    address: "Av. Ipiranga, 200, Vila Madalena, São Paulo, SP",
-    description: "Um bar tradicional da Vila Madalena com uma atmosfera sofisticada.",
+    name: "Boteco São Conrado",
+    address: "Rua Aspicuelta, 51, Vila Madalena, São Paulo, SP",
+    description: "O Boteco São Conrado, localizado na animada Rua Aspicuelta, traz o clima descontraído da zona sul carioca para o bairro boêmio de São Paulo.
+    O bar possui um amplo e arejado salão, com toldos retráteis e um piso de ladrilho hidráulico que proporciona uma atmosfera de boteco autêntico.
+    A grande atração do cardápio é o chope, com uma chopeira de seis bicos oferecendo variedades como Brahma, Stella Artois, Brahma Black e Colorado. Nas quartas-feiras, o bar oferece chopp liberado!",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-da-onca.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029646/locations/bar4_aawwzh.jpg"
   },
   locationsp10: {
-    name: "Jojo Maronez",
-    address: "Rua Aspicuelta, 529, São Paulo, SP",
-    description: "Um restaurante especializado em comida brasileira com uma atmosfera informal.",
+    name: "Ícone",
+    address: "Rua Fidalga, 79, Vila Madalena, São Paulo, SP",
+    description: "Em um ambiente descontraído e acolhedor no coração da Vila Madalena, o restaurante Ícone Asiático é a combinação perfeita entre o respeito às tradições e a atenção às tendências da gastronomia asiática.
+    Sob o comando dos chefs Alexandre Ortigoso e Roberto Satoru, a casa oferece o melhor da culinária asiática autoral, com um toque de influência das técnicas francesas.
+    De maneira inovadora, todos os pratos são preparados diante dos olhos dos clientes, atrás de um balcão, proporcionando uma experiência única para saborear a refeição e conversar com os chefs.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/jojo-maronez.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031952/locations/restaurante-icone_rj7pnr.jpg"
   },
   locationsp11: {
-    name: "Starbucks Jardins",
-    address: "Av. Paulista, 1499, São Paulo, SP",
-    description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-    neighborhood_id: Neighborhood.find(12).id,
+    name: "Coffee Lab",
+    address: "Rua Fradique Coutinho, 1340, Vila Madalena, São Paulo, SP",
+    description: "O Coffee Lab, localizado na Rua Fradique Coutinho, em São Paulo, é reconhecido como o melhor lugar para apreciar café na cidade. Sob a orientação de Isabella Raposeiras e sua equipe especializada em barismo,
+    você terá a oportunidade de aprofundar seu conhecimento sobre café, independentemente de preferir com ou sem açúcar.
+    Eles pacientemente ensinam sobre métodos de preparo, moagem e torrefação dos grãos. Além disso, oferecem deliciosos quitutes, como queijo quente e bolos caseiros.
+    Embora seja um pouco mais caro do que outros lugares, a atenção aos detalhes justifica o preço.
+    A única ressalva são os horários de pico durante o almoço e nos fins de semana.",
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-jardins.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031238/locations/cafe_odusl5.jpg"
   },
   locationsp12: {
-    name: "Bar do Pirata",
-    address: "Av. Paulista, 2899, São Paulo, SP",
-    description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
-    neighborhood_id: Neighborhood.find(12).id,
+    name: "Pátio SP",
+    address: "Rua Mourato Coelho, 1.272, Vila Madalena, São Paulo, SP",
+    description: "O Pátio SP abriu suas portas na Vila Madalena em março de 2017 e rapidamente se tornou um ponto badalado para o happy hour na região.
+    A casa possui uma fachada aberta e bem iluminada, com decoração sustentável que inclui mesas e cadeiras feitas de pallets, garrafas reutilizadas como luminárias e um jardim vertical.
+    O cardápio oferece petiscos, coquetéis, cervejas artesanais e chopp Brahma e Colorado.",
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-pirata.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029651/locations/bar3_wpvgv6.jpg"
   },
   locationsp13: {
-    name: "Fasano",
-    address: "Av. Paulista, 1357, São Paulo, SP",
-    description: "Um dos hotéis mais luxuosos de São Paulo, com uma variedade de restaurantes e bares.",
-    neighborhood_id: Neighborhood.find(12).id,
+    name: "Buco",
+    address: "Rua Delfina, 38, Vila Madalena, São Paulo, SP",
+    description: "O Buco, um pizza-bar comandado por Rafael Silva, oferece uma opção descolada e saborosa no bairro. Entre os sabores de destaque, estão a Cacio e Pepe,
+    a de Abobrinha com molho cacio e pepe e raspas de limão siciliano, e a de Figo com queijo tipo taleggio, presunto de Parma e rúcula, entre outras opções.",
+    neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/hotel-fasano.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031954/locations/pizza-bar_pslpkw.jpg"
   },
   locationsp14: {
+    name: "Quintal do Espeto",
+    address: "Rua Mourato Coelho, 1022, Vila Madalena, São Paulo, SP",
+    description: "O Quintal do Espeto possui várias unidades em São Paulo e, para a alegria dos amantes da boemia, também está presente na Vila Madalena.
+    Este bar oferece um ambiente agradável ao ar livre, programação de música ao vivo e um cardápio com mais de 50 tipos de espetinhos, acompanhados de cervejas de garrafa. É a escolha perfeita para um encontro descontraído com os amigos.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029653/locations/bar8_iouwsu.jpg"
+  },
+  locationsp15: {
+    name: "Chez Mom",
+    address: "Rua Wisard, 586, Vila Madalena, São Paulo, SP",
+    description: "Se você é fã de um docinho para acompanhar o seu café, não pode deixar de visitar a Chez Mom. Este encantador estabelecimento combina uma confeitaria excepcional com uma cafeteria de primeira.
+    Eles oferecem um menu repleto de receitas autorais que harmonizam perfeitamente sabores. Aberto de segunda a domingo, das 8h às 16h.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031239/locations/cafe2_q2qpqm.jpg"
+  },
+  locationsp16: {
+    name: "Pé de Manga",
+    address: "Rua Arapiraca, 152, Vila Madalena, São Paulo, SP",
+    description: "O bar e restaurante Pé de Manga é conhecido por seu ambiente ao ar livre e cercado por vegetação.
+    O espaço acomoda 90 pessoas sentadas e inclui um lago artificial com queda d'água e três mangueiras centenárias. Durante a noite, o local é iluminado para que os clientes possam desfrutar dos pratos deliciosos criados pelo chef João Silva. Há também uma área interna dividida em dois pisos, ideal para comemorações mais intimistas.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031955/locations/restaurante-pe-de-manga_skyn3h.jpg"
+  },
+  locationsp17: {
+    name: "Vila 567",
+    address: "Rua Aspicuelta, 567, Vila Madalena, São Paulo, SP",
+    description: "O Vila 567 é o lugar perfeito para quem busca um happy hour animado. Este espaço sertanejo combina as características de um bar e uma balada, com shows ao vivo de quinta a domingo.
+    Uma de suas características únicas é a infraestrutura inovadora, incluindo um rooftop e um teto retrátil que oferecem uma vista privilegiada do bairro boêmio de São Paulo.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029642/locations/bar5_mhu0wf.jpg"
+  },
+  locationsp18: {
+    name: "Cupping Café",
+    address: "Rua Wisard, 171, Vila Madalena, São Paulo, SP",
+    description: "O Cupping Café é um destino ideal para os amantes de café, oferecendo um cardápio diversificado com diversas opções de preparo,
+    uma ampla seleção de grãos, bebidas quentes e geladas, opções veganas, chocolates bean-to-bar e deliciosos pães de queijo.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031241/locations/cafe1_co15vz.jpg"
+  },
+  locationsp19: {
+    name: "High Line Bar",
+    address: "Rua Girassol, 144, Vila Madalena, São Paulo, SP",
+    description: "Inspirado no famoso parque suspenso de Nova York, o High Line Bar oferece uma gastronomia sofisticada em um ambiente que recria o estilo nova-iorquino.
+    O complexo combina arte, música, gastronomia e coquetelaria, com um cardápio que inclui pratos quentes e tradicionais petiscos de bar.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Restaurante",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
+  },
+  locationsp20: {
+    name: "Alto da Harmonia",
+    address: "Rua Harmonia, 271, Vila Madalena, São Paulo, SP",
+    description: "O Alto da Harmonia, localizado na Rua Harmonia, é uma mistura de ambiente boêmio com restaurante sofisticado,
+    distribuído em três andares. O bar oferece um terraço com uma vista deslumbrante da cidade e possui uma programação especial que inclui transmissões de eventos esportivos e noites agitadas com DJs.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030659/locations/bar12_kbogrt.jpg"
+  },
+  locationsp21: {
+    name: "Sub Astor",
+    address: "Rua Delfina, 163, Vila Madalena, São Paulo, SP",
+    description: "O SubAstor, localizado no subsolo do refinado bar Astor, segue o conceito de speakeasy, inspirado nos bares secretos.
+    Com um ambiente charmoso e aconchegante, sua decoração é uma homenagem às décadas de 50 e 60. É o lugar perfeito para os apreciadores de uma carta de drinks clássicos e variados.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029639/locations/bar6_j1q3ry.jpg"
+  },
+  locationsp22: {
+    name: "Armazém Piola",
+    address: "Rua Aspicuelta, 574, Vila Madalena, São Paulo, SP",
+    description: "O Armazém Piola, situado na Rua Aspicuelta, é o lugar ideal para reunir os amigos.
+    Com um ambiente descontraído, mesas ao ar livre, paredes de tijolinho e decoração criativa, o bar oferece uma programação de música ao vivo que destaca novos talentos do samba, pagode, MPB e também conta com DJs para animar o público.",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Bar",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030652/locations/bar11_gzvmdk.jpg"
+  },
+  locationsp23: {
+    name: "Le Pain Quotidien",
+    address: "Rua Wisard, 138, Vila Madalena, São Paulo, SP",
+    description: "O Le Pain Quotidien é conhecido por sua culinária clássica e pães orgânicos que complementam perfeitamente seus cafés em um ambiente rústico e chique. ",
+    neighborhood_id: Neighborhood.find(11).id,
+    category: "Café",
+    user_id: User.first.id,
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
+  },
+  locationsp24: {
     name: "MASP",
     address: "Av. Paulista, 1578, São Paulo, SP",
     description: "Um museu de arte moderna com uma coleção de obras de arte de todo o mundo.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/masp.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960166/locations/masp_pkfgzg.jpg"
   },
-  locationsp15: {
+  locationsp25: {
     name: "Shopping Cidade Jardim, São Paulo, SP",
     address: "Av. Magalhães de Castro, 12000",
     description: "Um shopping de luxo com uma variedade de lojas e restaurantes.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-cidade-jardim.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/shopping-cidade-jardim_b1bh06.jpg"
   },
-  locationsp16: {
+  locationsp26: {
     name: "Parque Trianon",
     address: "Av. Paulista, 1700, São Paulo, SP",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-trianon.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960180/locations/parque-trianon_f5irwr.jpg"
   },
-  locationsp17: {
+  locationsp27: {
     name: "Passeio de bicicleta pela Avenida Paulista",
     address: "Av. Paulista, São Paulo, SP",
     description: "Um passeio pela avenida mais famosa de São Paulo, com uma vista de tirar o fôlego.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bike-av-paulista.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960134/locations/bike-av-paulista_ybeqs4.jpg"
   },
-  locationsp18: {
+  locationsp28: {
     name: "Le Pain Quotidien Jardins",
     address: "Rua Haddock Lobo, 1382, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-jardins.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960149/locations/le-pain-moema_mxdovg.jpg"
   },
-  locationsp19: {
+  locationsp29: {
     name: "Bar Brahma Jardins",
     address: "Av. Paulista, 227, São Paulo, SP",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
-  locationsp20: {
+  locationsp30: {
     name: "Paris 6 Jardins",
     address: "Rua Augusta, 1502, São Paulo, SP",
     description: "Um restaurante francês com um ambiente elegante e sofisticado.",
     neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/paris6-jardins.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960172/locations/paris6-jardins_yqpozp.jpg"
   },
-  locationsp21: {
+  locationsp31: {
     name: "Starbucks Moema",
     address: "Av. Ibirapuera, 2927, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-moema.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
-  locationsp22: {
+  locationsp32: {
     name: "Bar do Juarez Moema",
     address: "Av. Ibirapuera, 2181, São Paulo, SP",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-juarez.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
-  locationsp23: {
+  locationsp33: {
     name: "Coco Bambu",
     address: "Av. Ibirapuera, 3727, São Paulo, SP",
     description: "Um restaurante especializado em frutos do mar com um ambiente elegante.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/coco-bambu.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960139/locations/coco-bambu_kjqth7.jpg"
   },
-  locationsp24: {
+  locationsp34: {
     name: "Museu de Arte Contemporânea de São Paulo",
     address: "Av. Pedro Álvares Cabral, 1301, São Paulo, SP",
     description: "Um museu de arte contemporânea com uma coleção de obras de arte de todo o mundo.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/mac-sp.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960165/locations/mac-usp_egihwf.jpg"
   },
-  locationsp25: {
+  locationsp35: {
     name: "Shopping Ibirapuera",
     address: "Av. Ibirapuera, 3900, São Paulo, SP",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-ibirapuera.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/shopping-ibirapuera_g0qjsm.jpg"
   },
-  locationsp26: {
+  locationsp36: {
     name: "Parque Ibirapuera",
     address: "Av. Pedro Álvares Cabral, São Paulo, SP",
     description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960179/locations/parque-ibirapuera-2_qq0cv6.jpg"
   },
-  locationsp27: {
+  locationsp37: {
     name: "Stand up paddle no Lago do Parque Ibirapuera",
     address: "Av. Pedro Álvares Cabral, São Paulo, SP",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Ibirapuera.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960195/locations/standup-ibirapuera_rqfp8z.jpg"
   },
-  locationsp28: {
+  locationsp38: {
     name: "Le Pain Quotidien Moema",
     address: "Av. Ibirapuera, 2, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-moema.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960149/locations/le-pain-moema_mxdovg.jpg"
   },
-  locationsp29: {
+  locationsp39: {
     name: "Starbucks Pinheiros",
     address: "Rua dos Pinheiros, 248, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-vila-madalena.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
-  locationsp30: {
+  locationsp40: {
     name: "Bar Brahma Pinheiros",
     address: "Rua dos Pinheiros, 145, São Paulo, SP",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
-  locationsp31: {
+  locationsp41: {
     name: "Mocotó",
     address: "Rua Aspicuelta, 542, São Paulo, SP",
     description: "Um restaurante especializado em comida brasileira com um ambiente informal.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/mocoto.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960139/locations/coco-bambu_kjqth7.jpg"
   },
-  locationsp32: {
+  locationsp42: {
     name: "Pinacoteca do Estado de São Paulo",
     address: "Av. Tiradentes, 615, São Paulo, SP",
     description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/pinacoteca.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960184/locations/pinacoteca1_wyhalg.jpg"
   },
-  locationsp33: {
+  locationsp43: {
     name: "Shopping Villa Lobos",
     address: "Av. das Nações Unidas, 4777, São Paulo, SP",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-villa-lobos.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-patio-paulista_kaf9tt.jpg"
   },
-  locationsp34: {
+  locationsp44: {
     name: "Parque Villa Lobos",
     address: "Av. das Nações Unidas, 7161, São Paulo, SP",
     description: "Um parque público com uma variedade de atrações, incluindo o Auditório Ibirapuera, o Museu de Arte Moderna e o Museu de Arte Contemporânea de São Paulo.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-villa-lobos.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-villa-lobos_sjctgj.jpg"
   },
-  locationsp35: {
+  locationsp45: {
     name: "Stand up paddle no Lago do Parque Villa Lobos",
     address: "Av. das Nações Unidas, 716, São Paulo, SP",
     description: "Uma atividade ao ar livre para se divertir e praticar exercícios no lago do Parque Villa Lobos.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/standup-ibirapuera.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960195/locations/standup-ibirapuera_rqfp8z.jpg"
   },
-  locationsp36: {
+  locationsp46: {
     name: "Le Pain Quotidien Pinheiros",
     address: "Rua dos Pinheiros, 326, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-pinheiros.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
-  locationsp37: {
+  locationsp47: {
     name: "Bar da Esquina",
     address: "Rua dos Pinheiros, 340, São Paulo, SP",
     description: "Um bar tradicional da Vila Madalena com uma atmosfera descontraída.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-da-esquina.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
-  locationsp38: {
+  locationsp48: {
     name: "Jiquitaia",
     address: "Rua dos Pinheiros, 274, São Paulo, SP",
     description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/jiquitaia.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960147/locations/jiquitaia_exseaz.jpg"
   },
-  locationsp39: {
+  locationsp49: {
     name: "Starbucks Bela Vista",
     address: "Rua Augusta, 1059, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/starbucks-bela-vista.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
-  locationsp40: {
+  locationsp50: {
     name: "Bar do Luiz",
     address: "Rua Augusta, 1246, São Paulo, SP",
     description: "Um bar tradicional da Bela Vista com uma atmosfera descontraída.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-do-luiz.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
-  locationsp41: {
+  locationsp51: {
     name: "San Gennaro",
     address: "Rua Treze de Maio, 171, São Paulo, SP",
     description: "Um restaurante italiano com um ambiente familiar.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/san-gennaro.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/san-gennaro_ushavs.jpg"
   },
-  locationsp42: {
+  locationsp52: {
     name: "Edifício Itália",
     address: "Av. Ipiranga, 344, São Paulo, SP",
     description: "Um edifício de 36 andares com uma vista panorâmica da cidade.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/edificio-italia.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960141/locations/edificio-italia_tdufb5.jpg"
   },
-  locationsp43: {
+  locationsp53: {
     name: "Shopping Pátio Paulista",
     address: "Rua Augusta, 1261, São Paulo, SP",
     description: "Um shopping center com uma variedade de lojas e restaurantes.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/shopping-patio-paulista.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-patio-paulista_kaf9tt.jpg"
   },
-#  locationsp44: {
-#  #  name: "Parque Augusta",
-#  #  address: "Rua Augusta, 1500, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de árvores, flores e animais.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-augusta.jpg"
-#  },
-#  locationsp45: {
-#  #  name: "Corrida no Parque Augusta",
-#  #  address: "Rua Augusta, 1500, São Paulo, SP",
-#  #  description: "Uma atividade ao ar livre para se exercitar e aproveitar a natureza no Parque Augusta.",
-#  #  neighborhood_id: Neighborhood.find(15).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/corrida-parque-augusta.jpg"
-#  },
-  locationsp46: {
+  locationsp56: {
     name: "Le Pain Quotidien Bela Vista",
     address: "Rua Augusta, 1875, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-bela-vista.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
-  locationsp47: {
+  locationsp57: {
     name: "Bar Brahma Bela Vista",
     address: "Av. Ipiranga, 344, São Paulo, SP",
     description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/bar-brahma.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
-  locationsp48: {
+  locationsp58: {
     name: "Bráz Trattoria",
     address: "Rua Treze de Maio, 112, São Paulo, SP",
     description: "Uma trattoria italiana com um ambiente elegante.",
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/braz-trattoria.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960134/locations/braz-trattoria_y4gyng.jpg"
   },
-  locationsp49: {
+  locationsp59: {
     name: "Le Pain Quotidien",
     address: "Rua Jerônimo da Veiga, 149, São Paulo, SP",
     description: "Uma cafeteria internacional com uma variedade de pães, bolos e refeições.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Café",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/le-pain-quotidien-2.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
-  locationsp50: {
+  locationsp60: {
     name: "SubAstor",
     address: "Rua Oscar Freire, 414, São Paulo, SP",
     description: "Um bar e restaurante com uma variedade de pratos e bebidas.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Bar",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/subastor.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
-  locationsp51: {
+  locationsp61: {
     name: "D.O.M.",
     address: "Rua Barão de Capanema, 549, São Paulo, SP",
     description: "Um restaurante especializado em comida brasileira com um ambiente sofisticado.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Restaurante",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/dom.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960141/locations/dom_nbtfef.jpg"
   },
-  locationsp52: {
+  locationsp62: {
     name: "Museu de Arte de São Paulo (MASP)",
     address: "Avenida Paulista, 1578, São Paulo, SP",
     description: "Um museu de arte com uma coleção de obras de arte de todo o mundo.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Museu",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/masp1.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960166/locations/masp_pkfgzg.jpg"
   },
-  locationsp53: {
+  locationsp63: {
     name: "Daslu",
     address: "Rua Oscar Freire, 855, São Paulo, SP",
     description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Loja",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/daslu.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960140/locations/daslu_mrdusg.jpg"
   },
-  locationsp54: {
+  locationsp64: {
     name: "Parque do Ibirapuera",
     address: "Avenida Pedro Álvares Cabral, São Paulo, SP",
     description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-ibirapuera.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960179/locations/parque-ibirapuera_ni8i0e.jpg"
   },
-  locationsp55: {
+  locationsp65: {
     name: "Parque Burle Marx",
     address: "Rua Medeiros de Albuquerque, 450, São Paulo, SP",
     description: "Um parque público com uma variedade de jardins e esculturas.",
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
-    photo_url: "app/assets/images/locations/parque-burle-marx.jpg"
-  },
-#  locationsp56: {
-#  #  name: "Café Floresta",
-#  #  address: "Rua Galvão Bueno, 848, São Paulo, SP",
-#  #  description: "Um café tradicional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/cefe-floresta.jpg"
-#  },
-#  locationsp57: {
-#  #  name: "Bar do Tatu",
-#  #  address: "Rua Galvão Bueno, 786, São Paulo, SP",
-#  #  description: "Um bar tradicional com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-tatu.jpg"
-#  },
-#  locationsp58: {
-#  #  name: "Liberdade 99",
-#  #  address: "Rua Liberdade, 99, São Paulo, SP",
-#  #  description: "Um restaurante especializado em comida japonesa.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/liberdade-99.jpg"
-#  },
-#  locationsp59: {
-#  #  name: "Museu da Imigração Japonesa do Brasil",
-#  #  address: "Rua Galvão Bueno, 522, São Paulo, SP ",
-#  #  description: "Um museu dedicado à história da imigração japonesa no Brasil.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/museu-da-imigracao.jpg"
-#  },
-#  locationsp60: {
-#  #  name: "Loja Daiso",
-#  #  address: "Rua Galvão Bueno, 1068, São Paulo, SP",
-#  #  description: "Uma loja de departamento com uma variedade de produtos japoneses.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/loja-daiso.jpg"
-#  },
-#  locationsp61: {
-#  #  name: "Praça da Liberdade",
-#  #  address: "Rua Liberdade, 120, São Paulo, SP",
-#  #  description: "Uma praça pública com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(17).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/praca-da-liberdade.jpg"
-#  },
-#  locationsp68: {
-#  #  name: "Starbucks",
-#  #  address: "Rua Oscar Freire, 1479, São Paulo, SP",
-#  #  description: "Uma cafeteria internacional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/starbucks-oscar-freire.jpg"
-#  },
-#  locationsp69: {
-#  #  name: "Bar Brahma",
-#  #  address: "Rua São Luís, 183, São Paulo, SP",
-#  #  description: "Um dos bares mais famosos de São Paulo, com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-brahma.jpg"
-#  },
-#  locationsp70: {
-#  #  name: "Aprazível",
-#  #  address: "Rua Horácio Lafer, 129, São Paulo, SP",
-#  #  description: "Um restaurante com uma vista panorâmica da cidade.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/aprazivel.jpg"
-#  },
-#  locationsp71: {
-#  #  name: "Museu de Arte Contemporânea de São Paulo (MAC)",
-#  #  address: "Avenida Paulista, 1500, São Paulo, SP",
-#  #  description: "Um museu de arte contemporânea com uma coleção de obras de todo o mundo.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/mac-usp.jpg"
-#  },
-#  locationsp72: {
-#  #  name: "Shopping JK Iguatemi",
-#  #  address: "Avenida Juscelino Kubitschek, 2041, São Paulo, SP",
-#  #  description: "Um shopping center de luxo com uma variedade de lojas e restaurantes.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/shopping-jk.jpg"
-#  },
-#  locationsp73: {
-#  #  name: "Parque Ibirapuera",
-#  #  address: "Avenida Pedro Álvares Cabral, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de atrações, incluindo o Museu de Arte Contemporânea de São Paulo, o Pavilhão Japonês e o Obelisco.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-ibirapuera-2"
-#  },
-#  locationsp74: {
-#  #  name: "Ioga no Parque Ibirapuera",
-#  #  address: "Avenida Pedro Álvares Cabral, São Paulo, SP",
-#  #  description: "Uma atividade ao ar livre para relaxar e se exercitar no Parque Ibirapuera.",
-#  #  neighborhood_id: Neighborhood.find(19).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/ioga-parque.jpg"
-#  },
-#  locationsp82: {
-#  #  name: "Café Santa Clara",
-#  #  address: "Rua Conselheiro Moreira de Barros, 1823, São Paulo, SP",
-#  #  description: "Um café tradicional com uma variedade de bebidas e comidas.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Café",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/cafe-santa-clara.jpg"
-#  },
-#  locationsp83: {
-#  #  name: "Bar São Bento",
-#  #  address: "Rua São Bento, 416, São Paulo, SP",
-#  #  description: "Um bar tradicional com uma variedade de pratos e bebidas.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Bar",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/bar-sao-bento.jpg"
-#  },
-#  locationsp84: {
-#  #  name: "Empório Santa Maria",
-#  #  address: "Rua Conselheiro Moreira de Barros, 2424, São Paulo, SP",
-#  #  description: "Um restaurante especializado em comida brasileira.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Restaurante",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/emporio-santa-maria.jpg"
-#  },
-#  locationsp85: {
-#  #  name: "Pinacoteca de São Paulo",
-#  #  address: "Praça da Luz, 2, São Paulo, SP",
-#  #  description: "Um museu de arte com uma coleção de obras de arte brasileiras.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Museu",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/pinacoteca1.jpg"
-#  },
-#  locationsp86: {
-#  #  name: "Rua 25 de Março",
-#  #  address: "Rua 25 de Março, São Paulo, SP",
-#  #  description: "Uma rua comercial com uma variedade de lojas e vendedores ambulantes.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Loja",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/rua-25-de-marco.jpg"
-#  },
-#  locationsp87: {
-#  #  name: "Parque da Luz",
-#  #  address: "Praça da Luz, São Paulo, SP",
-#  #  description: "Um parque público com uma variedade de atrações, incluindo a Pinacoteca de São Paulo e o Museu da Língua Portuguesa.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/parque-da-luz"
-#  },
-#  locationsp88: {
-#  #  name: "Passeio de bicicleta pelo Parque da Luz",
-#  #  address: "Praça da Luz, São Paulo, SP",
-#  #  description: "Uma atividade ao ar livre para explorar o Parque da Luz.",
-#  #  neighborhood_id: Neighborhood.find(18).id,
-#  #  category: "Parque",
-#  #  user_id: User.first.id,
-#  #  photo_url: "app/assets/images/locations/passeio-bike-parque-da-luz.jpg"
-#  }
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960176/locations/parque-burle-marx_utlna1.jpg"
+  }
 }
 
 locations.each do |key, location_data|
@@ -933,11 +852,11 @@ end
 events = {
   event1: {
     title: "Festival de Arte Urbana Vila Colorida",
-    date: Date.new(2023, 9, 9),
+    date: Date.new(2023, 9, 10),
     description: "Um festival de arte urbana que transformará as ruas da Vila Madalena em uma galeria a céu aberto. Artistas locais e internacionais criarão murais incríveis.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-arte-urbana.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960071/event/festival-arte-urbana_hlbejq.jpg"
   },
   event2: {
     title: "Concerto ao Pôr do Sol no Parque da Aclimação",
@@ -945,7 +864,7 @@ events = {
     description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/concerto-por-do-sol.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/concerto-por-do-sol_zyjvpj.jpg"
   },
   event3: {
     title: "Feira de Artesanato da Vila",
@@ -953,47 +872,47 @@ events = {
     description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/feira-artesanato.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960068/event/feira-artesanato_t7ctpm.jpg"
   },
   event4: {
     title: "Exposição de Fotografia Cenas Urbanas",
     date: Date.new(2023, 9, 9),
     description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
-    location_id: Location.find(14).id,
+    location_id: Location.find(24).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/exposicao-fotografica.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/exposicao-fotografica_mir8hp.jpg"
   },
   event5: {
-    title: "Noite de Comédia Stand-up no Bar do Juarez",
-    date: Date.new(2023, 9, 9),
+    title: "Noite de Comédia Stand-up no Sub Astor",
+    date: Date.new(2023, 9, 10),
     description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
-    location_id: Location.find(2).id,
+    location_id: Location.find(21).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/standup-comedy.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960086/event/standup-comedy_oq9nar.jpg"
   },
   event6: {
     title: "Workshop de Yoga ao Ar Livre",
-    date: Date.new(2023, 9, 9),
+    date: Date.new(2023, 9, 10),
     description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/yoga-ar-livre.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960087/event/yoga-ar-livre_er1bum.jpg"
   },
   event7: {
     title: "Exposição de Arte Contemporânea Visões Abstratas",
-    date: Date.new(2023, 9, 9),
+    date: Date.new(2023, 9, 16),
     description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
-    location_id: Location.find(14).id,
+    location_id: Location.find(24).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/arte-contemporanea.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960063/event/arte-contemporanea_vplxl6.jpg"
   },
   event8: {
-    title: "Festa da Cultura Brasileira",
+    title: "Festa da Cultura Brasileira no Boteco São Conrado",
     date: Date.new(2023, 9, 9),
     description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
-    location_id: Location.find(12).id,
+    location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festa-cultura-brasileira.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960069/event/festa-cultura-brasileira_kwi3jt.jpg"
   },
   event9: {
     title: "Passeio de Bicicleta pela Vila Madalena",
@@ -1001,31 +920,31 @@ events = {
     description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/passeio-bike.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960085/event/passeio-bike_zofjca.jpg"
   },
   event10: {
-    title: "Noite de Jazz no Café Harmonia",
+    title: "Noite de Jazz no High Line Bar",
     date: Date.new(2023, 9, 9),
-    description: "Relaxe ao som suave do jazz em um dos cafés mais aconchegantes da Vila.",
-    location_id: Location.find(9).id,
+    description: "Relaxe ao som suave do jazz em um dos bares mais aconchegantes da Vila.",
+    location_id: Location.find(19).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-jazz.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960077/event/noite-jazz_ilfxqq.jpg"
   },
   event11: {
-    title: "Noite de Karaokê no Bar do Juarez",
+    title: "Noite de Karaokê no Quintal do Espeto",
     date: Date.new(2023, 9, 10),
     description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
-    location_id: Location.find(2).id,
+    location_id: Location.find(14).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-karaoke.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960080/event/noite-karaoke_kowllg.jpg"
   },
   event12: {
     title: "Exposição de Esculturas no Espaço Criativo",
     date: Date.new(2023, 9, 9),
     description: "Admire esculturas impressionantes criadas por artistas locais.",
-    location_id: Location.find(14).id,
+    location_id: Location.find(24).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/exposicao-esculturas.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/exposicao-esculturas_xvf6xh.jpg"
   },
   event13: {
     title: "Festival de Food Trucks na Rua Medeiros",
@@ -1033,31 +952,31 @@ events = {
     description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-foodtruck.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960072/event/festival-foodtruck_llk2zj.jpg"
   },
   event14: {
     title: "Festival de Jazz no Parque Trianon",
     date: Date.new(2023, 9, 9),
     description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
-    location_id: Location.find(16).id,
+    location_id: Location.find(26).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/festival-jazz.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960074/event/festival-jazz_apysyr.jpg"
   },
   event15: {
-    title: "Noite de MPB no Bar do Pirata",
+    title: "Noite de MPB no Armazém Piola",
     date: Date.new(2023, 9, 9),
     description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
-    location_id: Location.find(12).id,
+    location_id: Location.find(22).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-mpb1.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960080/event/noite-mpb1_elw0oj.jpg"
   },
   event16: {
     title: "Sessão de Cinema ao Ar Livre no Ibirapuera",
     date: Date.new(2023, 9, 9),
     description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
-    location_id: Location.find(26).id,
+    location_id: Location.find(36).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/cinema-arlivre.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960064/event/cinema-arlivre_vh4m71.jpg"
   },
   event17: {
     title: "Feira Gastronômica na Praça da Vila Madalena",
@@ -1065,31 +984,31 @@ events = {
     description: "Saboreie pratos deliciosos de diferentes culturas em um evento gastronômico diversificado.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/feira-gastronomica.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960068/event/feira-gastronomica_iwyssa.jpg"
   },
   event18: {
-    title: "Degustação de Cerveja Artesanal no Bar Bossa Lounge",
-    date: Date.new(2023, 9, 9),
+    title: "Degustação de Cerveja Artesanal no Boteco São Conrado",
+    date: Date.new(2023, 9, 17),
     description: "Experimente cervejas artesanais locais com especialistas em cerveja.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/cerveja-artesanal.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960064/event/cerveja-artesanal_y11xl7.jpg"
   },
   event19: {
-    title: "Noite de Bossa Nova no Bossa Lounge",
+    title: "Noite de Bossa Nova no Vila 567",
     date: Date.new(2023, 9, 10),
     description: "Desfrute de uma atmosfera sofisticada com músicas de bossa nova e coquetéis exclusivos.",
-    location_id: Location.find(9).id,
+    location_id: Location.find(17).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-bossa-nova.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960075/event/noite-bossa-nova_f1prwp.jpg"
   },
   event20: {
-    title: "Noite de Samba no Bar Brahma",
+    title: "Noite de Samba no Bar do Beco",
     date: Date.new(2023, 9, 9),
     description: "O melhor do samba ao vivo com deliciosos petiscos brasileiros e caipirinhas especiais.",
-    location_id: Location.find(3).id,
+    location_id: Location.find(2).id,
     user_id: User.first.id,
-    photo_url: "app/assets/images/events/noite-samba.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960081/event/noite-samba_qy5jhk.jpg"
   }
 }
 
