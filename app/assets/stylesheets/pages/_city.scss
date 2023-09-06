@@ -5,5 +5,9 @@
   margin-bottom: 24px;
   overflow: hidden;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+}
+
+.city-description {
+  max-width: 60%;
 }

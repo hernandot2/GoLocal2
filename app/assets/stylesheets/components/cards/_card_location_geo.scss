@@ -10,7 +10,7 @@
 .grid-card-event-geo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 24px 0;
+  margin: 24px 24px;
   gap: 24px 24px;
 }
 
@@ -56,15 +56,8 @@
 
 .locations-container-geo {
   display: flex;
-  overflow-y: hidden; /* Isso é importante para o sticky funcionar */
+  overflow-y: scroll; /* Isso é importante para o sticky funcionar */
 }
-
-.location-map {
-  position: sticky;
-  top: 0;
-  height: 100vh; /* Altura da janela de visualização */
-}
-
 
 .scrollable-content::-webkit-scrollbar {
   display: none;
@@ -75,13 +68,6 @@
   scrollbar-width: none;  /* Firefox */
 }
 
-.fixed-map {
-  flex: 1;
-  position: sticky;
-  top: 0;
-  height: 100vh; /* Altura da janela de visualização */
-
-}
 
 .disabled-heart {
   color: grey;
