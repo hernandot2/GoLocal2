@@ -131,8 +131,19 @@
   }
 }
 
-
 .no-style-link {
   text-decoration: none;
   color: inherit;
+}
+.special-heart-position {
+  top: auto;
+  bottom: calc(100% - 6.3em);
+  right: 10px;
+}
+
+.favoritar-text {
+  text-decoration: underline;
+  margin-right: 5px; /* Espaço entre o texto e o ícone */
+  color: #cd4754;
+  font-size: 15px;
 }

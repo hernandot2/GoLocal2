@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   resources :locations do
     resources :favorites, only: [:create]
   end
-  resources :events
+  resources :events do
+    resources :favorites, only: [:create]
+  end
+
   resources :ratings
   resources :favorites, only: [:index, :destroy]
   resources :cities

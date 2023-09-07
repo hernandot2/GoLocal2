@@ -1,25 +1,29 @@
+<section class="position-relative">
+  <div class="heart-icon-geo position-absolute special-heart-position d-flex align-items-center">
 
-<section>
+    <% if current_user && current_user.favorites.where(location_id: @location.id).exists? %>
+       <i class="fa fa-heart favorited-heart"></i>
+    <% else %>
+      <%= link_to location_favorites_path(@location), data: {turbo_method: :post} do %>
+        <span class="favoritar-text no-style-link">Favoritar</span><i class="fa fa-heart"></i>
+      <% end %>
+    <% end %>
+  </div>
   <span class="d-flex align-items-baseline">
     <h1><%= @location.name %></h1>
     <h2><%= @neighborhood.name %></h2>
   </span>
   <h4><%= @location.address %></h4>
-
   <section>
-  <%= render "banner" %>
+    <%= render "banner" %>
   </section>
-
   <p class="mt-2"><%= @location.description %></p>
-
-<!-- Map -->
-
+  <!-- Map -->
   <div class="location-map" data-controller="map"
       data-map-markers-value="<%= [@marker].to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
       style="width: 100%; height: 400px;">
   </div>
-
   <div class="d-flex justify-content-between mt-3">
     <% if user_signed_in? %>
       <div>
@@ -39,6 +43,7 @@
     <% else %>
       <div>
         <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+        
       </div>
     <% end %>
   </div>
