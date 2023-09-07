@@ -8,7 +8,12 @@
     <% current_user.favorites.each do |favorite| %>
       <%= link_to favorite.location.name, location_path(favorite.location) %>
     <% end %>
+    <div>
+      <% @locations = @locations.first(12) %>
+      <%= render "shared/cards/card_location", locations: @locations %>
+    </div>
   </section>
+
   <section>
     <div class="d-flex justify-content-between">
       <h3>Meus eventos</h3>
@@ -24,6 +29,7 @@
       <% end %>
     <% end %>
   </section>
+
   <section>
     <div class="d-flex justify-content-between">
       <h3>Meus locais</h3>
@@ -35,7 +41,7 @@
       <% else %>
         <div>
           <% @locations = @locations.first(12) %>
-          <%= render "shared/cards/card_location", locaions: @locations %>
+          <%= render "shared/cards/card_location", locations: @locations %>
         </div>
       <% end %>
     <% end %>

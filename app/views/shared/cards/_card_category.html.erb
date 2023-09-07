@@ -1,19 +1,19 @@
 <div class="grid-card-category">
   <% elements.each do |category| %>
     <% if category == "Café" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/cafe_jyqnjk.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959984/categories/cafe_upnhne.jpg" %>
     <% elsif category == "Bar" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/bar_fpzyxr.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959984/categories/bar_bqnrmr.jpg" %>
     <% elsif category == "Parque" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/park_b4uj1i.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959984/categories/park_kdtxoo.jpg" %>
     <% elsif category == "Loja" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/loja_so6q69.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959984/categories/loja_sj9lar.jpg" %>
     <% elsif category == "Restaurante" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/restaurant_ifm8ds.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959985/categories/restaurant_kv96mc.jpg" %>
     <% elsif category == "Museu" %>
-      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1692916932/local/museu_k6bxkl.jpg" %>
+      <% image_url = "https://res.cloudinary.com/go-local/image/upload/v1693959984/categories/museu_icxbzl.jpg" %>
     <% end %>
-    <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil), 
+    <%= link_to locations_path(category: category, city: @city || nil, neighborhood: @neighborhood || nil),
                                 class: "card-category text-decoration-none",
                                 style: "background-image: url('#{image_url}');" do %>
       <div class="card-category-content">
