@@ -902,7 +902,8 @@ locations.each do |key, location_data|
     address: location_data[:address],
     category: location_data[:category],
     neighborhood_id: location_data[:neighborhood_id],
-    user_id: location_data[:user_id]
+    user_id: location_data[:user_id],
+    approved: location_data[:approved]
   )
   if location_data[:photo_url]
     file = URI.open(location_data[:photo_url])
@@ -1104,7 +1105,8 @@ events.each do |key, event_data|
     date: event_data[:date],
     location_id: event_data[:location_id],
     neighborhood_id: event_data[:neighborhood_id],
-    user_id: event_data[:user_id]
+    user_id: event_data[:user_id],
+    approved: event_data[:approved]
   )
   if event_data[:photo_url]
     file = URI.open(event_data[:photo_url])
