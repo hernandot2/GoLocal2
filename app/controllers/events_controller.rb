@@ -8,7 +8,9 @@ class EventsController < ApplicationController
   def show
     authorize @event
     @event_id = @event.id
-  end
+    @location = @event.location 
+    end
+
 
   def new
     @event = Event.new

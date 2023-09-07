@@ -3,7 +3,18 @@
     <h1><%= @event.title %></h1>
     <h2><%= @event.location.name %></h2>
   </span>
-  <h4><%= @event.date.strftime("%A, %d %B, %Y - %H:%M") %></h4>
+  <div class="d-flex align-items-center justify-content-between">
+    <h4><%= @event.date.strftime("%A, %d %B, %Y - %H:%M") %></h4>
+    <div class="d-flex align-items-center">
+      <% if current_user && current_user.favorites.where(event_id: @event.id).exists? %>
+        <i class="fa fa-heart favorited-heart"></i>
+      <% else %>
+        <%= link_to event_favorites_path(@event), data: {turbo_method: :post} do %>
+          <span class="favoritar-text no-style-link">Favoritar</span><i class="fa fa-heart"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <p class="mt-2"><%= @event.description %></p>
   <div class="d-flex justify-content-between mt-3">
     <% if user_signed_in? %>

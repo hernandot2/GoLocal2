@@ -5,8 +5,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :events
+ 
   resources :locations do
+    resources :favorites, only: [:create]
+  end
+  resources :events do
     resources :favorites, only: [:create]
   end
 
