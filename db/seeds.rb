@@ -30,22 +30,23 @@ cities = {
   city1: {
     name: "Rio de Janeiro",
     description: "O Rio de Janeiro, famoso como a 'Cidade Maravilhosa', é uma joia costeira que encanta com sua beleza natural deslumbrante e seu estilo de vida descontraído. Com suas icônicas praias, como Copacabana e Ipanema, cercadas por montanhas exuberantes, incluindo o Pão de Açúcar e o Corcovado com a estátua do Cristo Redentor, a cidade oferece um cenário único onde a natureza e a urbanidade se encontram em perfeita harmonia. Além de sua paisagem deslumbrante, o Rio de Janeiro é um caldeirão cultural do Brasil. A cidade abriga uma rica mistura de influências, manifestando-se em sua música animada, como o samba e a bossa nova, bem como em celebrações vibrantes, incluindo o famoso Carnaval. Os bairros históricos, como Santa Teresa, refletem a herança colonial, enquanto a cena contemporânea de arte, moda e gastronomia atesta a vitalidade cultural em constante evolução da cidade. No entanto, o Rio também enfrenta desafios sociais e de segurança, o que cria uma complexidade adicional nesse quadro cativante.",
-    photo_url: "app/assets/images/cities/rio.jpg",
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960004/city/rio_pg4tde.jpg",
     state: "Rio de Janeiro"
   },
   city2: {
     name: "São Paulo",
     description: "São Paulo, a maior cidade do Brasil e uma das maiores do mundo, é uma metrópole pulsante e diversificada, que representa a rica complexidade da cultura brasileira. Localizada no sudeste do país, é um centro econômico, cultural e político de destaque na América Latina. A cidade é conhecida por sua arquitetura impressionante, abrangendo desde prédios modernos e arranha-céus até bairros históricos que preservam a herança colonial. As avenidas movimentadas, como a Avenida Paulista, são emblemáticas da agitação constante, enquanto os parques, como o Parque Ibirapuera, proporcionam refúgios verdes em meio à urbanidade.",
-    photo_url: "app/assets/images/cities/sp.jpg",
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960004/city/sp_hysj9j.jpg",
     state: "São Paulo"
   },
   city3: {
     name: "Belo Horizonte",
     description: "Belo Horizonte, a capital do estado de Minas Gerais, é uma cidade que combina charme urbano com um ritmo de vida mais tranquilo. Conhecida por sua arquitetura planejada e ruas amplas, a cidade oferece uma atmosfera acolhedora e descontraída. Rodeada pelas montanhas da Serra do Curral, a paisagem natural emoldura a cidade, proporcionando belas vistas e oportunidades para atividades ao ar livre. A gastronomia é um dos destaques de Belo Horizonte, com a culinária mineira sendo um verdadeiro tesouro. Pratos tradicionais como o feijão tropeiro, o tutu à mineira e o pão de queijo são sabores autênticos da região que podem ser apreciados em mercados, bares e restaurantes locais. Além disso, a cidade possui uma cena cultural crescente, com teatros, museus e festivais que celebram a rica herança cultural do estado.",
-    photo_url: "app/assets/images/cities/bh.jpg",
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960004/city/bh_uvihbh.jpg",
     state: "Minas Gerais"
   }
 }
+
 
 cities.each do |key, city_data|
   file = URI.open(city_data[:photo_url])
@@ -113,31 +114,31 @@ neighborhoods = {
     name: "Vila Madalena",
     city_id: City.find(2).id,
     description: "Vila Madalena é um bairro boêmio em São Paulo, famoso por sua arte de rua vibrante, vida noturna eclética e comunidade artística. Suas ruas charmosas são repletas de cafés, galerias e estúdios.",
-    photo_url: "app/assets/images/neighborhoods/vila-madalena.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960227/neighborhood/vila-madalena_khtppk.jpg"
   },
   neighborhood12: {
     name: "Jardins",
     city_id: City.find(2).id,
     description: "Jardins é um bairro residencial de luxo conhecido por suas boutiques de alto padrão, restaurantes sofisticados e ruas arborizadas. É um símbolo da riqueza e do estilo cosmopolita de São Paulo.",
-    photo_url: "app/assets/images/neighborhoods/jardins.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960226/neighborhood/jardins_ucptp1.jpg"
   },
   neighborhood13: {
     name: "Pinheiros",
     city_id: City.find(2).id,
     description: "Pinheiros é um bairro moderno e eclético em São Paulo, famoso por sua cena cultural diversa, espaços de arte e restaurantes contemporâneos.",
-    photo_url: "app/assets/images/neighborhoods/pinheiros.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960227/neighborhood/pinheiros_ixwx6m.webp"
   },
   neighborhood14: {
     name: "Bela Vista",
     city_id: City.find(2).id,
     description: "Bela Vista é um bairro histórico e vibrante, conhecido por seu teatro, vida noturna agitada e pela famosa Feira da Liberdade, que celebra a cultura asiática.",
-    photo_url: "app/assets/images/neighborhoods/bela-vista.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960225/neighborhood/bela-vista_y6iq2y.jpg"
   },
   neighborhood15: {
     name: "Moema",
     city_id: City.find(2).id,
     description: "Moema é um bairro elegante e residencial, com ruas arborizadas, lojas de grife e uma atmosfera sofisticada. É um destino popular para compras e gastronomia de alta qualidade.",
-    photo_url: "app/assets/images/neighborhoods/moema.jpg"
+    photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960226/neighborhood/moema_cujvhc.jpg"
   },
   neighborhood16: {
     name: "Itaim Bibi",
