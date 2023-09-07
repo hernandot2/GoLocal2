@@ -7,9 +7,9 @@ class CitiesController < ApplicationController
 
   def show
     authorize @city
-    @events = Event.joins(location: { neighborhood: :city }).where("cities.id = ?", @city.id)
+    @events = Event.joins(location: { neighborhood: :city }).where("cities.id = ?", @city.id).where(approved: true)
     @neighborhoods = @city.neighborhoods
-    @locations = Location.joins(neighborhood: :city).where("cities.id = ?", @city.id)
+    @locations = Location.joins(neighborhood: :city).where("cities.id = ?", @city.id).where(approved: true)
   end
 
   def new

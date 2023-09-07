@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
- 
+ get '/locations/:id/approve', to: 'locations#approve', as: 'approve_location'
+ get '/events/:id/approve', to: 'events#approve', as: 'approve_event'
+
   resources :locations do
     resources :favorites, only: [:create]
   end
@@ -19,6 +21,5 @@ Rails.application.routes.draw do
   resources :neighborhoods
   resources :profiles, only: [:show, :edit, :update]
   resources :search, only: :index
-  resources :locations
-
+  # resources :locations
 end

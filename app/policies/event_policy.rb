@@ -30,6 +30,10 @@ class EventPolicy < ApplicationPolicy
     record.user == user || admin?
   end
 
+  def approve?
+    admin?
+  end
+
   private
 
   def admin?

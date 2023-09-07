@@ -7,5 +7,6 @@
     <%= f.select :location_id, Location.order(:name).map { |location| [location.name, location.id] } %>
     <%= f.label :description, "Descrição do evento" %>
     <%= f.text_area :description %>
+    <%= f.file_field :photo %>
     <%= f.submit "Enviar", class: "btn btn-flat" %>
   <% end %>

@@ -2,8 +2,13 @@ class ProfilesController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update]
 
   def show
-    @locations = @user.locations
-    @events = @user.events
+    if @user.admin
+      @locations = Location.where(approved: false)
+      @events = Event.where(approved: false)
+    else
+      @locations = @user.locations
+      @events = @user.events
+    end
   end
 
   def edit

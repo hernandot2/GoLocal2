@@ -1,16 +1,15 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :approve]
 
   def index
-    @events = policy_scope(Event)
+    @events = policy_scope(Event).where(approved: true)
   end
 
   def show
     authorize @event
     @event_id = @event.id
-    @location = @event.location 
-    end
-
+    @location = @event.location
+  end
 
   def new
     @event = Event.new
@@ -20,6 +19,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.user = current_user
+    @event.approved = false if @event.approved.nil?
     authorize @event
     if @event.save
       redirect_to event_path(@event), notice: "Evento criado com sucesso!"
@@ -47,10 +47,20 @@ class EventsController < ApplicationController
     redirect_to events_path, notice: "Evento excluido com sucesso!"
   end
 
+  def approve
+    authorize @event
+    @event.approved = true
+    if @event.save!
+      redirect_to profile_path(current_user), notice: "Evento aprovado com sucesso!"
+    else
+      redirect_to event_path
+    end
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :location_id, :user_id, :neighborhood_id, :photo)
+    params.require(:event).permit(:title, :description, :date, :location_id, :user_id, :neighborhood_id, :photo, :approved)
   end
 
   def set_event
