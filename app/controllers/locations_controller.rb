@@ -52,6 +52,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.user = current_user
+    @location.approved = false if @location.approved.nil?
     authorize @location
     if @location.save
       redirect_to location_path(@location), notice: "Local criado com sucesso!"
@@ -106,7 +107,6 @@ class LocationsController < ApplicationController
   #     end
   #   end
   # end
-
 
   private
 
