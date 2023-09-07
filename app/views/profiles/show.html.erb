@@ -40,7 +40,7 @@
         <p class="mb-5">Você ainda não cadastrou nenhum local</p>
       <% else %>
         <div>
-          <% @locations = @locations.first(12) %>
+          <%# @locations = @locations.first(12) %>
           <%= render "shared/cards/card_location", locations: @locations %>
         </div>
       <% end %>

@@ -22,7 +22,7 @@
         <% if policy(@event).edit? %>
           <%= link_to "Editar evento", edit_event_path, class: "btn-main" %>
         <% end %>
-        <% if policy(@event).approve? %>
+        <% if policy(@event).approve? && @event.approved = false %>
           <%= link_to "Aprovar evento", approve_event_path(@event) , class: "btn-main" %>
         <% end %>
         <% if policy(@event).destroy? %>
