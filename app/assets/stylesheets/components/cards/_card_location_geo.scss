@@ -1,12 +1,3 @@
-
-.grid-card-event-geo-neigh {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 24px 0;
-  gap: 24px 24px;
-}
-
-
 .grid-card-event-geo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,20 +7,19 @@
 
 .card-geo {
   display: flex;
-  border: 1px $neutral-03 solid;
+  // border: 1px $neutral-03 solid;
   flex-direction: column;
-  border-radius: $border-radius;
-  min-height: 320px;
+  // border-radius: $border-radius;
+  min-height: 150px;
   width: 100%;
   position: relative;
   overflow: hidden;
   text-decoration: none;
 }
 
-
 .card-content-geo {
   color: $neutral-01;
-  padding: 16px;
+  padding-top: 16px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -38,12 +28,13 @@
   text-decoration: none;
 }
 
-
 .card-location-img-geo {
+  border-radius: $border-radius;
   overflow: hidden;
-  height: 100px;
+  padding-top: 100%;
   width: inherit;
-  background-color: $neutral-03;
+  background-position: center center;
+  background-size: cover;
 }
 
 .card-location-img-geo img {
@@ -56,16 +47,17 @@
 
 .locations-container-geo {
   display: flex;
-  overflow-y: scroll; /* Isso é importante para o sticky funcionar */
+  overflow-y: scroll;
 }
 
 .scrollable-content::-webkit-scrollbar {
   display: none;
 }
+
 .scrollable-content {
   flex: 1;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 
@@ -105,26 +97,24 @@
 }
 
 .favorited-heart {
-  color: #cd4754 !important; /* Usando !important para garantir que esta regra tenha prioridade */
+  color: #cd4754 !important;
 }
 
-.fa-heart, .favorited-heart {
+.fa-heart,
+.favorited-heart {
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
-/* Tamanho padrão */
 .heart-icon .fa-heart {
   font-size: 0.5em;
 }
 
-/* Tamanho maior para tablets e dispositivos maiores */
 @media (min-width: 768px) {
   .heart-icon .fa-heart {
     font-size: 1em;
   }
 }
 
-/* Tamanho ainda maior para desktops e dispositivos maiores */
 @media (min-width: 992px) {
   .heart-icon .fa-heart {
     font-size: 1.5em;
@@ -135,6 +125,7 @@
   text-decoration: none;
   color: inherit;
 }
+
 .special-heart-position {
   top: auto;
   bottom: calc(100% - 6.3em);
@@ -143,7 +134,13 @@
 
 .favoritar-text {
   text-decoration: underline;
-  margin-right: 5px; /* Espaço entre o texto e o ícone */
+  margin-right: 5px;
   color: #cd4754;
   font-size: 15px;
+}
+
+.card_address {
+  color: $neutral-07;
+  font-size: $text-md;
+  font-weight: $font-medium; 
 }
