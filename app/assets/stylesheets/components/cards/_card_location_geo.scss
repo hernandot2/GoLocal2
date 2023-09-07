@@ -76,15 +76,13 @@
   position: absolute;
   top: 4px;
   right: 7px;
-
 }
 
 .heart-icon-geo {
-  position: absolute;
-  top: 16px;
-  right: 22px;
-  z-index: 1;
-
+  position: inherit;
+  top: 0;
+  right: 0;
+  padding: 5px;
 }
 
 
