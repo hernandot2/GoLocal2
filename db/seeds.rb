@@ -289,7 +289,7 @@ locations = {
     name: "Parque da Aclimação",
     address: "Rua Muniz de Sousa, 1.119, Aclimação, São Paulo, SP",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
-    neighborhood_id: Neighborhood.find(11).id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960173/locations/parque-aclimacao_k0psll.jpg"
