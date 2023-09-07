@@ -289,7 +289,7 @@ locations = {
     name: "Parque da Aclimação",
     address: "Rua Muniz de Sousa, 1.119, Aclimação, São Paulo, SP",
     description: "Um parque público com uma variedade de árvores, flores e animais.",
-    neighborhood_id: Neighborhood.find(11).id,
+    neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960173/locations/parque-aclimacao_k0psll.jpg"
@@ -337,13 +337,10 @@ locations = {
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031952/locations/restaurante-icone_rj7pnr.jpg"
   },
   locationsp11: {
-    name: "Coffee Lab",
-    address: "Rua Fradique Coutinho, 1340, Vila Madalena, São Paulo, SP",
-    description: "O Coffee Lab, localizado na Rua Fradique Coutinho, em São Paulo, é reconhecido como o melhor lugar para apreciar café na cidade. Sob a orientação de Isabella Raposeiras e sua equipe especializada em barismo,
-    você terá a oportunidade de aprofundar seu conhecimento sobre café, independentemente de preferir com ou sem açúcar.
-    Eles pacientemente ensinam sobre métodos de preparo, moagem e torrefação dos grãos. Além disso, oferecem deliciosos quitutes, como queijo quente e bolos caseiros.
-    Embora seja um pouco mais caro do que outros lugares, a atenção aos detalhes justifica o preço.
-    A única ressalva são os horários de pico durante o almoço e nos fins de semana.",
+    name: "Santo Grão",
+    address: "Rua Fradique Coutinho, 915, Vila Madalena, São Paulo, SP",
+    description: "Santo Grão é muito mais do que apenas um lugar para tomar café; é uma experiência culinária e sensorial completa que combina o charme de uma cafeteria,
+    a excelência de um restaurante e a descontração de um lounge, criando um ambiente verdadeiramente acolhedor e convidativo para todos os tipos de visitantes.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
