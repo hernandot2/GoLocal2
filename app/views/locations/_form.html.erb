@@ -9,5 +9,6 @@
     <%= f.select :category, Location.categories %>
     <%= f.label :description, "Descrição do local" %>
     <%= f.text_area :description %>
+    <%= f.file_field :photo, class: "btn btn-flat" %>
     <%= f.submit "Enviar", class: "btn btn-flat" %>
   <% end %>

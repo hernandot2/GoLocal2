@@ -245,6 +245,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694007300/locations/coffee-lab_wqbwqe.jpg"
   },
   locationsp2: {
@@ -255,6 +256,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029637/locations/bar9_sudbmb.jpg"
   },
   locationsp3: {
@@ -265,6 +267,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029649/locations/bar_rqdldb.jpg"
   },
   locationsp4: {
@@ -274,6 +277,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960171/locations/museu-da-casa-brasileira_kvm54v.jpg"
   },
   locationsp5: {
@@ -283,6 +287,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960160/locations/livraria-da-vila-1_zdndh1.jpg"
   },
   locationsp6: {
@@ -292,6 +297,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960173/locations/parque-aclimacao_k0psll.jpg"
   },
   locationsp7: {
@@ -301,6 +307,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960133/locations/beco-do-batman_x7elez.jpg"
   },
   locationsp8: {
@@ -312,6 +319,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029659/locations/bar2_ofhypp.jpg"
   },
   locationsp9: {
@@ -323,6 +331,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029646/locations/bar4_aawwzh.jpg"
   },
   locationsp10: {
@@ -334,6 +343,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031952/locations/restaurante-icone_rj7pnr.jpg"
   },
   locationsp11: {
@@ -344,6 +354,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031238/locations/cafe_odusl5.jpg"
   },
   locationsp12: {
@@ -355,6 +366,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029651/locations/bar3_wpvgv6.jpg"
   },
   locationsp13: {
@@ -365,6 +377,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031954/locations/pizza-bar_pslpkw.jpg"
   },
   locationsp14: {
@@ -375,6 +388,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029653/locations/bar8_iouwsu.jpg"
   },
   locationsp15: {
@@ -385,6 +399,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031239/locations/cafe2_q2qpqm.jpg"
   },
   locationsp16: {
@@ -395,6 +410,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031955/locations/restaurante-pe-de-manga_skyn3h.jpg"
   },
   locationsp17: {
@@ -405,6 +421,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029642/locations/bar5_mhu0wf.jpg"
   },
   locationsp18: {
@@ -415,6 +432,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031241/locations/cafe1_co15vz.jpg"
   },
   locationsp19: {
@@ -425,6 +443,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
   locationsp20: {
@@ -435,6 +454,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030659/locations/bar12_kbogrt.jpg"
   },
   locationsp21: {
@@ -445,6 +465,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694029639/locations/bar6_j1q3ry.jpg"
   },
   locationsp22: {
@@ -455,6 +476,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030652/locations/bar11_gzvmdk.jpg"
   },
   locationsp23: {
@@ -464,6 +486,7 @@ locations = {
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
   locationsp24: {
@@ -473,6 +496,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960166/locations/masp_pkfgzg.jpg"
   },
   locationsp25: {
@@ -482,6 +506,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/shopping-cidade-jardim_b1bh06.jpg"
   },
   locationsp26: {
@@ -491,6 +516,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960180/locations/parque-trianon_f5irwr.jpg"
   },
   locationsp27: {
@@ -500,6 +526,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960134/locations/bike-av-paulista_ybeqs4.jpg"
   },
   locationsp28: {
@@ -509,6 +536,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960149/locations/le-pain-moema_mxdovg.jpg"
   },
   locationsp29: {
@@ -518,6 +546,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
   locationsp30: {
@@ -527,6 +556,7 @@ locations = {
     neighborhood_id: Neighborhood.find(12).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960172/locations/paris6-jardins_yqpozp.jpg"
   },
   locationsp31: {
@@ -536,6 +566,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
   locationsp32: {
@@ -545,6 +576,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
   locationsp33: {
@@ -554,6 +586,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960139/locations/coco-bambu_kjqth7.jpg"
   },
   locationsp34: {
@@ -563,6 +596,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960165/locations/mac-usp_egihwf.jpg"
   },
   locationsp35: {
@@ -572,6 +606,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/shopping-ibirapuera_g0qjsm.jpg"
   },
   locationsp36: {
@@ -581,6 +616,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960179/locations/parque-ibirapuera-2_qq0cv6.jpg"
   },
   locationsp37: {
@@ -590,6 +626,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960195/locations/standup-ibirapuera_rqfp8z.jpg"
   },
   locationsp38: {
@@ -599,6 +636,7 @@ locations = {
     neighborhood_id: Neighborhood.find(13).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960149/locations/le-pain-moema_mxdovg.jpg"
   },
   locationsp39: {
@@ -608,6 +646,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
   locationsp40: {
@@ -617,6 +656,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
   locationsp41: {
@@ -626,6 +666,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960139/locations/coco-bambu_kjqth7.jpg"
   },
   locationsp42: {
@@ -635,6 +676,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960184/locations/pinacoteca1_wyhalg.jpg"
   },
   locationsp43: {
@@ -644,6 +686,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-patio-paulista_kaf9tt.jpg"
   },
   locationsp44: {
@@ -653,6 +696,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-villa-lobos_sjctgj.jpg"
   },
   locationsp45: {
@@ -662,6 +706,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960195/locations/standup-ibirapuera_rqfp8z.jpg"
   },
   locationsp46: {
@@ -671,6 +716,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
   locationsp47: {
@@ -680,6 +726,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
   locationsp48: {
@@ -689,6 +736,7 @@ locations = {
     neighborhood_id: Neighborhood.find(14).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960147/locations/jiquitaia_exseaz.jpg"
   },
   locationsp49: {
@@ -698,6 +746,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960216/locations/starbucks-moema_tfagc7.jpg"
   },
   locationsp50: {
@@ -707,6 +756,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
   locationsp51: {
@@ -716,6 +766,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960189/locations/san-gennaro_ushavs.jpg"
   },
   locationsp52: {
@@ -725,6 +776,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960141/locations/edificio-italia_tdufb5.jpg"
   },
   locationsp53: {
@@ -734,6 +786,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960194/locations/shopping-patio-paulista_kaf9tt.jpg"
   },
   locationsp56: {
@@ -743,6 +796,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
   locationsp57: {
@@ -752,6 +806,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960126/locations/bar-brahma_r6dkhf.jpg"
   },
   locationsp58: {
@@ -761,6 +816,7 @@ locations = {
     neighborhood_id: Neighborhood.find(15).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960134/locations/braz-trattoria_y4gyng.jpg"
   },
   locationsp59: {
@@ -770,6 +826,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Café",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960148/locations/le-pain-jardins_z5exvi.jpg"
   },
   locationsp60: {
@@ -779,6 +836,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Bar",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
   locationsp61: {
@@ -788,6 +846,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Restaurante",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960141/locations/dom_nbtfef.jpg"
   },
   locationsp62: {
@@ -797,6 +856,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Museu",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960166/locations/masp_pkfgzg.jpg"
   },
   locationsp63: {
@@ -806,6 +866,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Loja",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960140/locations/daslu_mrdusg.jpg"
   },
   locationsp64: {
@@ -815,6 +876,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960179/locations/parque-ibirapuera_ni8i0e.jpg"
   },
   locationsp65: {
@@ -824,6 +886,7 @@ locations = {
     neighborhood_id: Neighborhood.find(16).id,
     category: "Parque",
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960176/locations/parque-burle-marx_utlna1.jpg"
   }
 }
@@ -836,7 +899,8 @@ locations.each do |key, location_data|
     address: location_data[:address],
     category: location_data[:category],
     neighborhood_id: location_data[:neighborhood_id],
-    user_id: location_data[:user_id]
+    user_id: location_data[:user_id],
+    approved: location_data[:approved]
   )
   if location_data[:photo_url]
     file = URI.open(location_data[:photo_url])
@@ -854,6 +918,7 @@ events = {
     description: "Um festival de arte urbana que transformará as ruas da Vila Madalena em uma galeria a céu aberto. Artistas locais e internacionais criarão murais incríveis.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960071/event/festival-arte-urbana_hlbejq.jpg"
   },
   event2: {
@@ -862,6 +927,7 @@ events = {
     description: "Uma noite mágica de música clássica no belo Parque das Artes. Traga seu piquenique e desfrute de um concerto inesquecível.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/concerto-por-do-sol_zyjvpj.jpg"
   },
   event3: {
@@ -870,6 +936,7 @@ events = {
     description: "Descubra o talento artesanal local nesta feira, onde você encontrará joias, roupas e objetos de decoração únicos.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960068/event/feira-artesanato_t7ctpm.jpg"
   },
   event4: {
@@ -878,6 +945,7 @@ events = {
     description: "Uma exposição cativante de fotografias que capturam a essência da vida urbana em São Paulo.",
     location_id: Location.find(24).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/exposicao-fotografica_mir8hp.jpg"
   },
   event5: {
@@ -886,6 +954,7 @@ events = {
     description: "Risos garantidos com os comediantes mais engraçados da cidade. Uma noite repleta de humor.",
     location_id: Location.find(21).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960086/event/standup-comedy_oq9nar.jpg"
   },
   event6: {
@@ -894,6 +963,7 @@ events = {
     description: "Sinta a paz e a harmonia enquanto pratica yoga em meio à natureza no Parque da Vila.",
     location_id: Location.find(6).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960087/event/yoga-ar-livre_er1bum.jpg"
   },
   event7: {
@@ -902,6 +972,7 @@ events = {
     description: "Explore as mentes criativas dos artistas contemporâneos em uma exposição que desafia a forma e a cor.",
     location_id: Location.find(24).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960063/event/arte-contemporanea_vplxl6.jpg"
   },
   event8: {
@@ -910,6 +981,7 @@ events = {
     description: "Celebre a riqueza da cultura brasileira com música ao vivo, dança e pratos típicos.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960069/event/festa-cultura-brasileira_kwi3jt.jpg"
   },
   event9: {
@@ -918,6 +990,7 @@ events = {
     description: "Explore os encantos da Vila de bicicleta com um passeio guiado pelas ruas pitorescas.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960085/event/passeio-bike_zofjca.jpg"
   },
   event10: {
@@ -926,6 +999,7 @@ events = {
     description: "Relaxe ao som suave do jazz em um dos bares mais aconchegantes da Vila.",
     location_id: Location.find(19).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960077/event/noite-jazz_ilfxqq.jpg"
   },
   event11: {
@@ -934,6 +1008,7 @@ events = {
     description: "Solte sua voz e divirta-se cantando seus hits favoritos com amigos.",
     location_id: Location.find(14).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960080/event/noite-karaoke_kowllg.jpg"
   },
   event12: {
@@ -942,6 +1017,7 @@ events = {
     description: "Admire esculturas impressionantes criadas por artistas locais.",
     location_id: Location.find(24).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960065/event/exposicao-esculturas_xvf6xh.jpg"
   },
   event13: {
@@ -950,6 +1026,7 @@ events = {
     description: "Experimente uma variedade de pratos de food trucks com música ao vivo.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960072/event/festival-foodtruck_llk2zj.jpg"
   },
   event14: {
@@ -958,6 +1035,7 @@ events = {
     description: "Desfrute de uma noite mágica de jazz ao ar livre, com músicos talentosos e comida de rua deliciosa.",
     location_id: Location.find(26).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960074/event/festival-jazz_apysyr.jpg"
   },
   event15: {
@@ -966,6 +1044,7 @@ events = {
     description: "Uma noite de música popular brasileira ao vivo com drinks especiais e petiscos.",
     location_id: Location.find(22).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960080/event/noite-mpb1_elw0oj.jpg"
   },
   event16: {
@@ -974,6 +1053,7 @@ events = {
     description: "Traga sua cadeira de praia e aproveite um filme sob as estrelas.",
     location_id: Location.find(36).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960064/event/cinema-arlivre_vh4m71.jpg"
   },
   event17: {
@@ -982,6 +1062,7 @@ events = {
     description: "Saboreie pratos deliciosos de diferentes culturas em um evento gastronômico diversificado.",
     location_id: Location.find(7).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960068/event/feira-gastronomica_iwyssa.jpg"
   },
   event18: {
@@ -990,6 +1071,7 @@ events = {
     description: "Experimente cervejas artesanais locais com especialistas em cerveja.",
     location_id: Location.find(9).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960064/event/cerveja-artesanal_y11xl7.jpg"
   },
   event19: {
@@ -998,6 +1080,7 @@ events = {
     description: "Desfrute de uma atmosfera sofisticada com músicas de bossa nova e coquetéis exclusivos.",
     location_id: Location.find(17).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960075/event/noite-bossa-nova_f1prwp.jpg"
   },
   event20: {
@@ -1006,6 +1089,7 @@ events = {
     description: "O melhor do samba ao vivo com deliciosos petiscos brasileiros e caipirinhas especiais.",
     location_id: Location.find(2).id,
     user_id: User.first.id,
+    approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1693960081/event/noite-samba_qy5jhk.jpg"
   }
 }
@@ -1018,7 +1102,8 @@ events.each do |key, event_data|
     date: event_data[:date],
     location_id: event_data[:location_id],
     neighborhood_id: event_data[:neighborhood_id],
-    user_id: event_data[:user_id]
+    user_id: event_data[:user_id],
+    approved: event_data[:approved]
   )
   if event_data[:photo_url]
     file = URI.open(event_data[:photo_url])

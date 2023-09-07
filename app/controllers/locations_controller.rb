@@ -1,22 +1,23 @@
 class LocationsController < ApplicationController
   layout "map_page"
-  before_action :set_location, only: [:show, :edit, :update, :destroy]
-  
+  before_action :set_location, only: [:show, :edit, :update, :destroy, :approve]
+
   def index
     @category = params[:category]
     @city_id = params[:city]
     @neighborhood_id = params[:neighborhood]
     @neighborhood = Neighborhood.where("neighborhood.id = ?", @neighborhood_id)
+    @locations = policy_scope(Location).where(approved: true)
     if @category.present?
       if @city_id.present?
-        @locations = policy_scope(Location).joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
+        @locations = @locations.joins(neighborhood: :city).where(category: @category).where("cities.id = ?", @city_id)
       elsif @neighborhood_id.present?
-        @locations = policy_scope(Location).where(category: @category).where(neighborhood_id: @neighborhood_id)
+        @locations = @locations.where(category: @category).where(neighborhood_id: @neighborhood_id)
       else
-        @locations = policy_scope(Location).where(category: @category)
+        @locations = @locations.where(category: @category)
       end
     else
-      @locations = policy_scope(Location)
+      @locations
     end
     @markers = @locations.geocoded.map do |location|
       {
@@ -51,6 +52,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.user = current_user
+    @location.approved = false if @location.approved.nil?
     authorize @location
     if @location.save
       redirect_to location_path(@location), notice: "Local criado com sucesso!"
@@ -78,6 +80,15 @@ class LocationsController < ApplicationController
     redirect_to locations_path, notice: "Local excluido com sucesso!"
   end
 
+  def approve
+    authorize @location
+    @location.approved = true
+    if @location.save!
+      redirect_to profile_path(current_user), notice: "Local aprovado com sucesso!"
+    else
+      redirect_to location_path
+    end
+  end
 
   # def toggle_favorite
   #   Rails.logger.debug "toggle_favorite called"
@@ -97,11 +108,10 @@ class LocationsController < ApplicationController
   #   end
   # end
 
-
   private
 
   def location_params
-    params.require(:location).permit(:name, :address, :description, :neighborhood_id, :category, :photo)
+    params.require(:location).permit(:name, :address, :description, :neighborhood_id, :category, :photo, :approved)
   end
 
   def set_location

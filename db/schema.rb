@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_02_175401) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_05_204931) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_02_175401) do
     t.datetime "updated_at", null: false
     t.bigint "location_id"
     t.bigint "neighborhood_id"
+    t.boolean "approved"
     t.index ["location_id"], name: "index_events_on_location_id"
     t.index ["neighborhood_id"], name: "index_events_on_neighborhood_id"
     t.index ["user_id"], name: "index_events_on_user_id"
@@ -87,6 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_02_175401) do
     t.bigint "neighborhood_id", null: false
     t.float "latitude"
     t.float "longitude"
+    t.boolean "approved"
     t.index ["neighborhood_id"], name: "index_locations_on_neighborhood_id"
     t.index ["user_id"], name: "index_locations_on_user_id"
   end

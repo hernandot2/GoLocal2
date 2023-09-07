@@ -1,7 +1,13 @@
 <h1 class="mb-3">Perfil de <%= current_user.name %></h1>
 <% if current_user.admin %>
+  <section>
     <h3>Eventos para aprovação</h3>
+    <%= render "shared/cards/card_event" %>
+  </section>
+  <section>
     <h3>Locais para aprovação</h3>
+    <%= render "shared/cards/card_location" %>
+  </section>
 <% else %>
   <section>
     <h3>Meus favoritos</h3>
@@ -40,7 +46,7 @@
         <p class="mb-5">Você ainda não cadastrou nenhum local</p>
       <% else %>
         <div>
-          <% @locations = @locations.first(12) %>
+          <%# @locations = @locations.first(12) %>
           <%= render "shared/cards/card_location", locations: @locations %>
         </div>
       <% end %>
