@@ -30,8 +30,10 @@
         <% if policy(@location).edit? %>
           <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
         <% end %>
-        <% if policy(@location).approve? %>
-          <%= link_to "Aprovar local", approve_location_path(@location) , class: "btn-main" %>
+        <% unless @location.approved %>
+          <% if policy(@location).approve? %>
+            <%= link_to "Aprovar local", approve_location_path(@location) , class: "btn-main" %>
+          <% end %>
         <% end %>
         <% if policy(@location).destroy? %>
           <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
