@@ -1,4 +1,3 @@
-
 <div class="row">
   <!-- Left: Location Cards -->
   <div class="col-md-6">
@@ -8,15 +7,20 @@
         <!-- Title -->
         <div class="grid-card-event-geo sq-md pr-5 pl-5">
           <% @locations.each do |location| %>
-            <div class="card-geo sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
-              <div class="card-content-geo sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
-                <div class="card-location-img-geo" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker"></div>
-                <div>
-                  <h5><%= location.name %></h5>
+            <% asset_url = location.photo.url %>
+            <%= link_to location_path(location), class: "map-marker-link location-link text-decoration-none", data: { id: location.id } do %>
+              <div class="card-location-img-geo" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker" style="background-image: url('<%= asset_url %>');"></div>
+              <div class="card-geo sq-md" data-id="<%= location.id %>" data-lat="<%= location.latitude %>" data-lng="<%= location.longitude %>">
+                <div class="card-content-geo sq-md" data-action="mouseover->map#highlightMarker mouseout->map#unhighlightMarker">
+                  <div>
+                    <h5><%= location.name %></h5>
+                  </div>
+                  <div class="card-address link-text">
+                    <%= location.address %>
+                  </div>
                 </div>
-                <%= link_to "#{location.address}", location_path(location), class: "map-marker-link location-link", data: { id: location.id } %>
               </div>
-            </div>
+            <% end %>
           <% end %>
         </div>
       </div>

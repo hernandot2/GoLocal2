@@ -1,14 +1,14 @@
   <%= form_with(model: @location, class: "edit-form") do |f| %>
     <%= f.label :name, "Nome do local" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "mb-3 border-radius-input"  %>
     <%= f.label :address, "Endereço completo" %>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, class: "mb-3 border-radius-input" %>
     <%= f.label :neighborhood_id, "Selecione o bairro" %>
-    <%= f.select :neighborhood_id, Neighborhood.order(:name).map { |neighborhood| [neighborhood.name, neighborhood.id] } %>
-    <%= f.label :category, "Selecione o tipo de local" %>
-    <%= f.select :category, Location.categories %>
-    <%= f.label :description, "Descrição do local" %>
-    <%= f.text_area :description %>
-    <%= f.file_field :photo, class: "btn btn-flat" %>
-    <%= f.submit "Enviar", class: "btn btn-flat" %>
+    <%= f.select :neighborhood_id, Neighborhood.order(:name).map { |neighborhood| [neighborhood.name, neighborhood.id] }, class: "border-radius-input" %>
+    <%= f.label :category, "Selecione o tipo de local", class: "mt-3" %>
+    <%= f.select :category, Location.categories, class: "mb-3 border-radius-input" %>
+    <%= f.label :description, "Descrição do local", class: "mt-3" %>
+    <%= f.text_area :description, class: "mb-3 border-radius-input"  %>
+    <%= f.file_field :photo, class: "mb-5" %>
+    <%= f.submit "Enviar", class: "btn btn-main" %>
   <% end %>

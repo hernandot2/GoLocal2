@@ -1,11 +1,10 @@
-<section class="position-relative">
-  <div class="heart-icon-geo position-absolute special-heart-position d-flex align-items-center">
-
+<section class="position-relative mb-3">
+  <div class="heart-icon-geo position-absolute special-heart-position d-flex align-items-baseline">
     <% if current_user && current_user.favorites.where(location_id: @location.id).exists? %>
-       <i class="fa fa-heart favorited-heart"></i>
+      <i class="fa fa-heart favorited-heart"></i>
     <% else %>
       <%= link_to location_favorites_path(@location), data: {turbo_method: :post} do %>
-        <span class="favoritar-text no-style-link">Favoritar</span><i class="fa fa-heart"></i>
+       <i class="fa fa-heart ml-3"></i><span class="favoritar-text no-style-link link-text"> Favoritar</span>
       <% end %>
     <% end %>
   </div>
@@ -13,40 +12,39 @@
     <h1><%= @location.name %></h1>
     <h2><%= @neighborhood.name %></h2>
   </span>
-  <h4><%= @location.address %></h4>
-  <section>
-    <%= render "banner" %>
-  </section>
-  <p class="mt-2"><%= @location.description %></p>
-  <!-- Map -->
-  <div class="location-map" data-controller="map"
-      data-map-markers-value="<%= [@marker].to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-      style="width: 100%; height: 400px;">
-  </div>
-  <div class="d-flex justify-content-between mt-3">
-    <% if user_signed_in? %>
-      <div>
-        <% if policy(@location).edit? %>
-          <%= link_to "Editar local", edit_location_path, class: "btn-main" %>
-        <% end %>
-        <% unless @location.approved %>
-          <% if policy(@location).approve? %>
-            <%= link_to "Aprovar local", approve_location_path(@location) , class: "btn-main" %>
-          <% end %>
-        <% end %>
-        <% if policy(@location).destroy? %>
-          <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
-        <% end %>
-      </div>
-      <div>
-        <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
-      </div>
-    <% else %>
-      <div>
-        <%= link_to "Todos os locais", locations_path, class: "btn-main" %>
+  <span class="location-address"><%= @location.address %></span>
+</section>
 
-      </div>
+<section class="location-address mb-5">
+  <%= render "banner" %>
+</section>
+
+<div class="d-flex gap-5">
+  <div class="location-description w-50">
+    <p class="mr-4"><%= @location.description %></p>
+  </div>
+  <!-- Map -->
+  <div class="location-map-show w-50 vh-25" data-controller="map"
+        data-map-markers-value="<%= [@marker].to_json %>"
+       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" >
+  </div>
+</div>
+<div>
+  <div class="d-flex justify-content-end mt-3 gap-2">
+    <% if user_signed_in? %>
+      <% unless @location.approved %>
+        <% if policy(@location).approve? %>
+          <%= link_to "Aprovar local",  approve_location_path(@location) , class: "btn-main" %>
+        <% end %>
+      <% end %>
+      <% if policy(@location).edit? %>
+        <%= link_to "Editar local", edit_location_path, class: "btn-sub mr-5 " %>
+      <% end %>
+      <% if policy(@location).destroy? %>
+        <%= link_to "Excluir local", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Tem certeza que gostaria de apagar esse local?" }, class: "btn-sub" %>
+      <% end %>
+    <% else %>
+      <%= link_to "Todos os locais", locations_path, class: "btn-sub" %>
     <% end %>
   </div>
-</section>
+</div>
