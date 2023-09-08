@@ -16,6 +16,12 @@ users = {
     email: "admin@example.com",
     password: "123123",
     admin: true
+  },
+  user3: {
+    name: "Julia Artigas",
+    email: "julia@gmail.com",
+    password: "123123",
+    admin: false
   }
 }
 
@@ -398,7 +404,7 @@ locations = {
     Eles oferecem um menu repleto de receitas autorais que harmonizam perfeitamente sabores. Aberto de segunda a domingo, das 8h às 16h.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Café",
-    user_id: User.first.id,
+    user_id: User.last.id,
     approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031239/locations/cafe2_q2qpqm.jpg"
   },
@@ -409,7 +415,7 @@ locations = {
     O espaço acomoda 90 pessoas sentadas e inclui um lago artificial com queda d'água e três mangueiras centenárias. Durante a noite, o local é iluminado para que os clientes possam desfrutar dos pratos deliciosos criados pelo chef João Silva. Há também uma área interna dividida em dois pisos, ideal para comemorações mais intimistas.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
-    user_id: User.first.id,
+    user_id: User.last.id,
     approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694031955/locations/restaurante-pe-de-manga_skyn3h.jpg"
   },
@@ -442,7 +448,7 @@ locations = {
     O complexo combina arte, música, gastronomia e coquetelaria, com um cardápio que inclui pratos quentes e tradicionais petiscos de bar.",
     neighborhood_id: Neighborhood.find(11).id,
     category: "Restaurante",
-    user_id: User.first.id,
+    user_id: User.last.id,
     approved: true,
     photo_url: "https://res.cloudinary.com/go-local/image/upload/v1694030654/locations/bar10_fqdqo0.jpg"
   },
