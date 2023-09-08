@@ -2,12 +2,23 @@
 <% if current_user.admin %>
   <section>
     <h3>Eventos para aprovação</h3>
-    <p> Não há eventos para aprovação</p>
-    <%= render "shared/cards/card_event" %>
+    <% if @events.empty? %>
+      <p class="mb-5">Não há eventos para aprovação</p>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_event" %>
+      </div>
+    <% end %>
   </section>
   <section>
     <h3>Locais para aprovação</h3>
-    <%= render "shared/cards/card_location" %>
+    <% if @locations.empty? %>
+      <p class="mb-5">Não há locais para aprovação</p>
+    <% else %>
+      <div>
+        <%= render "shared/cards/card_location" %>
+      </div>
+    <% end %>
   </section>
 <% else %>
   <section>

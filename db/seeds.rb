@@ -1,7 +1,12 @@
 require "open-uri"
 
-# Users
+# Event.destroy_all
+# Location.destroy_all
+# Neighborhood.destroy_all
+# City.destroy_all
 
+
+# Users
 User.destroy_all
 
 users = {
@@ -12,8 +17,8 @@ users = {
     admin: false
   },
   user2: {
-    name: "Admin",
-    email: "admin@gmail.com",
+    name: "Julia",
+    email: "julia@golocal.com",
     password: "123123",
     admin: true
   },
@@ -32,6 +37,7 @@ users.each do |key, user_data|
 end
 
 # Cities
+
 cities = {
   city1: {
     name: "Rio de Janeiro",
@@ -53,7 +59,6 @@ cities = {
   }
 }
 
-
 cities.each do |key, city_data|
   file = URI.open(city_data[:photo_url])
 
@@ -63,6 +68,7 @@ cities.each do |key, city_data|
 end
 
 # Neighborhoods
+
 neighborhoods = {
   neighborhood1: {
     name: "Copacabana",
@@ -235,6 +241,7 @@ neighborhoods.each do |key, neighborhood_data|
 end
 
 # Locations
+
 locations = {
   # rio de janeiro
 
@@ -917,6 +924,7 @@ locations.each do |key, location_data|
 end
 
 # Events
+
 events = {
   event1: {
     title: "Festival de Arte Urbana Vila Colorida",
