@@ -1,7 +1,6 @@
 class LocationsController < ApplicationController
-  layout "map_page"
   before_action :set_location, only: [:show, :edit, :update, :destroy, :approve]
-
+  
   def index
     @category = params[:category]
     @city_id = params[:city]
@@ -28,6 +27,7 @@ class LocationsController < ApplicationController
         marker_html: render_to_string(partial: "locations/marker")
       }
     end
+    render layout: "map_page"
   end
 
   def show
