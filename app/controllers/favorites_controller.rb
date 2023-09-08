@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.new(user: current_user, location: @location)
     authorize @favorite
     @favorite.save!
-    redirect_to favorites_path, notice: 'Localização favoritada com sucesso!'
+    redirect_to location_path(@location), notice: 'Localização favoritada com sucesso!'
   end
 
   def destroy
