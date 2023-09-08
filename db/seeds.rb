@@ -12,14 +12,14 @@ users = {
     admin: false
   },
   user2: {
-    name: "Usuário admin",
-    email: "admin@example.com",
+    name: "Julia Artigas Admin",
+    email: "admin@gmail.com",
     password: "123123",
     admin: true
   },
   user3: {
-    name: "Julia Artigas",
-    email: "julia@gmail.com",
+    name: "Lisa Mansilha",
+    email: "lisa@gmail.com",
     password: "123123",
     admin: false
   }
