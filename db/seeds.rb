@@ -12,7 +12,7 @@ users = {
     admin: false
   },
   user2: {
-    name: "Julia Artigas Admin",
+    name: "Admin",
     email: "admin@gmail.com",
     password: "123123",
     admin: true
