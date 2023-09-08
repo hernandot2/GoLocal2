@@ -114,6 +114,11 @@ neighborhoods = {
     city_id: City.find(1).id,
     description: "Glória é um bairro histórico e central, com fácil acesso ao transporte público, museus importantes e uma vista deslumbrante do Pão de Açúcar."
   },
+  neighborhood11: {
+    name: "Urca",
+    city_id: City.find(1).id,
+    description: "A Urca é um charmoso bairro localizado na cidade do Rio de Janeiro, Brasil. Situada na zona sul da cidade, a Urca é conhecida por sua beleza natural, tranquilidade e história rica."
+  },
 
   # Bairros de São Paulo
   neighborhood11: {
